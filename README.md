@@ -27,6 +27,7 @@ The copyright extends to the person using the proxy name of [webVerts](https://g
 ### License
 
 GNU GPLv3
-
+  
+The data source used in this website is copyrighted by authifyWeb and not a part of this GPL 3 License
 For more details please visit <a href="https://github.com/authifyWeb/authifyURL/blob/main/LICENSE"> LICENSE </a> 
 
