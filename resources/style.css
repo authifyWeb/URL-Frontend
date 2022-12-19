@@ -1,3 +1,17 @@
+/* montserrat-regular - latin [Google Font: Self Hosted]*/
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/montserrat-v25-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('fonts/montserrat-v25-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/montserrat-v25-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/montserrat-v25-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('fonts/montserrat-v25-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('fonts/montserrat-v25-latin-regular.svg#Montserrat') format('svg'); /* Legacy iOS */
+}
+
 /****  Nav Menu Begins Here ****/
 *{
 	box-sizing: border-box;
@@ -230,6 +244,8 @@ margin-bottom:80px;
 
 .info{
 	padding-top:10px;
+	padding-left:10px;
+ 	padding-right:10px;
 	color:white;
 	font-size:14px;
 	width:100%;
