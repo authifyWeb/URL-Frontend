@@ -3,26 +3,25 @@ async function fetch_Data()
 			const res=await fetch ("https://raw.githubusercontent.com/authifyWeb/authifyURL-Database/main/everything.json");
 			const response=await res.json();
 			var json = response.source;
-			//console.log(response.source)
+			
 			
 }
 fetch_Data();
 
-function goTo()
+function searchNow()
 {	var input = document.getElementById('link_id').value;
 		
 	document.getElementById("data").innerHTML ="";
 	document.getElementById("disclaimer").innerHTML ="";
 	var url = new URL(input);
-	console.log(url)
+	
 	var hostname = url.hostname;
 	var protocol = url.protocol;
 	var origin = url.origin;
 	var href= url.href;
 	var pathname= url.pathname;
 
-	//console.log(hostname, protocol, origin, href)
-	//console.log(hostname+pathname)
+	
 
 	var output= authification(url, href, origin, hostname,protocol,pathname); 
 		
