@@ -2,7 +2,7 @@
 <p>Last updated: December 18, 2022</p>
 <p>This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.</p>
 <p>If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us.</p>
-<p>We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy. </p>
+<p>We use data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy. </p>
 
 We use GitHub Pages(Owned my Microsoft) to host our website, and hence by default they might track you with cookie. The current page is hosted on Github, so they may track you here.
 
