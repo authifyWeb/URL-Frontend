@@ -34,7 +34,16 @@ function authification(url, href, origin, hostname,protocol,pathname)
 		return `<h3> This page is part of your browser<h3>`;
 	}
 	else if(protocol != "https:" ) {return `<h3> This website is not secure. Please refrain from entering or submitting personal data and please don't download files from such sources</h3>`;}
-	else if((origin == "https://twitter.com") || (origin =="https://www.facebook.com") || (origin=="https://www.instagram.com") || (origin== "https://www.youtube.com") )  {link= hostname+pathname; var output=compare(link); return output; }
+	else if( (origin =="https://www.facebook.com") || (origin=="https://www.instagram.com") || (origin== "https://www.youtube.com") )  {
+				link= hostname+pathname;
+				var output = compare(link);
+				data.innerHTML= output;
+				return output;
+				
+			}
+	else if(origin =="https://twitter.com") {link = hostname + pathname.toLowerCase(); var output = compare(link);
+				data.innerHTML= output;
+				return output ;}
 	else{var output= compare(hostname);
 				return output ;
 			}
