@@ -7,7 +7,7 @@ async function fetch_Data()
 			
 }
 fetch_Data();
-
+function myFunction(){ if (event.key === "Enter"){searchNow();}}
 function searchNow()
 {	var input = document.getElementById('link_id').value;
 		
