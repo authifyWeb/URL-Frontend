@@ -11,7 +11,6 @@
        url('fonts/montserrat-v25-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
        url('fonts/montserrat-v25-latin-regular.svg#Montserrat') format('svg'); /* Legacy iOS */
 }
-
 /****  Nav Menu Begins Here ****/
 *{
 	box-sizing: border-box;
@@ -244,8 +243,8 @@ margin-bottom:80px;
 
 .info{
 	padding-top:10px;
-	padding-left:10px;
- 	padding-right:10px;
+  padding-left:10px;
+  padding-right:10px;
 	color:white;
 	font-size:14px;
 	width:100%;
@@ -317,7 +316,7 @@ margin-bottom:80px;
 
 .extension {
 	padding-top:9px;
-	visibility:hidden;
+	
 	
 }
 .extension a{
@@ -325,6 +324,7 @@ margin-bottom:80px;
 }
 
 #pixel{
+	display:none;
   position:fixed;
   bottom:8px;
   padding-left:10px;
@@ -336,6 +336,37 @@ margin-bottom:80px;
 
 
 
+#donate_box{
+	position: fixed;
+	//top:90vh;
+	bottom:2.5vh;
+	right:1.5vw;
+	
+	
+}
+
+#donate{
+	
+	
+	
+	background-color: #316e7d;   /*   #FDFF8F; */
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:5px;
+	padding-bottom:5px;
+	
+	border: solid white;
+	border-width: 1px;
+}
+
+#donate a{
+	color:white;
+	text-decoration:none;
+	font-weight: bold;
+	font-family: 'Montserrat', sans-serif;
+	font-size:14px;
+
+}
 
 
 @media(min-width: 320px) and (max-width: 999px) {
@@ -356,7 +387,8 @@ margin-bottom:80px;
 #pixel{
   visibility:hidden;
 }
-	
-}	
 
-
+#donate_box{
+	visibility: hidden;
+  }
+}
