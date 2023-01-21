@@ -15,7 +15,7 @@ function searchNow()
 	document.getElementById("data").innerHTML ="";
 	document.getElementById("disclaimer").innerHTML ="";
 	var url = new URL(input);
-	console.log(url)
+	//console.log(url)
 	var hostname = url.hostname;
 	var protocol = url.protocol;
 	var origin = url.origin;
