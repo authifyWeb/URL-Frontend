@@ -46,7 +46,10 @@ function authification(url, href, origin, hostname,protocol,pathname)
 			}
 		else if(origin =="https://www.youtube.com"|| origin=="https://www.twitch.tv" || origin=="https://www.instagram.com" || origin=="https://twitter.com"  ){link = hostname + pathname.toLowerCase(); var output = compare(link); 
 			data.innerHTML= output;
-			return output ;}	
+			return output ;}
+		else if(origin =="https://www.buymeacoffee.com"|| origin=="https://ko-fi.com" || origin=="https://liberapay.com" || origin =="https://opencollective.com" ){link = hostname + pathname.toLowerCase(); var output = compare(link); 
+			data.innerHTML= output;
+			return output ;}		
 		
 					
 		else{var output= compare(hostname);
