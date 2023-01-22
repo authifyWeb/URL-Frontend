@@ -15,7 +15,7 @@ function searchNow()
 	document.getElementById("data").innerHTML ="";
 	document.getElementById("disclaimer").innerHTML ="";
 	var url = new URL(input);
-	//console.log(url)
+	console.log(url)
 	var hostname = url.hostname;
 	var protocol = url.protocol;
 	var origin = url.origin;
@@ -36,17 +36,19 @@ function authification(url, href, origin, hostname,protocol,pathname)
 	{
 		return `<h3> This page is part of your browser<h3>`;
 	}
-	else if(protocol != "https:" ) {return `<h3> This website is not secure. Please refrain from entering or submitting personal data and please don't download files from such sources</h3>`;}
-	else if( (origin =="https://www.facebook.com") || (origin=="https://www.instagram.com") || (origin== "https://www.youtube.com") )  {
+	else if(protocol != "https:" ) {return `<h3> This website is not secure. Please refrain from submitting personal data and don't download files from such sources</h3>`;}
+	else if( origin =="https://www.facebook.com" )  {
 				link= hostname+pathname;
 				var output = compare(link);
 				data.innerHTML= output;
 				return output;
 				
 			}
-		else if(origin =="https://twitter.com") {link = hostname + pathname.toLowerCase(); var output = compare(link);
-				data.innerHTML= output;
-				return output ;}
+		else if(origin =="https://www.youtube.com"|| origin=="https://www.twitch.tv" || origin=="https://www.instagram.com" || origin=="https://twitter.com"  ){link = hostname + pathname.toLowerCase(); var output = compare(link); 
+			data.innerHTML= output;
+			return output ;}	
+		
+					
 		else{var output= compare(hostname);
 				return output ;
 			}
@@ -63,19 +65,19 @@ function compare(link)
 			{ var cl = response.source[i].urls;
 				for (j = 0; j<cl.length; j++)
 				{	
-					
+					//console.log(link)
 					if(json[i].urls[j] == link )
 					{ 
-						var Data=`<h5 style="color:white";>  ` + link + ` <p></br> <span style="color:#A2FB15; font-size: 16px; ">This site is verified by authifyURL.</span> &nbsp;<span class="tooltip"> ✅ <span class="tooltiptext">This website is valid and trustworthy. </span> </p> <p><span>Organisation : </span>` +response.source[i].name+ `</p></h5>` ;
+						var Data=`<div style="color:white";>  ` + link + `</br> <p> <span style="color:#A2FB15; font-size: 16px; ">Verified by authifyURL.</span> &nbsp;<span class="tooltip"> ✅ <span class="tooltiptext">This website is valid and legal. </span> </p></br> <p><span>Organisation : </span>` +response.source[i].name+ `</p></div>` ;
 						
-						var Disclaimer=`Read <a href ="https://github.com/authifyWeb/authifyURL#how-we-verify" style="color:white; target ="_blank"> how we verify</a> what is valid and what is not.`;
+						var Disclaimer=`Read <a href ="https://github.com/authifyWeb/authifyURL#how-we-verify" style="color:white"; target ="_blank"> how we verify</a> what is valid and what is not. </br><div class="refresh_btn_box" style="margin-top:10px"><button type="button"; onClick="window.location.reload()">Search Another Link </button></div> `;
 						data.innerHTML= Data;
 						disclaimer.innerHTML=Disclaimer;
 					return;
 					}
 					else{
-						var Data = `<h5 style=" color:white"; >` + link + `<p><span style="color:red;font-size: 16px;"> We weren't able to verify this site. Please be cautioned continuing in this site.</span> &nbsp; <span class="tooltip"> ❌ <span class="tooltiptext">Possibly scam. If unsure please take help from someone you know. </span> </p> </h5>` ;
-						var Disclaimer=`Read <a href ="https://github.com/authifyWeb/authifyURL#how-we-verify" style="color:white; target ="_blank"> how we verify</a> what is valid and what is not.`;
+						var Data = `<div style=" color:white"; >` + link + `<p><span style="color:red;font-size: 16px;"> We weren't able to verify this site. Please be cautioned continuing in this site.</span> &nbsp; <span class="tooltip"> ❌ <span class="tooltiptext">Possibly scam. If unsure please take help from someone you know. </span> </p> </div>` ;
+						var Disclaimer=`Read <a href ="https://github.com/authifyWeb/authifyURL#how-we-verify" style="color:white;" target ="_blank"> how we verify</a> what is valid and what is not. </br><div class="refresh_btn_box" style="margin-top:10px"><button type="button"; onClick="window.location.reload()">Search Another Link </button></div> `;
 						data.innerHTML= Data;
 						disclaimer.innerHTML=Disclaimer;
 						}
