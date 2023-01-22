@@ -287,7 +287,7 @@ margin-bottom:80px;
   color: #fff;
   text-align: center;
   border-radius: 6px;
-  padding: 5px 0;
+  padding: 1px 0;
   position: absolute;
   z-index: 1;
   bottom: 150%;
@@ -338,7 +338,7 @@ margin-bottom:80px;
 
 #donate_box{
 	position: fixed;
-	//top:90vh;
+	/*top:90vh;*/
 	bottom:2.5vh;
 	right:1.5vw;
 	
@@ -391,4 +391,9 @@ margin-bottom:80px;
 #donate_box{
 	visibility: hidden;
   }
+
+.extension {
+    display:none;
+    
+  }  
 }

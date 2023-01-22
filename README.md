@@ -23,6 +23,8 @@ The entire data set in made available to the public, where anybody can cross ver
 ### Disclaimer
 While we try our best to serve you accurate contact details, we don't guarantee you anything. In no event shall the Author, or any other contributors be liable for any claim, damages or any liability.
 
+We do not directly or indirectly promote or endorse any brands/companies. 
+
 THE SOFTWARE, DATA & SERVICE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ### Copyright
