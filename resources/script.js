@@ -15,7 +15,7 @@ function searchNow()
 	document.getElementById("data").innerHTML ="";
 	document.getElementById("disclaimer").innerHTML ="";
 	var url = new URL(input);
-	console.log(url)
+	//console.log(url)
 	var hostname = url.hostname;
 	var protocol = url.protocol;
 	var origin = url.origin;
@@ -37,12 +37,11 @@ function authification(url, href, origin, hostname,protocol,pathname)
 		return `<h3> This page is part of your browser<h3>`;
 	}
 	else if(protocol != "https:" ) {return `<h3> This website is not secure. Please refrain from submitting personal data and don't download files from such sources</h3>`;}
-	else if( origin =="https://www.facebook.com" )  {
-				link= hostname+pathname;
+	else if( origin =="https://www.facebook.com" )  
+			{	
+				link= hostname+'/'+pathname.split('/')[1];
 				var output = compare(link);
-				data.innerHTML= output;
 				return output;
-				
 			}
 		else if(origin =="https://www.youtube.com"|| origin=="https://www.twitch.tv" || origin=="https://www.instagram.com" || origin=="https://twitter.com"  ){link = hostname + pathname.toLowerCase(); var output = compare(link); 
 			data.innerHTML= output;
