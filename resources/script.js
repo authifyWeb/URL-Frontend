@@ -86,12 +86,16 @@ function authification(url, href, origin, hostname,protocol,pathname)
 				var output = compare(link);	
 				return output;	
 				}
-		else if(origin =="https://www.buymeacoffee.com"|| origin=="https://ko-fi.com" || origin=="https://liberapay.com" || origin =="https://opencollective.com" ){link = hostname + pathname.toLowerCase(); var output = compare(link); 
-			data.innerHTML= output;
-			return output ;}		
+	else if(origin == "https://ko-fi.com" || origin =="https://www.buymeacoffee.com" || origin=="https://liberapay.com" || origin =="https://opencollective.com")
+				{
+					
+					link=hostname+'/'+pathname.split('/')[1].toLowerCase();
+					var output = compare(link);
+					return output ;
+				}
 		
 					
-		else{var output= compare(hostname);
+	else{var output= compare(hostname);
 				return output ;
 			}
 }
