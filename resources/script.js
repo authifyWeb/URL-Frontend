@@ -66,7 +66,13 @@ function authification(url, href, origin, hostname,protocol,pathname)
 				link = hostname + pathname.toLowerCase(); 
 				var output = compare(link); 
 			
-			}	
+			}
+	else if(origin=="https://www.reddit.com" || origin=="https://old.reddit.com")
+			{	
+				link=hostname +'/' +pathname.split('/')[1]+ '/' + pathname.split('/')[2].toLowerCase();
+				var output = compare(link);
+				
+				}
 		else if(origin =="https://www.buymeacoffee.com"|| origin=="https://ko-fi.com" || origin=="https://liberapay.com" || origin =="https://opencollective.com" ){link = hostname + pathname.toLowerCase(); var output = compare(link); 
 			data.innerHTML= output;
 			return output ;}		
