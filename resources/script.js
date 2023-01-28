@@ -50,7 +50,18 @@ function authification(url, href, origin, hostname,protocol,pathname)
 				var output = compare(link);	
 				return output;
 			}
-		else if(origin =="https://www.youtube.com"|| origin=="https://www.twitch.tv" || origin=="https://www.instagram.com" ){link = hostname + pathname.toLowerCase(); var output = compare(link); 
+	else if(origin=="https://www.youtube.com")
+				{
+					var channel=(pathname.split('/')[1]);
+					if(channel=="channel") { link = hostname +'/' +pathname.split('/')[1]+ '/' + pathname.split('/')[2];}
+					else if(channel=="c") { 
+					var id=pathname.split('/')[2].toLowerCase();
+					link= hostname+'/'+id}
+					else{link=hostname+'/'+pathname.split('/')[1].toLowerCase();}
+					var output = compare(link);	
+					return output;
+				}
+		else if(origin=="https://www.twitch.tv" || origin=="https://www.instagram.com" ){link = hostname + pathname.toLowerCase(); var output = compare(link); 
 			data.innerHTML= output;
 			return output ;}
 		else if(origin =="https://www.buymeacoffee.com"|| origin=="https://ko-fi.com" || origin=="https://liberapay.com" || origin =="https://opencollective.com" ){link = hostname + pathname.toLowerCase(); var output = compare(link); 
