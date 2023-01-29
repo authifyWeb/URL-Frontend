@@ -43,14 +43,15 @@ function authification(url, href, origin, hostname,protocol,pathname)
 				var output = compare(link);
 				return output;
 			}
-	else if(origin =="https://twitter.com")
+		else if(origin =="https://twitter.com")
 			{
 				
 				link=hostname+'/'+pathname.split('/')[1].toLowerCase();
 				var output = compare(link);	
 				return output;
 			}
-	else if(origin=="https://www.youtube.com")
+			/* Youtube has 3 different types of URLS. github.com/authifyWeb/authifyNow/issues/14#issuecomment-1403993482 */
+		else if(origin=="https://www.youtube.com")
 				{
 					var channel=(pathname.split('/')[1]);
 					if(channel=="channel") { link = hostname +'/' +pathname.split('/')[1]+ '/' + pathname.split('/')[2];}
@@ -61,19 +62,19 @@ function authification(url, href, origin, hostname,protocol,pathname)
 					var output = compare(link);	
 					return output;
 				}
-	else if( origin=="https://www.twitch.tv" || origin=="https://www.instagram.com" )
+		else if( origin=="https://www.twitch.tv" || origin=="https://www.instagram.com" )
 			{
-				link = hostname + pathname.toLowerCase(); 
+				link = hostname +'/' + pathname.split('/')[1].toLowerCase(); 
 				var output = compare(link); 
 			
 			}
-	else if(origin=="https://www.reddit.com" || origin=="https://old.reddit.com")
+		else if(origin=="https://www.reddit.com" || origin=="https://old.reddit.com")
 			{	
 				link=hostname +'/' +pathname.split('/')[1]+ '/' + pathname.split('/')[2].toLowerCase();
 				var output = compare(link);
 				
-			}
-	else if(origin == "https://github.com")
+				}
+		else if(origin == "https://github.com")
 				{
 				var id= pathname.split('/')[1];
 					
@@ -86,17 +87,34 @@ function authification(url, href, origin, hostname,protocol,pathname)
 				var output = compare(link);	
 				return output;	
 				}
-	else if(origin == "https://ko-fi.com" || origin =="https://www.buymeacoffee.com" || origin=="https://liberapay.com" || origin =="https://opencollective.com")
+		else if(origin == "https://ko-fi.com" || origin =="https://www.buymeacoffee.com" || origin=="https://liberapay.com" || origin =="https://opencollective.com")
 				{
 					
 					link=hostname+'/'+pathname.split('/')[1].toLowerCase();
 					var output = compare(link);
 					return output ;
 				}
-		
+		else if(origin=="https://www.patreon.com")
+				{	
+					var id=pathname.split('/')[1];
+						if(id=="join")
+							{ var link= hostname+'/'+pathname.split('/')[2].toLowerCase();}
+						else { var link = hostname+'/'+pathname.split('/')[1].toLowerCase(); }
+					var output = compare(link);	
+					return output;	
+				
+				}
+			// Filter for crowdfunding platforms
+		else if(origin=="https://milaap.org"|| origin=="https://www.impactguru.com"|| origin=="https://www.ketto.org")
+				{var output = `Though the website is valid, authifyURL can't be used to verify the legalility of these fundraisers, please contact them directly.`;
+				return output;	}
 					
-	else{var output= compare(hostname);
-				return output ;
+		else
+			
+			{
+				var output = compare(hostname);
+				
+				return ;
 			}
 }
 
