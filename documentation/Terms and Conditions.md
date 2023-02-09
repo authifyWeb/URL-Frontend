@@ -2,14 +2,14 @@
 <p>Last updated: December 18, 2022</p>
 
 <p>Welcome to authifyURL</p>
-<p>Please read these terms and conditions carefully before using Our Service hosted at <a href ="https://authifyweb.github.io/authifyURL">authifyURL</a>.</p>
+<p>Please read these terms and conditions carefully before using Our Service hosted at <a href ="https://url.authifyweb.com">authifyURL</a>.</p>
 <p>By accessing this website we assume you accept these terms and conditions. Do not continue to use authifyURL if you do not agree to with all of the terms and conditions stated on this page.</p>
 
 <p>The following terminology applies to these Terms and Conditions, Privacy Statement and Disclaimer Notice and all Agreements: "Client", "You" and "Your" refers to you, the person log on this website and compliant to the Company's terms and conditions. "The Company", "Ourselves", "We", "Our" and "Us", refers to authifyURL. Any use of the above terminology or other words in the singular, plural, capitalization and/or he/she or they, are taken as interchangeable and therefore as referring to same.</p>
 
 <p><strong>Terms and Conditions</strong> (also referred as "Terms") mean these Terms and Conditions that form the entire agreement between You and Us regarding the use of our Services. </p>
 <p><strong>Third-party Social Media Service</strong> means any services or content (including data, information, products or services) provided by a third-party that may be displayed, included or made available by the Service.</p>
-<p><strong>Website</strong> refers to authifyURL, accessible from <a href="https://authifyweb.github.io/authifyURL" rel="external nofollow noopener" target="_blank">https://authifyweb.github.io/authifyURL</a></p>
+<p><strong>Website</strong> refers to authifyURL, accessible from <a href="https://fame.authifyweb.com" rel="external nofollow noopener" target="_blank">https://fame.authifyweb.com</a></p>
 
 <p>Your access to and use of the Service is also conditioned on Your acceptance of and compliance with the Privacy Policy . Our Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your personal information when You use the Application or the Website and tells You about Your privacy rights and how the law protects You. Please read Our Privacy Policy carefully before using Our Service.</p>
 
