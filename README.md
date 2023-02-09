@@ -8,7 +8,7 @@
 * [Website](https://authifyweb.github.io/authifyURL/)
 * [Data Source](https://github.com/authifyWeb/authifyURL-Database)
 * [How we verify](https://github.com/authifyWeb/authifyURL#how-we-verify)
-* [How to Trust](https://github.com/authifyWeb/authifyURL#how-to-trust)
+* [How to Trust](https://github.com/authifyWeb/authifyURL#how-to-trust-the-source)
 * [Disclaimer](https://github.com/authifyWeb/authifyURL#disclaimer)
 * [Copyright](https://github.com/authifyWeb/authifyURL#copyright)
 * [License](https://github.com/authifyWeb/authifyURL#license)
