@@ -63,6 +63,16 @@ function authification(url, href, origin, hostname,protocol,pathname)
 		{ if(pathname=="/") return `<p> This is DuckDuckGo Search Results page. Be wary of the links you click from a results page.</p>`;
 		  else{ link=hostname; var output = compare(link); return output;}
 		}
+	else if(hostname=="www.google.com"||hostname=="www.google.ca"||hostname=="www.google.co.in"||hostname=="www.google.co.uk"||hostname=="europe.google.com"){
+		var hostname="www.google.com"; 				
+			if(pathname=="/search") /*||pathname=="/"||pathname=="/webhp"*/
+			{
+				return `<p> This is Google Search Results page. Be wary of the links you click from a results page.</p>`;
+			}
+			else{link=hostname; var output=compare(link); return output;}
+
+	}
+
 	else if(origin=="https://www.bing.com") 
 		{ if(pathname=="/search" || pathname=="/shop") { return `<p> This is Microsoft Bing Search Results page. Be wary of the links you click from a results page.</p>`;}
 		else{ link=hostname; var output = compare(link); return output;}
