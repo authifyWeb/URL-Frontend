@@ -78,7 +78,14 @@ function authification(url, href, origin, hostname,protocol,pathname)
 		else{ link=hostname; var output = compare(link); return output;}
 		}
 	else if(origin=="https://search.brave.com") 
-		{ return `<p> This is Brave Search Results page. Be wary of the links you click from a results page.</p>`;}		
+		{ return `<p> This is Brave Search Results page. Be wary of the links you click from a results page.</p>`;}
+	else if(hostname=="search.yahoo.com"||hostname=="in.search.yahoo.com"||hostname=="uk.search.yahoo.com"||hostname=="us.search.hostname.com"){
+		
+		if(pathname.split(';')[0]=="/search")
+		{
+			return `<p>This is Yahoo Search Results page. Be wary of the links you click from a results page.</p>`;
+		}
+	}			
 	
 	else if( origin =="https://www.facebook.com" )  
 			{	
