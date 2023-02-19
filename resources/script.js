@@ -42,6 +42,10 @@ function authification(url, href, origin, hostname,protocol,pathname)
 		{ if(pathname=="/") return `<p> This is DuckDuckGo Search Engine Result page. Be wary of the links you click from a results page.</p>`;
 		  else{ link=hostname; var output = compare(link); return output;}
 		}
+	else if(origin=="https://www.bing.com") 
+		{ if(pathname=="/search" || pathname=="/shop") { return `<p> This is Microsoft Bing Search Engine Result page. Be wary of the links you click from a results page.</p>`;}
+		else{ link=hostname; var output = compare(link); return output;}
+		}	
 	
 	else if( origin =="https://www.facebook.com" )  
 			{	
