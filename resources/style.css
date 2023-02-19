@@ -323,12 +323,7 @@ margin-bottom:80px;
   color:white;
 }
 
-#pixel{
-	display:none;
-  position:fixed;
-  bottom:8px;
-  padding-left:10px;
-}
+
 
 
 
@@ -384,9 +379,6 @@ margin-bottom:80px;
   visibility:none;
 }
 	
-#pixel{
-  visibility:hidden;
-}
 
 #donate_box{
 	visibility: hidden;
