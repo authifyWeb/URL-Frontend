@@ -7,7 +7,28 @@ async function fetch_Data()
 			
 }
 fetch_Data();
-function myFunction(){ if (event.key === "Enter"){searchNow();}}
+link_id.addEventListener("keydown", (event) => {
+    if (event.defaultPrevented) {
+      return; // Do nothing if the event was already processed
+    }
+  
+    switch (event.key) {
+     
+      case "Enter":
+        searchNow();
+        link_id.blur();
+        break;
+      case "Esc": // IE/Edge specific value
+      case "Escape":
+        // Do something for "esc" key press.
+        break;
+      default:
+        return; // Quit when this doesn't handle the key event.
+    }
+  
+    // Cancel the default action to avoid it being handled twice
+    event.preventDefault();
+  }, true);
 
 function searchNow()
 {	var input = document.getElementById('link_id').value;
