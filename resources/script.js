@@ -39,13 +39,15 @@ function authification(url, href, origin, hostname,protocol,pathname)
 	else if(protocol != "https:" ) {return `<h3> This website is not secure. Please refrain from submitting personal data and don't download files from such sources</h3>`;}
 	
 	else if(origin=="https://duckduckgo.com")
-		{ if(pathname=="/") return `<p> This is DuckDuckGo Search Engine Result page. Be wary of the links you click from a results page.</p>`;
+		{ if(pathname=="/") return `<p> This is DuckDuckGo Search Results page. Be wary of the links you click from a results page.</p>`;
 		  else{ link=hostname; var output = compare(link); return output;}
 		}
 	else if(origin=="https://www.bing.com") 
-		{ if(pathname=="/search" || pathname=="/shop") { return `<p> This is Microsoft Bing Search Engine Result page. Be wary of the links you click from a results page.</p>`;}
+		{ if(pathname=="/search" || pathname=="/shop") { return `<p> This is Microsoft Bing Search Results page. Be wary of the links you click from a results page.</p>`;}
 		else{ link=hostname; var output = compare(link); return output;}
-		}	
+		}
+	else if(origin=="https://search.brave.com") 
+		{ return `<p> This is Brave Search Results page. Be wary of the links you click from a results page.</p>`;}		
 	
 	else if( origin =="https://www.facebook.com" )  
 			{	
