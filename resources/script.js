@@ -8,7 +8,7 @@ typeahead({
     input: el,
     source: {
     remote: {
-        url: "http://apiurl-theta.vercel.app/api/products?alias=%QUERY", 
+        url: "https://apiurl-theta.vercel.app/api/products?alias=%QUERY", 
 		wildcard: "%QUERY",
 
 
