@@ -1,32 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title> authifyURL &mdash; URL verification tool &mdash; to verify business websites</title>
+		<title> authifyURL &mdash; URL verification tool &mdash; to verify business websites.</title>
 		<meta name="description" content="No more second doubts on unsolicited URL's. We'll double check and verify it for you. ">
 		
-		<meta name="keywords" content="verify URL, verify website, is the site legit, website secure, authifyChat, authifyURL, authifyNow, authifyWeb">
-		
+		<meta name="keywords" content="verify URL, verify website, is the site legit, website secure, authifyChat, authifyURL, authifyNow, authifyWeb,authifyFame">
+        <meta charset="utf-8"/>
 		<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
 		<link rel="manifest" href="images/site.webmanifest">
 		
-		
 		<link rel="stylesheet" href="resources/style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeahead-standalone/dist/basic.css" > 
 		
 		
 	</head>
-	
-	
-	<body>
-		
-		<nav>			
+    <body>
+        <nav>		
 			<div class="logo">
-				<a href="#"><span style="color:#EDE3E3;"> authify</span><span style="color:#a2fb15;">URL</span></a>
+			<a href="#"><span style="color:#EDE3E3;"> authify</span><span style="color:#a2fb15;">URL</span><sup style="color:white; font-size:12px; background-color:#1f282d">βeta</sup></a><span class="brand_arch"> by authifyWeb</span>
 			</div> 
 			
-			
+			<div class="pages">
+				<a href="#">About</a>
+			</div>
 			<div class="hamburger-menu">
 				<input id="menu__toggle" type="checkbox" />
 				<label class="menu__btn" for="menu__toggle">
@@ -39,7 +38,9 @@
 						<li><a class="menu__item" href="https://authifyweb.com">Home</a></li>
 						<li><a class="menu__item" href="https://chat.authifyweb.com"><span style="color:#EDE3E3;"> authify</span><span style="color:#a2fb15;">Chat</span></a></li>
 						<li><a class="menu__item" href="https://url.authifyweb.com"><span style="color:#EDE3E3;"> authify</span><span style="color:#a2fb15;">URL</span></a></li>
-						<li><a class="menu__item" href="https://now.authifyweb.com"><span style="color:#EDE3E3;"> authify</span><span style="color:#a2fb15;">Now</span></a></li>
+						<!--<li><a class="menu__item" href="https://fame.authifyweb.com"><span style="color:#EDE3E3;"> authify</span><span style="color:#a2fb15;">Fame</span></a></li> -->
+                        <li><a class="menu__item" href="https://now.authifyweb.com"><span style="color:#EDE3E3;"> authify</span><span style="color:#a2fb15;">Now</span></a></li>
+                        
                         <li><a class="menu__item" target="_blank" style="background-color:#FFC800; color:black; font-style:italic; font-weight:bold" href="https://github.com/webVerts#donate">Donate Now</a></li>
 						</div>
 						
@@ -48,66 +49,56 @@
 						<div id="menu2">
 						<li><a class="foo__item" target ="_blank" href="https://authifyweb.com/resources/privacy">Privacy</a></li>		
 						<li><a class="foo__item" target ="_blank" href="https://github.com/authifyWeb/authifyURL#disclaimer">Disclaimer</a></li>
-						<li><a class="foo__item" target ="_blank" href="https://github.com/authifyWeb/authifyURL/blob/main/documentation/Terms%20and%20Conditions.md">Terms</a></li>
+						<li><a class="foo__item" target ="_blank" href="https://github.com/authifyWeb/authifyURL/blob/main/documentation/terms.md">Terms</a></li>
 						
 						<li><a class="foo__item" target ="_blank" href="https://github.com/authifyWeb/authifyURL">Github</a></li>
 					</ul>
 				</ul>
 			</div>
+        </nav>
+
+			<script src="https://cdn.jsdelivr.net/npm/typeahead-standalone"></script>
+            <div class="main_container" >
 			
-			
-			
-			
-			
-		</nav>
-		
-		
-		<div class="main_container" >
-			
-			<h3>Check the URL authenticity ✅</h3>
-			<br>
-			<div class="input-container"  >
-			<input type='text' id='link_id' autofocus autocomplete="off" placeholder="enter URL"  > <input type="submit" id="btn" value="Search 🔍" onClick="javascript:searchNow()" >
-			
-			<p class = "info"> Please use a valid URL format (including https://). Or else no data will be displayed</p>
+                <h3 style=" color:#a2fb15;">Check the URL authenticity ✅</h3>
+                
+                <div class="input-container" style="background-color:#1f282d;" >
+                    <input type="text" autofocus class="searchterm" autocomplete="off" placeholder="Search for the Organisation Name.(Eg: State Bank of India)"  > 
+                </div>
+                <p id="compatible"> ** Currently supports Indian Banks & few E-Commerce Stores only</p>
+                <div class="output">
+                    <p id="naam"></p>  
+                </div>
+                
+                <span id="input_form"></span> <span id="input_btn"></span>
+                <p id="data"></p>
+				<p id="official"></p>
+			    <p id="disclaimer" style="background: color #1f281f;"></p>
+                
 				
-			</div>
+                <p id="no_promote">This project is still in Beta.<br>This is a simple URL verification tool. We do not directly or indirectly endorse or promote any particular brand or organisation. </p>
+            </div>
 			
-			<div class="extension">
 			
-			 <span> Get the <a href="https://now.authifyweb.com" target="_blank"> Official Browser Extensions</a> &mdash; Chrome, Firefox and Edge </span>
 			
-			</div>
-			<div class= "output">
-	 
-	 
-			<p id="data"></p>
-	
-			<p id="disclaimer"></p>
-			<p id="no_promote" style="padding:40px; font-size:12px; color:white;">This is a simple website verification tool. We do not directly or indirectly promote or endorse any of the brands/organisation. </p>
-	
-	</div>
 			
-		</div>
-		
-		
-		
-		<script  src="resources/script.js"></script>
-		
-	
-	
-	<div class="footer"> 
-		
-		<div id="FooterLinks">
-			<span><a href="https://authifyweb.com/resources/privacy" target="_blank"> Privacy </a> </span> &nbsp; <span><a href="https://github.com/authifyWeb/authifyURL#disclaimer" target="_blank"> Disclaimer</a></span> &nbsp; <span><a href="https://github.com/authifyWeb/authifyURL" target="_blank"> Github</a></span>
-			<p>  &copy; <script>document.write( new Date().getFullYear() );</script><a href="https://authifyweb.com" > authifyWeb</a> </p>
 			
-		</div>
 		
-		
-		
-	</div>
-		<p id="donate_box"><span id ="donate"> <a href="https://github.com/webVerts#donate" target="_blank"><i>Donate Now</i></a></span> </p>
-</body>	
-	
-</html>			
+
+        <div class="footer"> 
+           
+            <div id="FooterLinks">
+                <span><a href="https://authifyweb.com/resources/privacy" target="_blank"> Privacy </a> </span> &nbsp; <span><a href="https://github.com/authifyWeb/authifyURL#disclaimer" target="_blank"> Disclaimer</a></span> &nbsp; <span><a href="https://github.com/authifyWeb/authifyURL" target="_blank"> Github</a></span>
+                <p>  &copy; <script>document.write( new Date().getFullYear() );</script><a href="https://authifyweb.com" > authifyWeb</a> </p>
+                
+            </div>
+            
+            
+            
+        </div>
+            <p id="donate_box"><span id ="donate"> <a href="https://github.com/webVerts#donate" target="_blank"><i>Donate Now</i></a></span> </p>
+
+        <script  src="resources/script.js"></script> 
+    </body>
+
+</html>    

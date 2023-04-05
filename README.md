@@ -5,20 +5,24 @@
 #### authifyURL get data from [authifyURL-Database](https://github.com/authifyWeb/authifyURL-Database)
 
 ## <ins>Quick Links</ins>
-* [Website](https://authifyweb.github.io/authifyURL/)
-* [Data Source](https://github.com/authifyWeb/authifyURL-Database)
+* [Website](https://url.authifyweb.com/)
+* [URLs Source](https://github.com/authifyWeb/authifyURL-Database)
 * [How we verify](https://github.com/authifyWeb/authifyURL#how-we-verify)
 * [How to Trust](https://github.com/authifyWeb/authifyURL#how-to-trust-the-source)
 * [Disclaimer](https://github.com/authifyWeb/authifyURL#disclaimer)
 * [Copyright](https://github.com/authifyWeb/authifyURL#copyright)
 * [License](https://github.com/authifyWeb/authifyURL#license)
 
+### Data Sources: 
+* Logos: [SimpleIcons](https://simpleicons.org) & [authifyWeb Logos](https://github.com/authifyWeb/logos)
+* URLs : [authifyURL Database](https://github.com/authifyWeb/authifyURL-Database)
+
 ### How we verify
-The URL you submit is searched through the [authifyURL Database](https://github.com/authifyWeb/authifyURL-Database) and if the entire domain matches with any in the list, we'll show the link is verified. When we show we weren't able to able to verify, it only means, that particular link is not in the database, but better take a more assisted approach rather than submitting data or process payments. 
-You can request the company to include that link in our database by sending an email to 'authifylabs@proton.me' from their official email address. You can also raise a request [here](https://github.com/authifyWeb/authifyURL-Database/issues) with the company name and url. We'll contact the company and make sure it is a valid url and include it in our database.
+The URL you submit is searched through the [Database](https://github.com/authifyWeb/authifyURL-Database) for the company you selected, and if the entire domain matches with any in the list, we'll show the link is verified. When we show we weren't able to able to verify, it only means, that particular link is not in the database. It'd be better if you take a more assisted approach rather than submitting data or process payments with the site directly. 
+You can request the company to include that link in our database by sending an email to 'authifyweb@gmail.com' from their official email address. You can also raise a request [here](https://github.com/authifyWeb/authifyURL-Database/issues) with the company name and url. We'll contact the company and make sure it is a valid url and include it in our database.
 
 ### How To Trust the source
-The entire data set in made available to the public, where anybody can cross verify anytime. We are entirely transparent. We'll consider adding links, only if the links are sent from their official email address. For example a link belonging to Microsoft is added only if they are sent from an official @microsoft.com email address. So anyone who sent from @xyz.com cannot add link related with Microsoft. A new company or organisatiopn will be added to a temporary waiting list, and will only be added to the main databse once we were able to verify that company. 
+The entire data set in made available to the public, where anybody can cross verify anytime. We are entirely transparent. We'll consider adding links, only if the links are sent from their official email address. For example a link belonging to Microsoft is added only if they are sent from an official @microsoft.com email address. So anyone who sent from @xyz.com cannot add link related with Microsoft. A new company or organisatiopn will be added to a temporary waiting list, and will only be added to the main database once we were able to verify that company. 
 
 ### Disclaimer
 While we try our best to serve you accurate contact details, we don't guarantee you anything. In no event shall the Author, or any other contributors be liable for any claim, damages or any liability.
