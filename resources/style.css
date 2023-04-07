@@ -527,8 +527,11 @@ margin-bottom:80px;
 }
 @media (min-width: 320px) and (max-width: 900px) {
   #no_promote{
-  
     margin-top:0px;
+  }
+  
+  #donate_box{
+    display:none;
   }
 }
 
