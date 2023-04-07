@@ -242,8 +242,8 @@ function authification(url, href, origin, hostname,protocol,pathname)
 else if(hostname == "addons.mozilla.org")
         /*Once the above condition is true, the function replaces the URL language to the the default en-US. This is used since mozilla supports multiple languages and the url structure is directly based on user language.  */
           { lang=pathname.split('/')[1];
-            new_lang=lang.replace(pathname.split('/')[1],"en-US"); 
-          link= hostname + new_lang +pathname.split('/')[2]+'/'+pathname.split('/')[3]+'/'+pathname.split('/')[4];
+            default_lang=lang.replace(lang,"en-US"); 
+          link= hostname +'/'+ default_lang+ '/' +pathname.split('/')[2]+'/'+pathname.split('/')[3]+'/'+pathname.split('/')[4];
           var output = compare(link);
           return output;
       
@@ -262,6 +262,15 @@ else if(hostname == "microsoftedge.microsoft.com")
           var output= compare(link);
           return output;
         }
+
+else if(hostname == "addons.opera.com")
+        {
+          lang=pathname.split('/')[1];
+          default_lang=lang.replace(lang,"en");
+          link= hostname +'/'+ default_lang+'/' +pathname.split('/')[2]+'/'+pathname.split('/')[3]+'/'+pathname.split('/')[4];
+          var output = compare(link);
+          return output;
+        }        
    
 					
 	else{var output= compare(hostname);
@@ -280,7 +289,7 @@ for(i=0;i<cl.length;i++){
 
     if(json.urls[i]===link)
       {//console.log("Yay")
-      var Data=`<div style="color:white;font-size:12px; background-color:#1f282d;">  ` + new_link + `</br> <p> <span style="color:#A2FB15; font-size: 14px; ">Verified by authifyURL.</span> &nbsp;<span class="tooltip" > ✅ <span class="tooltiptext">This website is valid and legal. </span> </p></br> <p><span style="font-size:14px; color:white;">The page you submitted belongs to: </span><br> <span class="op_logo"><img src=${json.l}></span><span style="font-size:18px; color: #DFb014"> ` +json.name+ `</span></p></br></div>` ;
+      var Data=`<div style="color:white;font-size:12px; background-color:#1f282d;">  ` + new_link + `</br> <p> <span style="color:#A2FB15; font-size: 14px; ">Verified by authifyURL.</span> &nbsp;<span class="tooltip" > ✅ <span class="tooltiptext">This website is valid and legal. </span> </p></br> <p><span style="font-size:14px; color:white;">The page you submitted belongs to: </span><br> <span class="op_logo"><img src=${json.logo}></span><span style="font-size:18px; color: #DFb014"> ` +json.name+ `</span></p></br></div>` ;
                 
                 var Disclaimer=`Read <a href ="https://github.com/authifyWeb/authifyURL#how-we-verify" style="color:white"; target ="_blank"> how we verify</a> what is valid and what is not. </br>`;
                 data.innerHTML= Data;
