@@ -247,16 +247,22 @@ else if(hostname == "addons.mozilla.org")
           var output = compare(link);
           return output;
       
-          }      
-		
+          }   
+             
+else if(hostname+'/'+pathname.split('/')[1] == "chrome.google.com/webstore")
+          {
+            link= hostname +'/'+pathname.split('/')[1] +'/'+ pathname.split('/')[2] +'/'+ pathname.split('/')[3] +'/'+ pathname.split('/')[4]
+            var output= compare(link);
+            return output;
+          }		
 
-   else if(hostname == "microsoftedge.microsoft.com")
+else if(hostname == "microsoftedge.microsoft.com")
         {
           link=hostname+'/'+pathname;
           var output= compare(link);
           return output;
         }
-
+   
 					
 	else{var output= compare(hostname);
 				return output ;
@@ -284,7 +290,7 @@ for(i=0;i<cl.length;i++){
       }
 } 
  
-    console.log("Nop")
+   // console.log("Nop")
     var Data = `<div style=" color:white; background-color:#1f282d; font-size:12px;" >` + new_link + `<p><br><span style="color:red;  font-size: 18px;"> The page you submitted doesn't belong to the organisation selected above</span>&nbsp; <span class="tooltip"> ❌ <span class="tooltiptext">Possibly scam. Report the page directly to the owner. </span> </p> </div>` ;
 	/*if(json.off != ""){
 		console.log("Not Empty");
