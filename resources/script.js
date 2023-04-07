@@ -264,6 +264,7 @@ else if(hostname == "microsoftedge.microsoft.com")
         }
 
 else if(hostname == "addons.opera.com")
+/*Once the above condition is true, the function replaces the URL language to the the default en. This is used since mozilla supports multiple languages and the url structure is directly based on user language.  */
         {
           lang=pathname.split('/')[1];
           default_lang=lang.replace(lang,"en");
