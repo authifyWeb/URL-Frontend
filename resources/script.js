@@ -155,6 +155,10 @@ function searchNow()
 function authification(url, href, origin, hostname,protocol,pathname)
 {
 	if(protocol != "https:" ) {return `<p style="padding:40px; color:lightred;"> This website is not secure. Please refrain from submitting personal data and don't download files from such sources</p>`;}
+  else if(origin=="https://duckduckgo.com")
+  { if(pathname=="/") return `<p> This is DuckDuckGo Search Engine Result page. Be wary of the links you click from a results page.</p>`;
+    else{ link=hostname; var output = compare(link); return output;}
+  } 
 	else if( origin =="https://www.facebook.com" )  
 			{	
 				link= hostname+'/'+pathname.split('/')[1];
