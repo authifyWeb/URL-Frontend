@@ -238,6 +238,7 @@ function authification(url, href, origin, hostname,protocol,pathname)
 					var output = compare(link);
 					return output ;
 				}
+
 else if(hostname == "addons.mozilla.org")
         /*Once the above condition is true, the function replaces the URL language to the the default en-US. This is used since mozilla supports multiple languages and the url structure is directly based on user language.  */
           { lang=pathname.split('/')[1];
@@ -248,6 +249,14 @@ else if(hostname == "addons.mozilla.org")
       
           }      
 		
+
+   else if(hostname == "microsoftedge.microsoft.com")
+        {
+          link=hostname+'/'+pathname;
+          var output= compare(link);
+          return output;
+        }
+
 					
 	else{var output= compare(hostname);
 				return output ;
