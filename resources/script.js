@@ -238,7 +238,12 @@ function authification(url, href, origin, hostname,protocol,pathname)
 					var output = compare(link);
 					return output ;
 				}
-		
+   else if(hostname == "microsoftedge.microsoft.com")
+        {
+          link=hostname+'/'+pathname;
+          var output= compare(link);
+          return output;
+        }
 					
 	else{var output= compare(hostname);
 				return output ;
