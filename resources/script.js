@@ -231,6 +231,18 @@ function authification(url, href, origin, hostname,protocol,pathname)
 				var output = compare(link);	
 				return output;	
 				}
+  /* Mastadon Instances
+  mastadon.social --- Mastadon gGmbH
+  social.vivaldi.net --- Vivaldi
+  */
+        else if(hostname == "mastodon.social" || hostname=="social.vivaldi.net")
+  
+      {
+        link = hostname + pathname.toLowerCase(); 
+				var output = compare(link); 
+			  return output;
+
+      }      
 	else if(origin == "https://ko-fi.com" || origin =="https://www.buymeacoffee.com" || origin=="https://liberapay.com" || origin =="https://opencollective.com")
 				{
 					
