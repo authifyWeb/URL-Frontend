@@ -231,11 +231,12 @@ function authification(url, href, origin, hostname,protocol,pathname)
 				var output = compare(link);	
 				return output;	
 				}
-  /* Mastadon Instances
-  mastadon.social --- Mastadon gGmbH
+  /* Mastodon Instances
+  mastodon.social --- Mastodon gGmbH
+  mastodon.online  --- Mastodon gGmbH
   social.vivaldi.net --- Vivaldi
   */
-        else if(hostname == "mastodon.social" || hostname=="social.vivaldi.net")
+        else if(hostname == "mastodon.social" || hostname=="social.vivaldi.net" || hostname=="mastodon.online")
   
       {
         link = hostname + pathname.toLowerCase(); 
