@@ -227,6 +227,23 @@ function authification(url, href, origin, hostname,protocol,pathname,search)
          var output = compare(link);
 				 return output; 
         }    
+  else if(hostname=="apps.apple.com")
+        {
+            lang=pathname.split('/')[1];
+            default_lang=lang.replace(lang,"us");
+            if(pathname.split('/')[3].startsWith('id')){ 
+              link=hostname+'/'+ default_lang+ '/' +pathname.split('/')[2]+'/'+pathname.split('/')[3];
+              
+            }
+           else if(pathname.split('/')[4].startsWith('id')){
+            link=hostname+'/'+ default_lang+ '/' +pathname.split('/')[2]+'/'+pathname.split('/')[4];
+            
+           }
+           var output = compare(link);
+           return output; 
+
+
+        }      
 	else if(origin == "https://github.com")
 				{
 				var id= pathname.split('/')[1];
