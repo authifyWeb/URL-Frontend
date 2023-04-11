@@ -245,7 +245,7 @@ function authification(url, href, origin, hostname,protocol,pathname,search)
   mastodon.online  --- Mastodon gGmbH
   social.vivaldi.net --- Vivaldi
   */
-        else if(hostname == "mastodon.social" || hostname=="social.vivaldi.net" || hostname=="mastodon.online")
+  else if(hostname == "mastodon.social" || hostname=="social.vivaldi.net" || hostname=="mastodon.online")
   
       {
         link = hostname + pathname.toLowerCase(); 
@@ -253,15 +253,25 @@ function authification(url, href, origin, hostname,protocol,pathname,search)
 			  return output;
 
       }      
-	else if(origin == "https://ko-fi.com" || origin =="https://www.buymeacoffee.com" || origin=="https://liberapay.com" || origin =="https://opencollective.com")
+  else if(origin == "https://ko-fi.com" || origin =="https://www.buymeacoffee.com" || origin=="https://liberapay.com" || origin =="https://opencollective.com")
 				{
 					
 					link=hostname+'/'+pathname.split('/')[1].toLowerCase();
 					var output = compare(link);
 					return output ;
 				}
+  else if(origin=="https://www.patreon.com")
+				{	
+					var id=pathname.split('/')[1];
+						if(id=="join")
+							{ var link= hostname+'/'+pathname.split('/')[2].toLowerCase();}
+						else { var link = hostname+'/'+pathname.split('/')[1].toLowerCase(); }
+					var output = compare(link);	
+					return output;	
+				
+				}      
 
-else if(hostname == "addons.mozilla.org")
+  else if(hostname == "addons.mozilla.org")
         /*Once the above condition is true, the function replaces the URL language to the the default en-US. This is used since mozilla supports multiple languages and the url structure is directly based on user language.  */
           { lang=pathname.split('/')[1];
             default_lang=lang.replace(lang,"en-US"); 
@@ -271,22 +281,22 @@ else if(hostname == "addons.mozilla.org")
       
           }   
              
-else if(hostname+'/'+pathname.split('/')[1] == "chrome.google.com/webstore")
+  else if(hostname+'/'+pathname.split('/')[1] == "chrome.google.com/webstore")
           {
             link= hostname +'/'+pathname.split('/')[1] +'/'+ pathname.split('/')[2] +'/'+ pathname.split('/')[3] +'/'+ pathname.split('/')[4]
             var output= compare(link);
             return output;
           }		
 
-else if(hostname == "microsoftedge.microsoft.com")
+  else if(hostname == "microsoftedge.microsoft.com")
         {
           link=hostname+'/'+pathname;
           var output= compare(link);
           return output;
         }
 
-else if(hostname == "addons.opera.com")
-/*Once the above condition is true, the function replaces the URL language to the the default en. This is used since mozilla supports multiple languages and the url structure is directly based on user language.  */
+  else if(hostname == "addons.opera.com")
+  /*Once the above condition is true, the function replaces the URL language to the the default en. This is used since mozilla supports multiple languages and the url structure is directly based on user language.  */
         {
           lang=pathname.split('/')[1];
           default_lang=lang.replace(lang,"en");
