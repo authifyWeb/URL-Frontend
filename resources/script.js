@@ -1,3 +1,5 @@
+
+
 const el = document.querySelector(".searchterm");
 var authData;
 
@@ -141,8 +143,9 @@ function searchNow()
     var origin = url.origin;
     var href= url.href;
     var pathname= url.pathname;
+    var search = url.search;
 
-    var output= authification(url, href, origin, hostname,protocol,pathname); 
+    var output= authification(url, href, origin, hostname,protocol,pathname,search); 
 		
 			data.innerHTML = (output || "...Verifying");
 			
@@ -152,7 +155,7 @@ function searchNow()
 
 }
 
-function authification(url, href, origin, hostname,protocol,pathname)
+function authification(url, href, origin, hostname,protocol,pathname,search)
 {
 	if(protocol != "https:" ) {return `<p style="padding:40px; color:lightred;"> This website is not secure. Please refrain from submitting personal data and don't download files from such sources</p>`;}
 
@@ -218,6 +221,12 @@ function authification(url, href, origin, hostname,protocol,pathname)
 				var output = compare(link);
 				return output;
 			}
+  else if(hostname=="play.google.com")
+        {
+         link=hostname+pathname+search;
+         var output = compare(link);
+				 return output; 
+        }    
 	else if(origin == "https://github.com")
 				{
 				var id= pathname.split('/')[1];
