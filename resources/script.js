@@ -44,7 +44,7 @@ minLength: 3,
 preventSubmit: false,
 limit:25,
 hint: false,
-autoSelect: false,
+autoSelect: true,
 templates: {
     suggestion: (authifyURL) => (
 		
