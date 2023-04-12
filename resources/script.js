@@ -41,10 +41,10 @@ debounceRemote: 300,
 highlight: true,
 className: 'typeahead-sgst',
 minLength: 3,
-preventSubmit: true,
+preventSubmit: false,
 limit:25,
 hint: false,
-autoSelect: true,
+autoSelect: false,
 templates: {
     suggestion: (authifyURL) => (
 		

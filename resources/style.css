@@ -603,7 +603,7 @@ margin-bottom:80px;
   text-align:right;
 	
 }
-  @media(min-width: 320px) and (max-width: 999px) {
+  @media(min-width: 100px) and (max-width: 999px) {
 	
 .bgimg{display:none;}
 
