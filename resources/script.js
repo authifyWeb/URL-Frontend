@@ -64,14 +64,10 @@ loader: () => '<div style="text-align: center"><img src="images/loader.svg" /></
 },
 
 onSubmit: (e, selectedSuggestion) => {
-
-
-
  
 if (selectedSuggestion) {
 
- document.getElementById('output'),innerHTML ="";
- document.getElementById("compatible").innerHTML ="";
+ 
 const myJSON = JSON.stringify(selectedSuggestion);
 const outp=JSON.parse(myJSON);
 const {name, urls,type,id,official} = outp;
@@ -79,13 +75,8 @@ console.log(myJSON)
 //console.log(outp)
 authData=outp;
 
-
-
-
-
-
-
-
+//document.getElementById('output').innerHTML ="";
+document.getElementById("compatible").innerHTML ="";
 
 document.getElementById('naam').innerHTML = `<p style="font-size:1em;"> Submit URL below to verify whether the site belongs to <span style="color:#DFB014 "> ${name} </span></> </p>`;
 
