@@ -597,3 +597,16 @@ margin-bottom:80px;
 	width:30px;
 	
 }
+/* This section is simply added and not for display. This will create a preview image in whenever https://url.authifyweb.com is mentioned.*/
+.bgimg{
+	display:none;
+  text-align:right;
+	
+}
+  @media(min-width: 320px) and (max-width: 999px) {
+	
+.bgimg{display:none;}
+
+  }
+
+  
