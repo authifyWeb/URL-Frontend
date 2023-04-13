@@ -12,13 +12,9 @@ typeahead({
     remote: {
         url: "https://apiurl-theta.vercel.app/api/products?alias=%QUERY", 
 		wildcard: "%QUERY",
-
-
-      requestOptions: {}
-        },
+    requestOptions: {}
+  },
         
-		
-		
 	identifier: 'alias',
 	
     transform: (data) => { 
@@ -48,7 +44,7 @@ autoSelect: false,
 templates: {
     suggestion: (authifyURL) => (
 		
-    `<div  class="single-item">
+     `<div  class="single-item">
       <img src=${authifyURL.logo} style="background-color:${authifyURL.bg}; font-size:12px;" loading="lazy">
       <div class="details">
       <div class="company_name"><span>${authifyURL.name}</span><span> <img class="badge" src="images/goldbadge.svg"></span></div>
@@ -61,6 +57,9 @@ notFound: (resultSet) => {   return `Nothing found for <span style="color:yellow
 
 footer:() => 'an <a href="https://authifyweb.com" target="_blank" style="color:goldenrod; font-size:14px;"> authifyWeb</a> project',
 loader: () => '<div style="text-align: center"><img src="images/loader.svg" /></div>',
+/*empty: (resultSet) => {
+  return `<div style="font-size:12px;">Enter organisation name and click enter</div>`;
+    },*/
 },
 
 onSubmit: (e, selectedSuggestion) => {
