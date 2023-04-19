@@ -297,7 +297,7 @@ margin-bottom:80px;
     margin-bottom:5px;
     border-radius: 8px;
     padding: 15px 15px;
-    width: 70%;
+    
     
     text-align:left;
     color: rgb(234, 250, 9);
@@ -306,8 +306,8 @@ margin-bottom:80px;
     font-size:12px;
     z-index:2;
 
-    margin-left:15%;
-    margin-right:15%;
+    margin-left:15vw;
+    margin-right:15vw;
     
 
     
@@ -320,9 +320,12 @@ margin-bottom:80px;
   } 
   @media (min-width: 320px) and (max-width: 999px)  {
    .tt-input {
-	   width:100%;
+    margin-left:5vw;
+    margin-right:5vw;
 	   }
 	   
+     .typeahead-standalone.typeahead-sgst .tt-list {margin-left:5vw;
+      margin-right:5vw;}
   }
   
   /* override style for list of suggestions */
@@ -335,8 +338,8 @@ margin-bottom:80px;
     /* adds scrollbar when necessary */
     max-height: 400px;
     
-    margin-left:15%;
-    margin-right:15%;
+    margin-left:15vw;
+    margin-right:15vw;
    
   }
   
