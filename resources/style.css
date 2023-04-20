@@ -291,8 +291,8 @@ margin-bottom:80px;
 }
 }
   
-  .tt-input {
-    margin:5px 15px 5px 15px;
+  .searchterm {
+    margin:5px 8px 5px 8px;
     padding: 8px;
     min-width: 300px;
     text-align:left;
@@ -315,7 +315,7 @@ margin-bottom:80px;
     /* adds scrollbar when necessary */
     max-height: 400px;
    overflow:auto;
-   margin:5px 15px 5px 15px;
+   margin:5px 8px 5px 8px;
 
     
    
@@ -465,9 +465,7 @@ margin-bottom:80px;
     
   }
   
-  #searchterm{
-    color:#fff;
-  }
+  
   #naam{
     color:white;
     
@@ -519,7 +517,7 @@ margin-bottom:80px;
 #no_promote{
   letter-spacing: 1px;
   font-weight:400;
-  padding-top:70px;
+  padding-top:400px;
   font-size:12px; 
   color:white;
   background-color:#1f282d;
@@ -528,6 +526,8 @@ margin-bottom:80px;
 @media (min-width: 320px) and (max-width: 900px) {
   #no_promote{
     margin-top:0px;
+    padding-top:350px;
+    font-size:10px; 
   }
   
   #donate_box{

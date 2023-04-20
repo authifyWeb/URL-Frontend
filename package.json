@@ -1,0 +1,20 @@
+{
+  "name": "authifyurl",
+  "version": "1.0.0",
+  "description": "URL verification tool - to verify business websites",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "authifyWeb",
+    "authifyURL",
+    "authifyChat",
+    "authifyFame"
+  ],
+  "author": "webVerts",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "typeahead-standalone": "^4.19.1"
+  }
+}
