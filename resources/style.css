@@ -221,7 +221,7 @@ margin-bottom:80px;
 	left: 0;
   z-index:1;
 	right: 0;
-	bottom:0;
+	bottom:1vh;
 	
 }	
 
@@ -273,8 +273,8 @@ margin-bottom:80px;
 .main_container{
   text-align:center;
    background-color: #1f282d;
-    margin-top:10vh;
-    margin-bottom:5px;
+    margin-top:8vh;
+   
     color:#A2FB15;
     padding-left:10px;
     padding-right:10px;
@@ -292,54 +292,32 @@ margin-bottom:80px;
 }
   
   .tt-input {
-    
-    margin-top: 5px;
-    margin-bottom:5px;
-    border-radius: 8px;
-    padding: 15px 15px;
-    
-    
+    margin:5px 15px 5px 15px;
+    padding: 8px;
+    min-width: 300px;
     text-align:left;
     color: rgb(234, 250, 9);
     background-color: #333333;
-    
     font-size:12px;
     z-index:2;
-
-    margin-left:15vw;
-    margin-right:15vw;
     
-
-    
-    
-    
-    
-    
-    
-     
   } 
-  @media (min-width: 320px) and (max-width: 999px)  {
-   .tt-input {
-    margin-left:5vw;
-    margin-right:5vw;
-	   }
-	   
-     .typeahead-standalone.typeahead-sgst .tt-list {margin-left:5vw;
-      margin-right:5vw;}
-  }
-  
+ 
+ 
+ 
   /* override style for list of suggestions */
   .typeahead-standalone.typeahead-sgst .tt-list {
     font-size:8px;
     background: #1f282d;
-    color: #fff;
-    border: 1px dotted #6d6b6b;
-    border-radius: 10px;
+    color: goldenrod;
+    border: 1px solid #6d6b6b;
+    border-radius: 4px;
     /* adds scrollbar when necessary */
     max-height: 400px;
+   overflow:auto;
+   margin:5px 15px 5px 15px;
+
     
-    margin-left:15vw;
-    margin-right:15vw;
    
   }
   
@@ -349,7 +327,7 @@ margin-bottom:80px;
     margin-bottom:5px;
     border-radius: 8px;
     padding: 15px 15px;
-    width: 100%;
+    
    /* text-align:left; */
     
     
@@ -358,8 +336,7 @@ margin-bottom:80px;
     color:white;
     background-color: #1f282d;
     opacity:0.2;
-    /* display:none; Remove to hide hint */    
-  
+     display:none; 
   }
   
   /* override style for all templates */
