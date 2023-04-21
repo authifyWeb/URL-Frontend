@@ -83,6 +83,7 @@ var form=`<input type='url' id='link_id'  autocomplete="off" placeholder="Paste 
 var btn=`<input type="submit" id="search_btn" value="Search 🔍" onClick="searchNow()" > <p style="color:white; font-size:12px; padding-top:2px;">Please use a valid URL format (with https://). Or else no data will be displayed.</p><div class="refresh_btn_box" style="margin-top:5px; margin-bottom:5px;"><button type="button"; onClick="window.location.reload()">Search Another Link </button></div> `;
 input_form.innerHTML=form;
 input_btn.innerHTML=btn;
+no_promote.innerHTML="";
 
 
 
