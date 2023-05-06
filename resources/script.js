@@ -219,19 +219,16 @@ function authification(url, href, origin, hostname,protocol,pathname,search)
 				 return output; 
         }    
   else if(hostname=="apps.apple.com")
-        {
-            lang=pathname.split('/')[1];
-            default_lang=lang.replace(lang,"us");
-            if(pathname.split('/')[3].startsWith('id')){ 
-              link=hostname+'/'+ default_lang+ '/' +pathname.split('/')[2]+'/'+pathname.split('/')[3];
-              
+            { function extractId(appleStoreLink) {
+              const regex = /\/id(\d+)/;
+              const match = appleStoreLink.match(regex);
+              return match ? match[1] : null;
             }
-           else if(pathname.split('/')[4].startsWith('id')){
-            link=hostname+'/'+ default_lang+ '/' +pathname.split('/')[2]+'/'+pathname.split('/')[4];
-            
-           }
-           var output = compare(link);
-           return output; 
+        const Id = 'id'+ extractId(pathname);
+          if(pathname.includes('developer')){link=hostname+'/developer/'+Id;}
+          else if(pathname.includes('app')){link=hostname+'/app/'+Id;}
+          var output= compare(link);
+          return output;
 
 
         }      
