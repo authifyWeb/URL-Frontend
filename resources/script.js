@@ -249,8 +249,9 @@ function authification(url, href, origin, hostname,protocol,pathname,search)
   mastodon.social --- Mastodon gGmbH
   mastodon.online  --- Mastodon gGmbH
   social.vivaldi.net --- Vivaldi
+  mozilla.social --- Mozilla 
   */
-  else if(hostname == "mastodon.social" || hostname=="social.vivaldi.net" || hostname=="mastodon.online")
+  else if(hostname == "mastodon.social" || hostname=="social.vivaldi.net" || hostname=="mastodon.online" || hostname=="mozilla.social")
   
       {
         link = hostname + pathname.toLowerCase(); 
