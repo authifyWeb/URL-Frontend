@@ -1,4 +1,4 @@
-
+import { filtering } from './filters.js';
 
 const el = document.querySelector(".searchterm");
 var authData;
@@ -136,7 +136,7 @@ function searchNow()
     var pathname= url.pathname;
     var search = url.search;
 
-    var output= authification(url, href, origin, hostname,protocol,pathname,search); 
+    var output= filtering(url, href, origin, hostname,protocol,pathname,search); 
 		
 			data.innerHTML = (output || "...Verifying");
 			
@@ -146,212 +146,43 @@ function searchNow()
 
 }
 
-function authification(url, href, origin, hostname,protocol,pathname,search)
-{
-	if(protocol != "https:" ) {return `<p style="padding:40px; color:lightred;"> This website is not secure. Please refrain from submitting personal data and don't download files from such sources</p>`;}
-
-  else if(origin=="https://duckduckgo.com")
-  { if(pathname=="/") return `<p> This is DuckDuckGo Search Results page. Be wary of the links you click from a results page.</p>`;
-    else{ link=hostname; var output = compare(link); return output;}
-  } 
-  else if(origin=="https://www.bing.com") 
-		{ if(pathname=="/search" || pathname=="/shop") { return `<p> This is Microsoft Bing Search Results page. Be wary of the links you click from a results page.</p>`;}
-		else{ link=hostname; var output = compare(link); return output;}
-		}
-    else if(hostname=="www.google.com"||hostname=="www.google.ca"||hostname=="www.google.co.in"||hostname=="www.google.co.uk"||hostname=="europe.google.com"){
-      var hostname="www.google.com"; 				
-        if(pathname=="/search") /*||pathname=="/"||pathname=="/webhp"*/
-        {
-          return `<p> This is Google Search Results page. Be wary of the links you click from a results page.</p>`;
-        }
-        else{link=hostname; var output=compare(link); return output;}
-  
-    }
-    else if(hostname=="search.yahoo.com"||hostname=="in.search.yahoo.com"||hostname=="uk.search.yahoo.com"||hostname=="us.search.hostname.com"){
-
-      if(pathname.split(';')[0]=="/search")
-      {
-        return `<p>This is Yahoo Search Results page. Be wary of the links you click from a results page.</p>`;
-      }
-    }
-    else if(origin=="https://search.brave.com") 
-		{ return `<p> This is Brave Search Results page. Be wary of the links you click from a results page.</p>`;}		
-	else if( origin =="https://www.facebook.com" )  
-			{	
-				link= hostname+'/'+pathname.split('/')[1];
-				var output = compare(link);
-				return output;
-			}
-	else if(origin =="https://twitter.com")
-			{
-				
-				link=hostname+'/'+pathname.split('/')[1].toLowerCase();
-				var output = compare(link);	
-				return output;
-			}
-	else if(origin=="https://www.youtube.com")
-      {
-        var channel=(pathname.split('/')[1]);
-        if(channel=="channel") { link = hostname +'/' +pathname.split('/')[1]+ '/' + pathname.split('/')[2];}
-        else if(channel=="c") { 
-        var id=pathname.split('/')[2].toLowerCase();
-        link= hostname+'/'+id}
-        else{link=hostname+'/'+pathname.split('/')[1].toLowerCase();}
-        var output = compare(link);	
-        return output;
-      }
-	else if( origin=="https://www.twitch.tv" || origin=="https://www.instagram.com" )
-			{
-				link = hostname + pathname.toLowerCase(); 
-				var output = compare(link); 
-			  return output;
-			}
-	else if(origin=="https://www.reddit.com" || origin=="https://old.reddit.com")
-			{	
-				link=hostname +'/' +pathname.split('/')[1]+ '/' + pathname.split('/')[2].toLowerCase();
-				var output = compare(link);
-				return output;
-			}
-  else if(hostname=="play.google.com")
-        {
-         link=hostname+pathname+search;
-         var output = compare(link);
-				 return output; 
-        }    
-  else if(hostname=="apps.apple.com")
-            { function extractId(appleStoreLink) {
-              const regex = /\/id(\d+)/;
-              const match = appleStoreLink.match(regex);
-              return match ? match[1] : null;
-            }
-        const Id = 'id'+ extractId(pathname);
-          if(pathname.includes('developer')){link=hostname+'/developer/'+Id;}
-          else if(pathname.includes('app')){link=hostname+'/app/'+Id;}
-          var output= compare(link);
-          return output;
 
 
-        }      
-	else if(origin == "https://github.com")
-				{
-				var id= pathname.split('/')[1];
-					
-					if(id=="orgs" || id=="sponsors")
-						{ var link= hostname+'/'+pathname.split('/')[2].toLowerCase();
-						}
-					else{
-						var link=hostname+'/'+pathname.split('/')[1].toLowerCase();
-						}
-				var output = compare(link);	
-				return output;	
-				}
-  /* Mastodon Instances
-  mastodon.social --- Mastodon gGmbH
-  mastodon.online  --- Mastodon gGmbH
-  social.vivaldi.net --- Vivaldi
-  mozilla.social --- Mozilla 
-  */
-  else if(hostname == "mastodon.social" || hostname=="social.vivaldi.net" || hostname=="mastodon.online" || hostname=="mozilla.social")
-  
-      {
-        link = hostname + pathname.toLowerCase(); 
-				var output = compare(link); 
-			  return output;
-
-      }      
-  else if(origin == "https://ko-fi.com" || origin =="https://www.buymeacoffee.com" || origin=="https://liberapay.com" || origin =="https://opencollective.com")
-				{
-					
-					link=hostname+'/'+pathname.split('/')[1].toLowerCase();
-					var output = compare(link);
-					return output ;
-				}
-  else if(origin=="https://www.patreon.com")
-				{	
-					var id=pathname.split('/')[1];
-						if(id=="join")
-							{ var link= hostname+'/'+pathname.split('/')[2].toLowerCase();}
-						else { var link = hostname+'/'+pathname.split('/')[1].toLowerCase(); }
-					var output = compare(link);	
-					return output;	
-				
-				}      
-
-  else if(hostname == "addons.mozilla.org")
-        /*Once the above condition is true, the function replaces the URL language to the the default en-US. This is used since mozilla supports multiple languages and the url structure is directly based on user language.  */
-          { lang=pathname.split('/')[1];
-            default_lang=lang.replace(lang,"en-US"); 
-          link= hostname +'/'+ default_lang+ '/' +pathname.split('/')[2]+'/'+pathname.split('/')[3]+'/'+pathname.split('/')[4];
-          var output = compare(link);
-          return output;
-      
-          }   
-             
-  else if(hostname+'/'+pathname.split('/')[1] == "chrome.google.com/webstore")
-          {
-            link= hostname +'/'+pathname.split('/')[1] +'/'+ pathname.split('/')[2] +'/'+ pathname.split('/')[3] +'/'+ pathname.split('/')[4]
-            var output= compare(link);
-            return output;
-          }		
-
-  else if(hostname == "microsoftedge.microsoft.com")
-        {
-          link=hostname+'/'+pathname;
-          var output= compare(link);
-          return output;
-        }
-
-  else if(hostname == "addons.opera.com")
-  /*Once the above condition is true, the function replaces the URL language to the the default en. This is used since mozilla supports multiple languages and the url structure is directly based on user language.  */
-        {
-          lang=pathname.split('/')[1];
-          default_lang=lang.replace(lang,"en");
-          link= hostname +'/'+ default_lang+'/' +pathname.split('/')[2]+'/'+pathname.split('/')[3]+'/'+pathname.split('/')[4];
-          var output = compare(link);
-          return output;
-        }        
-   
-					
-	else{var output= compare(hostname);
-				return output ;
-			}
-}
-
-function compare(link){
+export function compare(link){
 var json = authData; 
 
 var new_link=link;
 var cl= json.urls;
 
 
-for(i=0;i<cl.length;i++){
+var conditionMet = false; // Flag variable to track if the condition is met
 
-    if(json.urls[i]===link)
-      {//console.log("Yay")
-      var Data=`<div style="color:white;font-size:12px; background-color:#1f282d;">  ` + new_link + `</br> <p> <span style="color:#A2FB15; font-size: 14px; ">Verified by authifyURL.</span> &nbsp;<span class="tooltip" > ✅ <span class="tooltiptext">This website is valid and legal. </span> </p></br> <p><span style="font-size:14px; color:white;">The page you submitted belongs to: </span><br> <span class="op_logo"><img src=${json.logo}></span><span style="font-size:18px; color: #DFb014"> ` +json.name+ `</span></p></br></div>` ;
+for (var i = 0; i < cl.length; i++) {
+  if (json.urls[i] === link) {
+    var Data = `<div style="color:white;font-size:12px; background-color:#1f282d;">` + new_link + `</br> <p> <span style="color:#A2FB15; font-size: 14px; ">Verified by authifyURL.</span> &nbsp;<span class="tooltip" > ✅ <span class="tooltiptext">This website is valid and legal. </span> </p></br> <p><span style="font-size:14px; color:white;">The page you submitted belongs to: </span><br> <span class="op_logo"><img src="${json.logo}"></span><span style="font-size:18px; color: #DFb014"> ${json.name}</span></p></br></div>`;
                 
-                var Disclaimer=`Read <a href ="https://github.com/authifyWeb/authifyURL#how-we-verify" style="color:white"; target ="_blank"> how we verify</a> what is valid and what is not. </br>`;
-                data.innerHTML= Data;
-                disclaimer.innerHTML=Disclaimer;
-				no_promote.innerHTML="";
-              return Data;
-      }
-} 
- 
-   // console.log("Nop")
-    var Data = `<div style=" color:white; background-color:#1f282d; font-size:12px;" >` + new_link + `<p><br><span style="color:red;  font-size: 18px;"> The page you submitted doesn't belong to the organisation selected above</span>&nbsp; <span class="tooltip"> ❌ <span class="tooltiptext">Possibly scam. Report the page directly to the owner. </span> </p> </div>` ;
-	/*if(json.off != ""){
-		console.log("Not Empty");
-	var Official = `<div style="font-size:10px;">To visit the official website of <span> `+json.id+` </span>use <a href="${json.off}">`+ json.off+` </a></div>`;
-	official.innerHTML=Official;}*/
-  var Disclaimer=`<br>Read <a href ="https://github.com/authifyWeb/authifyURL#how-we-verify" style="color:white;" target ="_blank"> how we verify</a> what is valid and what is not. </br> </div>`;
-  data.innerHTML= Data;
+    var Disclaimer = `Read <a href="https://github.com/authifyWeb/authifyURL#how-we-verify" style="color:white"; target="_blank"> how we verify</a> what is valid and what is not. </br>`;
+    
+    data.innerHTML = Data;
+    disclaimer.innerHTML = Disclaimer;
+    no_promote.innerHTML = "";
 
-  disclaimer.innerHTML=Disclaimer;
-  no_promote.innerHTML="";
-  return Data;
+    conditionMet = true; // Set the flag to true indicating the condition is met
+    break; // Exit the loop since the condition is met
+  }
+}
 
+if (!conditionMet) {
+  var Data = `<div style="color:white; background-color:#1f282d; font-size:12px;" >${new_link}<p><br><span style="color:red;  font-size: 18px;"> The page you submitted doesn't belong to the organization selected above</span>&nbsp; <span class="tooltip"> ❌ <span class="tooltiptext">Possibly a scam. Report the page directly to the owner. </span> </p> </div>`;
+    
+  var Disclaimer = `<br>Read <a href="https://github.com/authifyWeb/authifyURL#how-we-verify" style="color:white;" target="_blank"> how we verify</a> what is valid and what is not. </br>`;
+    
+  data.innerHTML = Data;
+  disclaimer.innerHTML = Disclaimer;
+  no_promote.innerHTML = "";
+}
 
+return Data; 
 
 
 
