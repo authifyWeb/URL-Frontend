@@ -1,6 +1,6 @@
 ![authifyURL](https://user-images.githubusercontent.com/100699190/206897669-bfac10fa-3c62-485e-a515-f7ef10ba1f07.png)
 
-<div align=center> <h3> <a href ="https://authifyWeb.github.io/authifyURL/"> authifyURL </a> is a free service for users to make sure that a URL or a website you are visiting belongs to an authentic business/ organisation and not a phoney scammer's phishing scam.  <h3> </div>
+<div align=center> <h3> <a href ="https://url.authifyweb.com"> authifyURL </a> is a free service for users to make sure that a URL or a website you are visiting belongs to an authentic business/ organisation and not a phoney scammer's phishing scam.  <h3> </div>
 
 #### authifyURL get data from [authifyURL-Database](https://github.com/authifyWeb/authifyURL-Database)
 
