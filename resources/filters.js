@@ -104,8 +104,9 @@ export function filtering(url, href, origin, hostname,protocol,pathname,search)
   mastodon.online  --- Mastodon gGmbH
   social.vivaldi.net --- Vivaldi
   mozilla.social --- Mozilla 
+  infosec.exchange --- For Cyber security-minded people
   */
-  else if(hostname == "mastodon.social" || hostname=="social.vivaldi.net" || hostname=="mastodon.online" || hostname=="mozilla.social")
+  else if(hostname == "mastodon.social" || hostname=="social.vivaldi.net" || hostname=="mastodon.online" || hostname=="mozilla.social"|| hostname=="infosec.exchange")
   
       {
         link = hostname + pathname.toLowerCase(); 
