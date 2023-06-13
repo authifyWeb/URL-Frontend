@@ -55,7 +55,7 @@ templates: {
 header: (resultSet) => `Results for <span style="color:#A2FB15; background-color:#1f282d; text-transform: uppercase;">" ${resultSet.query} "</span> : ${resultSet.count} `,
 notFound: (resultSet) => {   return `Nothing found for <span style="color:yellow; background-color:#1f282d; text-transform: uppercase;">" ${resultSet.query} "</span>`;},
 
-footer:() => 'an <a href="https://authifyweb.com" target="_blank" style="color:goldenrod; font-size:14px;"> authifyWeb</a> project ',
+footer:() => 'an <a href="https://authifyweb.com" target="_blank" style="color:goldenrod; font-size:14px;"> authifyWeb.com</a> project ',
 loader: () => '<div style="text-align: center"><img src="images/loader.svg" /></div>',
 /*empty: (resultSet) => {
   return `<div style="font-size:12px;">Enter organisation name and click enter</div>`;
