@@ -98,7 +98,9 @@ nav{	position:absolute;
   color:skyblue;
   text-decoration:none;
 }
-
+.get_verified  a:hover{
+  color:red;
+}
 @media (min-width: 320px) and (max-width: 999px){
   .get_verified{
     display:none;
@@ -484,6 +486,9 @@ margin-bottom:80px;
   #verify_your_company a{
     color:skyblue;
     text-decoration: none;
+  }
+  #verify_your_company a:hover{
+    color:red;
   }
   .output p{
     background-color:#1f282d;
