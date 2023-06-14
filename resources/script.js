@@ -53,7 +53,7 @@ templates: {
     ),
    
 header: (resultSet) => `Results for <span style="color:#A2FB15; background-color:#1f282d; text-transform: uppercase;">" ${resultSet.query} "</span> : ${resultSet.count} `,
-notFound: (resultSet) => {   return `Nothing found for <span style="color:yellow; background-color:#1f282d; text-transform: uppercase;">" ${resultSet.query} "</span>`;},
+notFound: (resultSet) => {   return `Nothing found for <span style="color:yellow; background-color:#1f282d; text-transform: uppercase;">" ${resultSet.query} "</span>. `;},
 
 footer:() => 'an <a href="https://authifyweb.com" target="_blank" style="color:goldenrod; font-size:14px;"> authifyWeb.com</a> project ',
 loader: () => '<div style="text-align: center"><img src="images/loader.svg" /></div>',
@@ -76,6 +76,7 @@ authData=outp;
 
 //document.getElementById('output').innerHTML ="";
 document.getElementById("compatible").innerHTML ="";
+document.getElementById("verify_your_company").innerHTML ="";
 
 document.getElementById('naam').innerHTML = `<p style="font-size:1em;"> Submit URL below to verify whether the site belongs to <span style="color:#DFB014 "> ${name} </span></> </p>`;
 

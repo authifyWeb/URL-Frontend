@@ -69,7 +69,7 @@ nav{	position:absolute;
 		color:goldenrod;
 		font-size:12px; 
 		position:absolute; 
-		left:90px; 
+		left:60px; 
 		top:37px;  
 	}
 
@@ -87,6 +87,31 @@ nav{	position:absolute;
   color:white;
 }	
 
+.get_verified{
+  padding-top: 10px;
+  text-align:right;
+  font-size: 15px;
+  position:absolute;
+  right:10vw;
+}
+.get_verified a{
+  color:skyblue;
+  text-decoration:none;
+}
+
+@media (min-width: 320px) and (max-width: 999px){
+  .get_verified{
+    display:none;
+
+    padding-top:25px;
+    text-align:right;
+    font-size: 15px;
+    position:absolute;
+    right:20vw;
+  }
+  .pages{
+    padding-top:10px; /* 3px in case get_verified is displayed */  }
+}
 
 #menu__toggle {
   opacity: 0;
@@ -448,7 +473,18 @@ margin-bottom:80px;
     padding-right:2px;
 
   }
-  
+  #verify_your_company{
+    position:relative;
+    top:15vh;
+    
+    text-align:center;
+    color:skyblue;
+    font-size:14.4px;
+  }
+  #verify_your_company a{
+    color:skyblue;
+    text-decoration: none;
+  }
   .output p{
     background-color:#1f282d;
     padding-left:10px;
@@ -464,7 +500,7 @@ margin-bottom:80px;
     letter-spacing: 1em;
     
   }
-  
+
   
   #naam{
     color:white;
@@ -517,7 +553,7 @@ margin-bottom:80px;
 #no_promote{
   letter-spacing: 1px;
   font-weight:400;
-  padding-top:400px;
+  padding-top:350px;
   font-size:12px; 
   color:white;
   background-color:#1f282d;
@@ -526,7 +562,7 @@ margin-bottom:80px;
 @media (min-width: 320px) and (max-width: 900px) {
   #no_promote{
     margin-top:0px;
-    padding-top:350px;
+    padding-top:300px;
     font-size:10px; 
   }
   
