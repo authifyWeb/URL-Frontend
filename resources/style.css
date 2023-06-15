@@ -556,9 +556,11 @@ margin-bottom:80px;
 }
 
 #no_promote{
+  position:relative;
+  top:50vh;
   letter-spacing: 1px;
   font-weight:400;
-  padding-top:350px;
+  
   font-size:12px; 
   color:white;
   background-color:#1f282d;
@@ -567,7 +569,7 @@ margin-bottom:80px;
 @media (min-width: 320px) and (max-width: 900px) {
   #no_promote{
     margin-top:0px;
-    padding-top:300px;
+   
     font-size:10px; 
   }
   
