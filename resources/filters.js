@@ -60,6 +60,12 @@ export function filtering(url, href, origin, hostname,protocol,pathname,search)
 				var output = compare(link); 
 			  return output;
 			}
+  else if(hostname=="profiles.wordpress.org")
+      {
+       link = hostname + '/'+ pathname.split('/')[1].toLowerCase(); 
+       var output = compare(link); 
+       return output;
+      }     
 	else if(origin=="https://www.reddit.com" || origin=="https://old.reddit.com")
 			{	
 				link=hostname +'/' +pathname.split('/')[1]+ '/' + pathname.split('/')[2].toLowerCase();
