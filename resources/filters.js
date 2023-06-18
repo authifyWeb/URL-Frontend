@@ -111,8 +111,10 @@ export function filtering(url, href, origin, hostname,protocol,pathname,search)
   social.vivaldi.net --- Vivaldi
   mozilla.social --- Mozilla 
   infosec.exchange --- For Cyber security-minded people
+  mas.to
+  fosstodon.org --- For technology and Opensource
   */
-  else if(hostname == "mastodon.social" || hostname=="social.vivaldi.net" || hostname=="mastodon.online" || hostname=="mozilla.social"|| hostname=="infosec.exchange")
+  else if(hostname == "mastodon.social" || hostname=="social.vivaldi.net" || hostname=="mastodon.online" || hostname=="mozilla.social"|| hostname=="infosec.exchange" || hostname=="fosstodon.org" || hostname=="mas.to")
   
       {
         link = hostname + pathname.toLowerCase(); 
