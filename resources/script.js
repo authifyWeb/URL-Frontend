@@ -70,7 +70,7 @@ if (selectedSuggestion) {
 const myJSON = JSON.stringify(selectedSuggestion);
 const outp=JSON.parse(myJSON);
 const {name, urls,type,id,official} = outp;
-console.log(myJSON)
+//console.log(myJSON)
 //console.log(outp)
 authData=outp;
 
@@ -152,7 +152,10 @@ function searchNow()
     var pathname= url.pathname;
     var search = url.search;
 
-    var output= filtering(url, href, origin, hostname,protocol,pathname,search); 
+    var domain = filterdomain_from_hostname(hostname);
+    //console.log(domain)
+
+    var output= filtering(url, href, origin, hostname,protocol,pathname,search,domain); 
 		
 			data.innerHTML = (output || "...Verifying");
 			
@@ -162,12 +165,30 @@ function searchNow()
 
 }
 
+function filterdomain_from_hostname(hostname)
+{
+  var parts = hostname.split('.');
+  var domain;
 
+  if (parts.length > 2) {
+    if (parts[parts.length - 2].length === 2 || parts[parts.length - 2].length === 3) {
+      domain = parts.slice(-3).join('.');
+    } else {
+      domain = parts.slice(-2).join('.');
+    }
+  } else {
+    domain = hostname;
+  }
 
-export function compare(link){
+  return domain;
+
+}
+
+export function compare(link,display_link){
+ // console.log(link)
 var json = authData; 
 
-var new_link=link;
+
 var cl= json.urls;
 
 
@@ -175,7 +196,7 @@ var conditionMet = false; // Flag variable to track if the condition is met
 
 for (var i = 0; i < cl.length; i++) {
   if (json.urls[i] === link) {
-    var Data = `<div style="color:white;font-size:12px; background-color:#1f282d;">` + new_link + `</br> <p> <span style="color:#A2FB15; font-size: 14px; ">Verified by authifyURL.</span> &nbsp;<span class="tooltip" > ✅ <span class="tooltiptext">This website is valid and legal. </span> </p></br> <p><span style="font-size:14px; color:white;">The page you submitted belongs to: </span><br> <span class="op_logo"><img src="${json.logo}"></span><span style="font-size:18px; color: #DFb014"> ${json.name}</span></p></br></div>`;
+    var Data = `<div style="color:white;font-size:12px; background-color:#1f282d;">` + display_link + `</br> <p> <span style="color:#A2FB15; font-size: 14px; ">Verified by authifyURL.</span> &nbsp;<span class="tooltip" > ✅ <span class="tooltiptext">This website is valid and legal. </span> </p></br> <p><span style="font-size:14px; color:white;">The page you submitted belongs to: </span><br> <span class="op_logo"><img src="${json.logo}"></span><span style="font-size:18px; color: #DFb014"> ${json.name}</span></p></br></div>`;
                 
     var Disclaimer = `Read <a href="https://github.com/authifyWeb/authifyURL#how-we-verify" style="color:white"; target="_blank"> how we verify</a> what is valid and what is not. </br>`;
     
@@ -189,7 +210,7 @@ for (var i = 0; i < cl.length; i++) {
 }
 
 if (!conditionMet) {
-  var Data = `<div style="color:white; background-color:#1f282d; font-size:12px;" >${new_link}<p><br><span style="color:red;  font-size: 18px;"> The page you submitted doesn't belong to the organization selected above</span>&nbsp; <span class="tooltip"> ❌ <span class="tooltiptext">Possibly a scam. Report the page directly to the owner. </span> </p> </div>`;
+  var Data = `<div style="color:white; background-color:#1f282d; font-size:12px;" >` + display_link+`<p><br><span style="color:red;  font-size: 18px;"> The page you submitted doesn't belong to the organization selected above</span>&nbsp; <span class="tooltip"> ❌ <span class="tooltiptext">Possibly a scam. Report the page directly to the owner. </span> </p> </div>`;
     
   var Disclaimer = `<br>Read <a href="https://github.com/authifyWeb/authifyURL#how-we-verify" style="color:white;" target="_blank"> how we verify</a> what is valid and what is not. </br>`;
     
