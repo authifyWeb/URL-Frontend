@@ -113,8 +113,9 @@ export function filtering(url, href, origin, hostname,protocol,pathname,search)
   infosec.exchange --- For Cyber security-minded people
   mas.to
   fosstodon.org --- For technology and Opensource
+  mastodon.art --- Art Related
   */
-  else if(hostname == "mastodon.social" || hostname=="social.vivaldi.net" || hostname=="mastodon.online" || hostname=="mozilla.social"|| hostname=="infosec.exchange" || hostname=="fosstodon.org" || hostname=="mas.to")
+  else if(hostname == "mastodon.social" || hostname=="social.vivaldi.net" || hostname=="mastodon.online" || hostname=="mozilla.social"|| hostname=="infosec.exchange" || hostname=="fosstodon.org" || hostname=="mas.to" || hostname=="mastodon.art")
   
       {
         link = hostname + pathname.toLowerCase(); 
