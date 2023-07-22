@@ -54,12 +54,21 @@ export function filtering(url, href, origin, hostname,protocol,pathname,search)
         var output = compare(link);	
         return output;
       }
-	else if( origin=="https://www.twitch.tv" || origin=="https://www.instagram.com" )
+	else if( origin=="https://www.twitch.tv" )
 			{
 				link = hostname + pathname.toLowerCase(); 
 				var output = compare(link); 
 			  return output;
 			}
+  else if(origin=="https://www.instagram.com" )
+			{ var channel=(pathname.split('/')[1]);
+      if(channel=="p"|| channel=="reels"){return `<p style="color:yellow;">Cannot verify individual posts or reels. Please submit the profile URL to verify.</p>`;}
+      else{
+				link = hostname + pathname.toLowerCase(); 
+				var output = compare(link); 
+			  return output;
+      }
+			}    
   else if(hostname=="profiles.wordpress.org")
       {
        link = hostname + '/'+ pathname.split('/')[1].toLowerCase(); 
