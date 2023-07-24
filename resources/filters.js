@@ -46,7 +46,8 @@ export function filtering(url, href, origin, hostname,protocol,pathname,search)
 	else if(origin=="https://www.youtube.com")
       {
         var channel=(pathname.split('/')[1]);
-        if(channel=="channel") { link = hostname +'/' +pathname.split('/')[1]+ '/' + pathname.split('/')[2];}
+        if(channel=="channel" ||channel=="user" ) { link = hostname +'/' +pathname.split('/')[1]+ '/' + pathname.split('/')[2];}
+        else if(channel=="shorts"|| channel=="watch"){return `<p>Cannot identify individual videos. Please submit the profile URL to verify.</p>`;}
         else if(channel=="c") { 
         var id=pathname.split('/')[2].toLowerCase();
         link= hostname+'/'+id}
