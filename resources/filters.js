@@ -44,6 +44,11 @@ export function filtering(url, href, origin, hostname,protocol,pathname,search,d
 				var output = compare(link,link);	
 				return output;
 			}
+  else if(hostname == "www.threads.net"){
+        link= hostname + '/' + pathname.split('/')[1].toLowerCase();
+        var output = compare(link,link);
+        return output;
+      }    
 	else if(origin=="https://www.youtube.com")
       {
         var channel=(pathname.split('/')[1]);
