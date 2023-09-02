@@ -339,11 +339,22 @@ margin-bottom:80px;
     
    
   }
+  .hero{
+    margin-left:25vw;
+    margin-right:25vw;
+  }
   
   @media (min-width: 320px) and (max-width: 999px)  {
 .main_container h3{
   font-size: 0.8em;
 }
+.hero{
+  margin-left:0px;
+  margin-right:0px ;
+}
+}
+::placeholder{
+  color:rgb(177, 140, 102);
 }
   
   .searchterm {
@@ -566,10 +577,12 @@ margin-bottom:80px;
 	margin-top:2px;
 	height: 30px;
 	width:60%;
-	border:2px solid green;
+	border:2px solid grey;
 	text-align:center;
 	margin-right:10px;
 	border-radius:5px;
+  background-color:#202b31;
+  color:whitesmoke;
 	
 }
 
