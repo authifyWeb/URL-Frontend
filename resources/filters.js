@@ -139,6 +139,21 @@ export function filtering(url, href, origin, hostname,protocol,pathname,search)
 			  return output;
 
       }      
+  else if(hostname== "linktr.ee"){
+    var path1= pathname.split('/')[1].toLowerCase();
+        if(path1 !== "s" && path1 !=="marketplace" && path1 !== "blog" && path1 !=="help" && path1 !== "login" && path1 !=="register" & path1 !=="")
+        {
+          link=hostname+ pathname.toLowerCase();
+          
+          
+        }
+        else {
+          link = hostname;
+        }
+      
+      var output = compare(link); 
+      return output;
+  }    
   else if(origin == "https://ko-fi.com" || origin =="https://www.buymeacoffee.com" || origin=="https://liberapay.com" || origin =="https://opencollective.com")
 				{
 					
