@@ -216,6 +216,11 @@ export function filtering(url, href, origin, hostname,protocol,pathname,search,d
     var output = compare(link,link);
     return output;
   }
+  else if(domain == "keka.com"){
+    link=hostname;
+    var output= compare(link,link);
+    return output;
+  }
   
 	else{
     link=domain;
