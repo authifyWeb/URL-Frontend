@@ -45,6 +45,7 @@ export function filtering(url, href, origin, hostname,protocol,pathname,search,d
 				return output;
 			}
   else if(hostname == "www.threads.net"){
+
         link= hostname + '/' + pathname.split('/')[1].toLowerCase();
         var output = compare(link,link);
         return output;
@@ -52,7 +53,8 @@ export function filtering(url, href, origin, hostname,protocol,pathname,search,d
 	else if(origin=="https://www.youtube.com")
       {
         var channel=(pathname.split('/')[1]);
-        if(channel=="channel") { link = hostname +'/' +pathname.split('/')[1]+ '/' + pathname.split('/')[2];}
+        if(channel=="channel" ||channel=="user" ) { link = hostname +'/' +pathname.split('/')[1]+ '/' + pathname.split('/')[2];}
+        else if(channel=="shorts"|| channel=="watch"){return `<p>Cannot identify individual videos. Please submit the profile URL to verify.</p>`;}
         else if(channel=="c") { 
         var id=pathname.split('/')[2].toLowerCase();
         link= hostname+'/'+id}
@@ -60,12 +62,21 @@ export function filtering(url, href, origin, hostname,protocol,pathname,search,d
         var output = compare(link,link);	
         return output;
       }
-	else if( origin=="https://www.twitch.tv" || origin=="https://www.instagram.com" )
+	else if( origin=="https://www.twitch.tv" )
 			{
 				link = hostname + pathname.toLowerCase(); 
 				var output = compare(link,link); 
 			  return output;
 			}
+  else if(origin=="https://www.instagram.com" )
+			{ var channel=(pathname.split('/')[1]);
+      if(channel=="p"|| channel=="reels"){return `<p style="color:yellow;">Cannot verify individual posts or reels. Please submit the profile URL to verify.</p>`;}
+      else{
+				link = hostname + pathname.toLowerCase(); 
+				var output = compare(link); 
+			  return output;
+      }
+			}    
   else if(hostname=="profiles.wordpress.org")
       {
        link = hostname + '/'+ pathname.split('/')[1].toLowerCase(); 
@@ -117,13 +128,18 @@ export function filtering(url, href, origin, hostname,protocol,pathname,search,d
   social.vivaldi.net --- Vivaldi
   mozilla.social --- Mozilla 
   infosec.exchange --- For Cyber security-minded people
+  mas.to
+  fosstodon.org --- For technology and Opensource
+  mastodon.art --- Art Related
+  mstdn.social
   */
-  else if(hostname == "mastodon.social" || hostname=="social.vivaldi.net" || hostname=="mastodon.online" || hostname=="mozilla.social"|| hostname=="infosec.exchange")
+  else if(hostname == "mastodon.social" || hostname=="social.vivaldi.net" || hostname=="mastodon.online" || hostname=="mozilla.social"|| hostname=="infosec.exchange" || hostname=="fosstodon.org" || hostname=="mas.to" || hostname=="mastodon.art" || hostname == "mstdn.social")
   
       {
         link = hostname + pathname.toLowerCase(); 
 				var output = compare(link,link); 
 			  return output;
+
 
       }
   else if(hostname == "linktr.ee"){
