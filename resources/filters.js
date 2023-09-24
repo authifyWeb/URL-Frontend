@@ -210,7 +210,13 @@ export function filtering(url, href, origin, hostname,protocol,pathname,search,d
     link = hostname;
     var output = compare(link,link);
     return output;
-  }				
+  }	
+  else if(domain=="crew.work"){
+    link=hostname;
+    var output = compare(link,link);
+    return output;
+  }
+  
 	else{
     link=domain;
     
