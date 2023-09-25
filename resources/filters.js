@@ -72,8 +72,8 @@ export function filtering(url, href, origin, hostname,protocol,pathname,search,d
 			{ var channel=(pathname.split('/')[1]);
       if(channel=="p"|| channel=="reels"){return `<p style="color:yellow;">Cannot verify individual posts or reels. Please submit the profile URL to verify.</p>`;}
       else{
-				link = hostname + pathname.toLowerCase(); 
-				var output = compare(link); 
+				link = hostname + pathname.split('/')[1].toLowerCase(); 
+				var output = compare(link,link); 
 			  return output;
       }
 			}    
