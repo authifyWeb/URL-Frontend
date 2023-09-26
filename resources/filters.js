@@ -64,7 +64,7 @@ export function filtering(url, href, origin, hostname,protocol,pathname,search,d
       }
 	else if( origin=="https://www.twitch.tv" )
 			{
-				link = hostname + pathname.toLowerCase(); 
+				link = hostname + '/'+ pathname.split('/')[1].toLowerCase(); 
 				var output = compare(link,link); 
 			  return output;
 			}
