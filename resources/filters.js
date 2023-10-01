@@ -136,11 +136,9 @@ export function filtering(url, href, origin, hostname,protocol,pathname,search,d
   else if(hostname == "mastodon.social" || hostname=="social.vivaldi.net" || hostname=="mastodon.online" || hostname=="mozilla.social"|| hostname=="infosec.exchange" || hostname=="fosstodon.org" || hostname=="mas.to" || hostname=="mastodon.art" || hostname == "mstdn.social")
   
       {
-        link = hostname + pathname.toLowerCase(); 
+        link = hostname + '/'+ pathname.split('/')[1].toLowerCase(); 
 				var output = compare(link,link); 
 			  return output;
-
-
       }
   else if(hostname == "linktr.ee"){
     var path1= pathname.split('/')[1].toLowerCase();
