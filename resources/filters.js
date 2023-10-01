@@ -77,6 +77,16 @@ export function filtering(url, href, origin, hostname,protocol,pathname,search,d
 			  return output;
       }
 			}    
+  else if(hostname=="www.snapchat.com") {
+    var path1= pathname.split('/')[1];
+    if(path1=="spotlight" ||path1=="discover" || path1=="lens" ){return `<p style="color:yellow;">Cannot verify individual posts. Please submit the snapchat profile URL to verify.</p>`}
+    else if(path1=="add"){
+      link= hostname+'/'+pathname.split('/')[2];
+      var output = compare(link,href);
+      return output;}
+      else{link=hostname; var output=compare(link,href); return output;}
+    
+  }  
   else if(hostname=="profiles.wordpress.org")
       {
        link = hostname + '/'+ pathname.split('/')[1].toLowerCase(); 
