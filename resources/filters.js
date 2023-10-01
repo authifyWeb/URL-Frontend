@@ -153,6 +153,13 @@ export function filtering(url, href, origin, hostname,protocol,pathname,search,d
         }
         var output = compare(link,link); 
         return output;
+  }
+  else if(hostname=="www.t.me" || hostname == "www.telegram.me")
+  { path1 = pathname.split('/')[1].toLowerCase();
+    if(path1 =="s"){link= hostname + '/'+ pathname.split('/')[2].toLowerCase();}
+    else{ link = hostname + '/'+ pathname.split('/')[1].toLowerCase();}
+      var output= compare(link,href);
+      return output
   }          
   else if(origin == "https://ko-fi.com" || origin =="https://www.buymeacoffee.com" || origin=="https://liberapay.com" || origin =="https://opencollective.com")
 				{
