@@ -177,7 +177,19 @@ export function filtering(url, href, origin, hostname,protocol,pathname,search,d
 					var output = compare(link,link);	
 					return output;	
 				
-				}      
+				}
+  else if(hostname=="folin.io")
+      {
+        var path1= pathname.split('/')[1];
+        
+        if(path1=="products"){return `<p style="color:yellow;">Cannot verify individual products, please visit user profile to verify.</p>`;}
+        else if(path1=="pages"){
+          var path2=pathname.split('/')[2];
+          if(path2=="refund"||path2=="about-us"||path2=="terms"||path2=="cookie-policy"||path2=="privacy"||path2=="contact"||path2=="brand"||path2=="influencer"||path2=="refund-policy"||path2=="shipping-policy"){ var link = hostname; var output=compare(link,link); return output;}
+          else{ var link = hostname + '/' + path2; var output=compare(link,hostname+pathname); return output; }
+        }
+        else{var link=domain; var output=compare(link,href); return output;}
+      }            
 
   else if(hostname == "addons.mozilla.org")
         /*Once the above condition is true, the function replaces the URL language to the the default en-US. This is used since mozilla supports multiple languages and the url structure is directly based on user language.  */
