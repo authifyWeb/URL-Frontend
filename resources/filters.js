@@ -191,8 +191,8 @@ export function filtering(url, href, origin, hostname,protocol,pathname,search,d
 
   else if(hostname == "addons.mozilla.org")
         /*Once the above condition is true, the function replaces the URL language to the the default en-US. This is used since mozilla supports multiple languages and the url structure is directly based on user language.  */
-          { lang=pathname.split('/')[1];
-            default_lang=lang.replace(lang,"en-US"); 
+          { var lang=pathname.split('/')[1];
+            var default_lang=lang.replace(lang,"en-US"); 
           link= hostname +'/'+ default_lang+ '/' +pathname.split('/')[2]+'/'+pathname.split('/')[3]+'/'+pathname.split('/')[4];
           var output = compare(link,link);
           return output;
@@ -208,7 +208,7 @@ export function filtering(url, href, origin, hostname,protocol,pathname,search,d
 
   else if(hostname == "microsoftedge.microsoft.com")
         {
-          link=hostname+'/'+pathname;
+          link=hostname+pathname;
           var output= compare(link,link);
           return output;
         }
