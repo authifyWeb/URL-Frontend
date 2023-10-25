@@ -243,6 +243,11 @@ export function filtering(url, href, origin, hostname,protocol,pathname,search,d
     var output = compare(link,link);
     return output;
   }
+  else if(domain=="myinstamojo.com"){
+    link=hostname;
+    var output=compare(link,link);
+    return output;
+  }
 
   
 	else{
