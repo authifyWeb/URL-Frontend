@@ -82,7 +82,7 @@ export function filtering(url, href, origin, hostname,protocol,pathname,search,d
 			}
   else if(origin=="https://www.instagram.com" )
 			{ var channel=(pathname.split('/')[1]);
-      if(channel=="p"|| channel=="reels"){return `<p style="color:yellow;">Cannot verify individual posts or reels. Please submit the profile URL to verify.</p>`;}
+      if(channel=="p"|| channel=="reels" || channel =="reel"){return `<p style="color:yellow;">Cannot verify individual posts or reels. Please submit the profile URL to verify.</p>`;}
       else{
 				link = hostname + '/' + pathname.split('/')[1].toLowerCase(); 
 				var output = compare(link,link); 
