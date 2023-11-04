@@ -164,7 +164,7 @@ export function filtering(url, href, origin, hostname,protocol,pathname,search,d
         var output = compare(link,link); 
         return output;
   }
-  else if(hostanem=="loco.gg"){ 
+  else if(hostname=="loco.gg"){ 
     var path1=pathname.split('/')[1];
     if(path1=="stream"|| path1=="clips"){return `<p style="color:yellow;">Cannot verify individual streams or clips. Please submit the profile URL to verify.</p>`;}
     else if(path1=="streamers"){link=hostname+'/'+pathname.split('/')[2];}
