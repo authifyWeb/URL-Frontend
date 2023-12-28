@@ -221,7 +221,7 @@ export function filtering(url, href, origin, hostname,protocol,pathname,search,d
              
   else if(hostname=="chromewebstore.google.com"||hostname+'/'+pathname.split('/')[1] == "chrome.google.com/webstore")
           {
-            if(hostname=="chromewebstore.google.com"){link=hostname+'/'+pathname.split('/')[1]+'/'+pathname.split('/')[2]+pathname.split('/')[3];}
+            if(hostname=="chromewebstore.google.com"){link=hostname+'/'+pathname.split('/')[1]+'/'+pathname.split('/')[2]+'/'+pathname.split('/')[3];}
             else{
             link= hostname +'/'+pathname.split('/')[1] +'/'+ pathname.split('/')[2] +'/'+ pathname.split('/')[3] +'/'+ pathname.split('/')[4];
             }
