@@ -219,12 +219,15 @@ export function filtering(url, href, origin, hostname,protocol,pathname,search,d
       
           }   
              
-  else if(hostname+'/'+pathname.split('/')[1] == "chrome.google.com/webstore")
+  else if(hostname=="chromewebstore.google.com"||hostname+'/'+pathname.split('/')[1] == "chrome.google.com/webstore")
           {
-            link= hostname +'/'+pathname.split('/')[1] +'/'+ pathname.split('/')[2] +'/'+ pathname.split('/')[3] +'/'+ pathname.split('/')[4]
-            var output= compare(link,link);
+            if(hostname=="chromewebstore.google.com"){link=hostname+'/'+pathname.split('/')[1]+'/'+pathname.split('/')[2]+pathname.split('/')[3];}
+            else{
+            link= hostname +'/'+pathname.split('/')[1] +'/'+ pathname.split('/')[2] +'/'+ pathname.split('/')[3] +'/'+ pathname.split('/')[4];
+            }
+            var output= compare(link,href);
             return output;
-          }		
+          }			
 
   else if(hostname == "microsoftedge.microsoft.com")
         {
