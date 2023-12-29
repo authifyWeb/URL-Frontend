@@ -225,6 +225,15 @@ export function filtering(url, href, origin, hostname,protocol,pathname,search,d
       }
       else if(hostname !="www.behance.net"){link=domain;}
       var output=compare(link,href); return output;
+    }
+    else if(domain="beacons.ai"){
+      if(hostname !="beacons.ai"){link=domain;}
+      else{
+        var path1=pathname.split('/')[1].toLowerCase();
+        if(path1=="i"||path1==""){link=domain;}
+        else{link=hostname+'/'+path1;}
+      }
+      var output=compare(link,href); return output;
     }              
 
   else if(hostname == "addons.mozilla.org")
