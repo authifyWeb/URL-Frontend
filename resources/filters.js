@@ -260,6 +260,15 @@ export function filtering(url, href, origin, hostname,protocol,pathname,search,d
         else{link=hostname+'/'+path1;}
         }
         var output = compare(link,href); return output;
+    }
+    else if(domain=="solo.to"){
+      if(hostname !="solo.to"){link=domain;}
+      else{
+        var path1=pathname.split('/')[1].toLowerCase();
+        if(path1=="login"||path1=="register"||path1=="pricing"||path1=="brand"||path1=="portals"){link=domain;}
+        else{link=hostname+'/'+path1;}
+      }
+      var output = compare(link,href); return output;
     }        
 
   else if(hostname == "addons.mozilla.org")
