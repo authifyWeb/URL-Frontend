@@ -251,6 +251,15 @@ export function filtering(url, href, origin, hostname,protocol,pathname,search,d
       link=hostname+'/'+path1;
       var output = compare(link,href);
       return output;
+    }
+    else if(domain=="liinks.co"){
+      if(hostname !="www.liinks.co"){link=domain;}
+      else{
+       var path1=pathname.split('/')[1].toLowerCase();
+        if(path1=="i"){link=domain;}
+        else{link=hostname+'/'+path1;}
+        }
+        var output = compare(link,href); return output;
     }        
 
   else if(hostname == "addons.mozilla.org")
