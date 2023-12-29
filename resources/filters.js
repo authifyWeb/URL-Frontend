@@ -245,6 +245,12 @@ export function filtering(url, href, origin, hostname,protocol,pathname,search,d
       }
       console.log(link);
       var output=compare(link,href); return output;
+    }
+    else if(hostname=="bio.site"){
+      var path1= pathname.split('/')[1].toLowerCase();
+      link=hostname+'/'+path1;
+      var output = compare(link,href);
+      return output;
     }        
 
   else if(hostname == "addons.mozilla.org")
