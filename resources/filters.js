@@ -269,6 +269,12 @@ export function filtering(url, href, origin, hostname,protocol,pathname,search,d
         else{link=hostname+'/'+path1;}
       }
       var output = compare(link,href); return output;
+    }
+    else if(hostname=="mailchi.mp"){
+      var path1=pathname.split('/')[1].toLowerCase();
+      link=hostname+'/'+path1;
+      var output=compare(link,href);
+      return output;
     }        
 
   else if(hostname == "addons.mozilla.org")
