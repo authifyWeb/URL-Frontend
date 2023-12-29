@@ -216,6 +216,15 @@ export function filtering(url, href, origin, hostname,protocol,pathname,search,d
       else{link = hostname+'/'+path1;}
       }
       var output=compare(link,href); return output;
+    }
+    else if(domain=="behance.net"){
+      if(hostname =="www.behance.net"){
+      var path1=pathname.split('/')[1].toLowerCase();
+      if(path1=="for_you"||path1=="galleries"||path1=="hire"||path1=="assets"||path1=="joblist"||path1==""||path1=="about"||path1=="blog"||path1=="careers"||path1=="misc"){link=domain;}
+      else {link=hostname + '/'+ path1;}
+      }
+      else if(hostname !="www.behance.net"){link=domain;}
+      var output=compare(link,href); return output;
     }              
 
   else if(hostname == "addons.mozilla.org")
