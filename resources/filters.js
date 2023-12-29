@@ -348,6 +348,11 @@ export function filtering(url, href, origin, hostname,protocol,pathname,search,d
     link=hostname;
     var output=compare(link,href);
     return output;
+  }
+  else if(domain=="gumroad.com"){
+    link=hostname;
+    var output=compare(link,href);
+    return output;
   } 
 
 
