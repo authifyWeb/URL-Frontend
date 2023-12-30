@@ -284,6 +284,10 @@ export function filtering(url, href, origin, hostname,protocol,pathname,search,d
         else{link=domain+'/'+path1;}
       }
       var output = compare(link,href); return output;
+    }
+    else if(domain=="wordpress.com"){
+      link=hostname;
+      var output = compare(link,href); return output;
     }        
 
   else if(hostname == "addons.mozilla.org")
