@@ -295,7 +295,7 @@ export function filtering(url, href, origin, hostname,protocol,pathname,search,d
         var path1=pathname.split('/')[1].toLowerCase();
         if(path1=="creators"||path1=="about"||path1=="jobs-at-medium"||path1==""||path1=="tag"||path1=="membership"||path1=="plans"){link=domain;}
         else{link=hostname+'/'+path1;}
-      }console.log(link)
+      }
       var output = compare(link,href); return output;
     }        
 
