@@ -290,12 +290,12 @@ export function filtering(url, href, origin, hostname,protocol,pathname,search,d
       var output = compare(link,href); return output;
     }
     else if(domain=="medium.com"){
-      if((hostname !="medium.com")&& (hostname !="policy.medium.com"||hostname!="blog.medium.com"||hostname!="help.medium.com")){link=domain;}
+      if((hostname !="medium.com")&& (hostname !="policy.medium.com"||hostname!="blog.medium.com"||hostname!="help.medium.com")){link=hostname;}
       else{
         var path1=pathname.split('/')[1].toLowerCase();
         if(path1=="creators"||path1=="about"||path1=="jobs-at-medium"||path1==""||path1=="tag"||path1=="membership"||path1=="plans"){link=domain;}
         else{link=hostname+'/'+path1;}
-      }
+      }console.log(link)
       var output = compare(link,href); return output;
     }        
 
