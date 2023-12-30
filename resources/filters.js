@@ -275,6 +275,15 @@ export function filtering(url, href, origin, hostname,protocol,pathname,search,d
       link=hostname+'/'+path1;
       var output=compare(link,href);
       return output;
+    }
+    else if(domain=="gravatar.com"){
+      if(hostname=="blog.gravatar.com"||hostname=="docs.gravatar.com"||hostname=="support.gravatar.com"){link=domain;}
+      else{
+        var path1=pathname.split('/')[1].toLowerCase();
+        if(path1=="connect"||path1==""){link=domain;}
+        else{link=domain+'/'+path1;}
+      }
+      var output = compare(link,href); return output;
     }        
 
   else if(hostname == "addons.mozilla.org")
