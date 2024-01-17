@@ -1,5 +1,3 @@
-import { filtering } from './filters.js';
-
 const el = document.querySelector(".searchterm");
 var authData;
 
@@ -73,8 +71,7 @@ if (selectedSuggestion) {
 const myJSON = JSON.stringify(selectedSuggestion);
 const outp=JSON.parse(myJSON);
 const {name, urls,type,id,official} = outp;
-//console.log(myJSON)
-//console.log(outp)
+
 authData=outp;
 
 //document.getElementById('output').innerHTML ="";
@@ -156,9 +153,9 @@ function searchNow()
     var search = url.search;
 
     var domain = filterdomain_from_hostname(hostname);
-    //console.log(domain)
+    
 
-    var output= filtering(url, href, origin, hostname,protocol,pathname,search,domain); 
+    var output = filtering(url, href, origin, hostname,protocol,pathname,search,domain);
 		
 			data.innerHTML = (output || "...Verifying");
 			
@@ -187,8 +184,8 @@ function filterdomain_from_hostname(hostname)
 
 }
 
-export function compare(link,display_link){
- // console.log(link)
+function compare(link,display_link){
+
 var json = authData; 
 
 
