@@ -305,6 +305,10 @@ export function filtering(url, href, origin, hostname,protocol,pathname,search,d
     else if(domain=="notion.site"){
       link=hostname;
       var output = compare(link,href); return output;
+    }
+    else if(domain=="myshopify.com"){
+      link=hostname;
+      var output=compare(link,href); return output;
     }        
 
   else if(hostname == "addons.mozilla.org")
