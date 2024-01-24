@@ -178,6 +178,14 @@ export function filtering(url, href, origin, hostname,protocol,pathname,search,d
     else{ link = hostname + '/'+ pathname.split('/')[1].toLowerCase();}
       var output= compare(link,href);
       return output
+  }
+  else if(hostname=="sharechat.com"){
+    path1=pathname.split('/')[1].toLowerCase();
+    if(path1=="about" || path1=="team" || path1=="news" || path1=="blogs"|| path1=="careers" ||path1=="about" || path1=="get-in-touch" || path1=="recharge"){ link=hostname; var output=compare(link,href); return output;}
+    if(path1=="item" || path1=="video" || path1=="buckets" || path1=="tag" || path1=="trending" || path1=="explore"){return `<p style="color:#e9d502;">Cannot identify these links. Please submit the user profile URL to verify.</p>`;}
+     else if(path1=="profile"){link=hostname+'/'+pathname.split('/')[2].toLowerCase(); var output=compare(link,link); return output;}
+     else{ link=hostname+'/'+pathname.split('/')[1] ; var output=compare(link,link); return output;}
+
   }          
   else if(origin == "https://ko-fi.com" || origin =="https://www.buymeacoffee.com" || origin=="https://liberapay.com" || origin =="https://opencollective.com")
 				{
