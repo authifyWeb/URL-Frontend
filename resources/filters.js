@@ -1,6 +1,4 @@
-import { compare } from './script.js';
-
-export function filtering(url, href, origin, hostname,protocol,pathname,search,domain)
+function filtering(url, href, origin, hostname,protocol,pathname,search,domain)
 {
   
 	if(protocol != "https:" ) {return `<p style="padding:40px; color:red;"> This website is not secure. Please refrain from submitting personal data and don't download files from such sources</p>`;}
