@@ -74,11 +74,14 @@ const {name, urls,type,id,official} = outp;
 
 authData=outp;
 
+
 //document.getElementById('output').innerHTML ="";
 document.getElementById("compatible").innerHTML ="";
 document.getElementById("verify_your_company").innerHTML ="";
 
 document.getElementById('naam').innerHTML = `<p style="font-size:1em;"> Submit URL below to verify whether the site belongs to <span style="color:#DFB014 "> ${name} </span></> </p>`;
+
+ 
 
 var form=`<input type='url' id='link_id'  autocomplete="off" placeholder="Paste the URL" > `;
 var btn = `<input type="submit" id="search_btn" value="Search 🔍"> <p style="color:white; font-size:12px; padding-top:2px;">Please use a valid URL format (with https://). Otherwise, no data will be displayed.</p><div class="refresh_btn_box" style="margin-top:5px; margin-bottom:5px;"><button type="button" id="refresh_btn">Search Another Link</button></div> `;
@@ -87,6 +90,10 @@ input_form.innerHTML=form;
 document.getElementById('input_btn').addEventListener('click', searchNow);
 input_btn.innerHTML=btn;
 no_promote.innerHTML="";
+
+if ("own" in authData) {var Disclaimer=`All data sourced from public domain`;} 
+					  else { var Disclaimer=`Official data submitted by the organisation above.`; }
+            disclaimer.innerHTML = Disclaimer; 
 
 document.getElementById('refresh_btn').addEventListener('click', function() {
   window.location.reload();
@@ -190,6 +197,7 @@ var json = authData;
 
 
 var cl= json.urls;
+console.log(json)
 
 
 var conditionMet = false; // Flag variable to track if the condition is met
@@ -198,7 +206,9 @@ for (var i = 0; i < cl.length; i++) {
   if (json.urls[i] === link) {
     var Data = `<div style="color:white;font-size:12px; background-color:#1f282d;">` + display_link + `</br> <p> <span style="color:#A2FB15; font-size: 14px; ">Verified by authifyURL.</span> &nbsp;<span class="tooltip" > ✅ <span class="tooltiptext">This website is valid and legal. </span> </p></br> <p><span style="font-size:14px; color:white;">The page you submitted belongs to: </span><br> <span class="op_logo"><img src="${json.logo}"></span><span style="font-size:18px; color: #DFb014"> ${json.name}</span></p></br></div>`;
                 
-    var Disclaimer = `<p style="color:yellow;">Unless explicitly mentioned with an "Official" tag, all data is obtained from the public domain. </p></br>`;
+    if ("own" in authData) {var Disclaimer=`All data sourced from public domain`;} 
+    else { var Disclaimer=`Official data submitted by the organisation above.`; }
+    disclaimer.innerHTML = Disclaimer; 
     
     data.innerHTML = Data;
     disclaimer.innerHTML = Disclaimer;
@@ -212,7 +222,9 @@ for (var i = 0; i < cl.length; i++) {
 if (!conditionMet) {
   var Data = `<div style="color:white; background-color:#1f282d; font-size:12px;" >` + display_link+`<p><br><span style="color:red;  font-size: 18px;"> The page you submitted doesn't belong to the organization selected above</span>&nbsp; <span class="tooltip"> ❌ <span class="tooltiptext">Possibly a scam. Report the page directly to the owner. </span> </p> </div>`;
     
-  var Disclaimer = `<br><p style="color:yellow;">Unless explicitly mentioned with an "Official" tag, all data is obtained from the public domain.</p></br>`;
+  if ("own" in authData) {var Disclaimer=`All data sourced from public domain`;} 
+					  else { var Disclaimer=`Official data submitted by the organisation above.`; }
+            disclaimer.innerHTML = Disclaimer; 
     
   data.innerHTML = Data;
   disclaimer.innerHTML = Disclaimer;
