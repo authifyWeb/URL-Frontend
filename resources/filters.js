@@ -2,9 +2,9 @@
 function filtering(url, href, origin, hostname, protocol, pathname, search, domain) {
 
     if (protocol != "https:") {
-        return ` This website is not secure. Please refrain from submitting personal data and don't download files from such sources`;
+        return `Info: This website is not secure. Please refrain from submitting personal data and don't download files from such sources`;
     } else if (origin == "https://duckduckgo.com") {
-        if (pathname == "/") return ` This is DuckDuckGo Search Results page. Be wary of the links you click from a results page.`;
+        if (pathname == "/") return `Info: This is DuckDuckGo Search Results page. Be wary of the links you click from a results page.`;
         else {
             link = hostname;
             var output = compare(link, link);
@@ -12,7 +12,7 @@ function filtering(url, href, origin, hostname, protocol, pathname, search, doma
         }
     } else if (origin == "https://www.bing.com") {
         if (pathname == "/search" || pathname == "/shop") {
-            return ` This is Microsoft Bing Search Results page. Be wary of the links you click from a results page.`;
+            return `Info: This is Microsoft Bing Search Results page. Be wary of the links you click from a results page.`;
         } else {
             link = hostname;
             var output = compare(link, link);
@@ -21,7 +21,7 @@ function filtering(url, href, origin, hostname, protocol, pathname, search, doma
     } else if (hostname == "www.google.com" || hostname == "www.google.ca" || hostname == "www.google.co.in" || hostname == "www.google.co.uk" || hostname == "europe.google.com") {
         var hostname = "www.google.com";
         if (pathname == "/search") /*||pathname=="/"||pathname=="/webhp"*/ {
-            return `This is Google Search Results page. Be wary of the links you click from a results page.`;
+            return `Info: This is Google Search Results page. Be wary of the links you click from a results page.`;
         } else {
             link = hostname;
             var output = compare(link, link);
@@ -29,10 +29,10 @@ function filtering(url, href, origin, hostname, protocol, pathname, search, doma
         }
     } else if (hostname == "search.yahoo.com" || hostname == "in.search.yahoo.com" || hostname == "uk.search.yahoo.com" || hostname == "us.search.hostname.com") {
         if (pathname.split(';')[0] == "/search") {
-            return `This is Yahoo Search Results page. Be wary of the links you click from a results page.`;
+            return `Info: This is Yahoo Search Results page. Be wary of the links you click from a results page.`;
         }
     } else if (origin == "https://search.brave.com") {
-        return `This is Brave Search Results page. Be wary of the links you click from a results page`;
+        return `Info: This is Brave Search Results page. Be wary of the links you click from a results page`;
     } else if (hostname == "www.facebook.com" || hostname == "m.facebook.com" || hostname == "facebook.com" || domain == "fb.com") {
         var hostname = "www.facebook.com";
         var path1 = pathname.split('/')[1];
@@ -63,7 +63,7 @@ function filtering(url, href, origin, hostname, protocol, pathname, search, doma
         if (channel == "channel" || channel == "user") {
             link = hostname + '/' + pathname.split('/')[1] + '/' + pathname.split('/')[2];
         } else if (channel == "shorts" || channel == "watch") {
-            return `Cannot identify individual videos. Please submit the profile URL to verify.`;
+            return `Info: Cannot identify individual videos. Please submit the profile URL to verify.`;
         } else if (channel == "c") {
             var id = pathname.split('/')[2].toLowerCase();
             link = hostname + '/' + id
@@ -79,7 +79,7 @@ function filtering(url, href, origin, hostname, protocol, pathname, search, doma
     } else if (origin == "https://www.instagram.com") {
         var channel = (pathname.split('/')[1]);
         if (channel == "p" || channel == "reels" || channel == "reel") {
-            return `Cannot verify individual posts or reels. Please submit the profile URL to verify.`;
+            return `Info: Cannot verify individual posts or reels. Please submit the profile URL to verify.`;
         } else {
             link = hostname + '/' + pathname.split('/')[1].toLowerCase();
             var output = compare(link, link);
@@ -135,7 +135,7 @@ function filtering(url, href, origin, hostname, protocol, pathname, search, doma
         mastodon.art --- Art Related
         mstdn.social
         */
-    else if (hostname == "mastodon.social" || hostname == "social.vivaldi.net" || hostname == "mastodon.online" || hostname == "mozilla.social" || hostname == "infosec.exchange" || hostname == "fosstodon.org" || hostname == "mas.to" || hostname == "mastodon.art" || hostname == "mstdn.social" || hostname == "newsie.social")
+    else if (hostname == "mastodon.social" || hostname == "social.vivaldi.net" || hostname == "mastodon.online" || hostname == "mozilla.social" || hostname == "infosec.exchange" || hostname == "fosstodon.org" || hostname == "mas.to" || hostname == "mastodon.art" || hostname == "mstdn.social" || hostname=="newsie.social")
 
     {
         link = hostname + '/' + pathname.split('/')[1].toLowerCase();
@@ -153,7 +153,7 @@ function filtering(url, href, origin, hostname, protocol, pathname, search, doma
     } else if (hostname == "loco.gg") {
         var path1 = pathname.split('/')[1];
         if (path1 == "stream" || path1 == "clips") {
-            return `Cannot verify individual streams or clips. Please submit the profile URL to verify.`;
+            return `Info: Cannot verify individual streams or clips. Please submit the profile URL to verify.`;
         } else if (path1 == "streamers") {
             link = hostname + '/' + pathname.split('/')[2];
         } else {
@@ -161,7 +161,7 @@ function filtering(url, href, origin, hostname, protocol, pathname, search, doma
         }
         var output = compare(link, href);
         return output;
-    } else if (hostname == "www.t.me" || hostname == "www.telegram.me" || hostname == "t.me") {
+    } else if (hostname == "www.t.me" || hostname == "www.telegram.me" || hostname=="t.me") {
         path1 = pathname.split('/')[1].toLowerCase();
         if (path1 == "s") {
             link = hostname + '/' + pathname.split('/')[2].toLowerCase();
@@ -189,7 +189,7 @@ function filtering(url, href, origin, hostname, protocol, pathname, search, doma
         var path1 = pathname.split('/')[1];
 
         if (path1 == "products") {
-            return `Cannot verify individual products, please visit user profile to verify.`;
+            return `Info: Cannot verify individual products, please visit user profile to verify.`;
         } else if (path1 == "pages") {
             var path2 = pathname.split('/')[2];
             if (path2 == "refund" || path2 == "about-us" || path2 == "terms" || path2 == "cookie-policy" || path2 == "privacy" || path2 == "contact" || path2 == "brand" || path2 == "influencer" || path2 == "refund-policy" || path2 == "shipping-policy") {
@@ -251,7 +251,7 @@ function filtering(url, href, origin, hostname, protocol, pathname, search, doma
         } else {
             var path1 = pathname.split('/')[1].toLowerCase();
             if (path1 == "products") {
-                return `Cannot verify individual products, please visit user profile to verify.`;
+                return `Info: Cannot verify individual products, please visit user profile to verify.`;
             } else if (path1 == "collections") {
                 var link = hostname + '/' + pathname.split('/')[2].toLowerCase();
             } else {
@@ -297,86 +297,67 @@ function filtering(url, href, origin, hostname, protocol, pathname, search, doma
         link = hostname + '/' + path1;
         var output = compare(link, href);
         return output;
-    } else if (domain == "gravatar.com") {
-        if (hostname == "blog.gravatar.com" || hostname == "docs.gravatar.com" || hostname == "support.gravatar.com") {
-            link = domain;
-        } else {
-            var path1 = pathname.split('/')[1].toLowerCase();
-            if (path1 == "connect" || path1 == "") {
-                link = domain;
-            } else {
-                link = domain + '/' + path1;
-            }
+    }
+    else if(domain=="gravatar.com"){
+        if(hostname=="blog.gravatar.com"||hostname=="docs.gravatar.com"||hostname=="support.gravatar.com"){link=domain;}
+        else{
+          var path1=pathname.split('/')[1].toLowerCase();
+          if(path1=="connect"||path1==""){link=domain;}
+          else{link=domain+'/'+path1;}
         }
-        var output = compare(link, href);
-        return output;
-    } else if (domain == "wordpress.com") {
-        link = hostname;
-        var output = compare(link, href);
-        return output;
-    } else if (domain == "medium.com") {
-        if ((hostname != "medium.com") && (hostname != "policy.medium.com" || hostname != "blog.medium.com" || hostname != "help.medium.com")) {
-            link = hostname;
-        } else {
-            var path1 = pathname.split('/')[1].toLowerCase();
-            if (path1 == "creators" || path1 == "about" || path1 == "jobs-at-medium" || path1 == "" || path1 == "tag" || path1 == "membership" || path1 == "plans") {
-                link = domain;
-            } else {
-                link = hostname + '/' + path1;
-            }
+        var output = compare(link,href); return output;
+      }
+      else if(domain=="wordpress.com"){
+        link=hostname;
+        var output = compare(link,href); return output;
+      }
+      else if(domain=="medium.com"){
+        if((hostname !="medium.com")&& (hostname !="policy.medium.com"||hostname!="blog.medium.com"||hostname!="help.medium.com")){link=hostname;}
+        else{
+          var path1=pathname.split('/')[1].toLowerCase();
+          if(path1=="creators"||path1=="about"||path1=="jobs-at-medium"||path1==""||path1=="tag"||path1=="membership"||path1=="plans"){link=domain;}
+          else{link=hostname+'/'+path1;}
         }
-        var output = compare(link, href);
-        return output;
-    } else if (domain == "start.page") {
-        link = hostname;
-        var output = compare(link, href);
-        return output;
-    } else if (domain == "notion.site") {
-        link = hostname;
-        var output = compare(link, href);
-        return output;
-    } else if (domain == "myshopify.com") {
-        link = hostname;
-        var output = compare(link, href);
-        return output;
-    } else if (domain == "myportfolio.com") {
-        link = hostname;
-        var output = compare(link, href);
-        return output;
-    } else if (domain == "featurebase.app") {
-        link = hostname;
-        var output = compare(link, href);
-        return output;
-    } else if (domain == "substack.com") {
-        if (hostname == "on.substack.com" || hostname == "support.substack.com") {
-            link = domain;
-        } else if (hostname == "substack.com") {
-            path1 = pathname.split('/')[1].toLowerCase();
-            if (path1.startsWith("@")) {
-                link = hostname + '/' + path1;
-            } else {
-                link = domain;
-            }
-        } else {
-            link = hostname;
+        var output = compare(link,href); return output;
+      }
+      else if(domain=="start.page"){
+        link=hostname;
+        var output = compare(link,href); return output;
+      }
+      else if(domain=="notion.site"){
+        link=hostname;
+        var output = compare(link,href); return output;
+      }
+      else if(domain=="myshopify.com"){
+      link=hostname;
+      var output=compare(link,href); return output;
+    }
+    else if(domain=="myportfolio.com"){
+        link=hostname; var output=compare(link,href); return output;
+    }
+    else if(domain=="featurebase.app"){
+        link=hostname; var output=compare(link,href); return output;
+    }
+    else if(domain=="substack.com"){
+        if (hostname=="on.substack.com" || hostname=="support.substack.com"){link=domain;}
+        else if(hostname=="substack.com"){
+            path1=pathname.split('/')[1].toLowerCase();
+            if(path1.startsWith("@")){link=hostname+'/'+path1;}else{link=domain;}
         }
-        var output = compare(link, href);
-        return output;
-    } else if (domain == "lnk.bio") {
-        path1 = pathname.split('/')[1].toLowerCase();;
-        if (path1 == 'all-features' || path1 == 'agency' || path1 == "signup" || path1 == "login" || path1 == "verification" || path1 == "booking-calendar" || path1 == "custom-domain" || path1 == "shop" || path1 == "newsletter" || path1 == "about" || path1 == "press" || path1 == "contact" || path1 == "contacts" || path1 == "gift-card" || path1 == "advertise") {
-            link = domain;
-        } else {
-            link = hostname + '/' + path1;
-        }
-        var output = compare(link, href);
-        return output;
-    } else if (hostname == "pages.razorpay.com") {
-        path1 = pathname.split('/')[1].toLowerCase();
-        link = hostname + '/' + path1;
-        var output = compare(link, href);
-        return output;
-    } else if (hostname == "addons.mozilla.org")
+        else{link=hostname;}
+        var output=compare(link,href); return output;
+    }
+    else if(domain=="lnk.bio"){path1=pathname.split('/')[1].toLowerCase();;
+    if(path1=='all-features'|| path1=='agency' || path1=="signup"||path1=="login"||path1=="verification"||path1=="booking-calendar"||path1=="custom-domain"||path1=="shop"||path1=="newsletter"|| path1=="about"||path1=="press" || path1=="contact"||path1=="contacts"||path1=="gift-card"||path1=="advertise"){link=domain;}
+    else{link=hostname+'/'+path1;}
+    var output=compare(link,href); return output;
+    }
+    else if(hostname=="pages.razorpay.com"){
+        path1=pathname.split('/')[1].toLowerCase();
+        link=hostname+'/'+path1;
+        var output=compare(link,href); return output;
+    }
+    else if (hostname == "addons.mozilla.org")
     /*Once the above condition is true, the function replaces the URL language to the the default en-US. This is used since mozilla supports multiple languages and the url structure is directly based on user language.  */
     {
         var lang = pathname.split('/')[1];
@@ -441,11 +422,12 @@ function filtering(url, href, origin, hostname, protocol, pathname, search, doma
         link = hostname;
         var output = compare(link, href);
         return output;
-    } else if (domain == "zohorecruit.in") {
-        link = hostname;
-        var output = compare(link, href);
-        return output;
-    } else {
+    } else if(domain=="zohorecruit.in"){
+        link=hostname;
+        var output = compare(link, href); return output;
+    }
+    
+     else {
         link = domain;
 
 
