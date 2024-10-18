@@ -1,468 +1,884 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title> authifyURL | About &mdash; What is authifyURL?</title>
-        <meta name="description" content="Understand what authifyURL is and how it's an ally for both users and brands.">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>About &mdash; What is an authifyBrand Page?</title>
+        <meta name="description" content="Understand what authifyBrand Page is and how it helps organisations, brands, communities,  non-profits, etc to safeguard their online reputation." />
+        <meta property="og:title" content="About &mdash; What is an authifyBrand Page?">
+        <meta property="og:description" content="UUnderstand what authifyBrand Page is and how it helps organisations, brands, communities,  non-profits, etc to safeguard their online reputation.">
+        <meta property="og:image" content="https://brand.authifyweb.com/images/authifyBrand.jpg">
         <meta name="google-site-verification" content="D6Q4n8azCjI14o-iCcXxn0r3_xZ-3r7wzBaz25y_Clw" />
-        <meta name="keywords" content="verify URL, verify website, authifyURL, what is authifyURL">
-        <meta charset="utf-8"/>
-        <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
-		<link rel="manifest" href="../images/site.webmanifest">
-		<style>
+        <meta name="keywords" content="authifyBrand, authifyBrand One Cards, what is authifyBrand, verify websites, identify scams sites" />
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@authifyBrand">
+        <meta name="twitter:creator" content="@authifyWeb">
+        <meta property="twitter:url" content="https://brand.authifyweb.com/pages/about.html" />
+        <meta property="twitter:title" content="About &mdash; What is an authifyBrand Page?" />
+        <meta property="twitter:description" content="Understand what authifyBrand Page is and how it helps organisations, brands, communities,  non-profits, etc to safeguard their online reputation." />
+        <meta property="twitter:image" content="https://brand.authifyweb.com/images/authifyBrand.jpg">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png" />
+        <link rel="manifest" href="../images/site.webmanifest" />
+        <style>
             @font-face {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-display: swap;
-    font-weight: 400;
-    src: url('fonts/montserrat-v25-latin-regular.eot'); /* IE9 Compat Modes */
-    src: local(''),
-         url('../resources/fonts/montserrat-v25-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('../resources/fonts/montserrat-v25-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-         url('../resources/fonts/montserrat-v25-latin-regular.woff') format('woff'), /* Modern Browsers */
-         url('../resources/fonts/montserrat-v25-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-         url('../resources/fonts/montserrat-v25-latin-regular.svg#Montserrat') format('svg'); /* Legacy iOS */
-  }
-  *{
-      box-sizing: border-box;
-      margin: 0px;
-      padding: 0px;
-  }
-  
-  body{
-        font-family: 'Montserrat', sans-serif;
-        background-color: #1f282d; /* #343434*/
-        font-weight:400px ;
-      }
-  
-  nav{	position:fixed;
-          top:0; left:0; right:0; 
-          
-          padding-top: 9px;
-          
-          display: flex;
-          justify-content: space-between;
-          min-height: 8vh;
-          background-color: #1f282d; /* or use #5d4954*/
-      }
-  
-  .logo a{
-          position: fixed;
-          padding-left: 35px;
-          padding-top: 5px;
-          text-decoration: none;
-          font-family: 'Montserrat', sans-serif;
-          letter-spacing: 3px;
-          font-size: 20px;
-          font-weight: 200;
-      
-        }
-        .brand_arch{
-		color:goldenrod;
-		font-size:12px; 
-		position:absolute; 
-		left:60px; 
-		top:37px;  
-	}
-  
-      .dropbtn {
-        background-color: #1f282d;
-        color: white;
-        padding: 1px;
-        font-size: 14px;
-        border: none;
-        cursor: grab;
-        
-      }
-      
-      .dropdown {
-        
-        display: inline-block;
-      }
-      
-      .dropdown-content {
-        padding-top:20px;
-        display: none;
-        position: absolute;
-        background-color: #1f282d;
-        min-width: 130px;
-        box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
-        border-radius: 5px ;
-      z-index:3;
-      }
-      
-      .dropdown-content a {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-      }
-      
-      .dropdown-content a:hover {background-color: #354852}
-      
-      .dropdown:hover .dropdown-content {
-        display: block;
-      }
-      
-      .dropdown:hover .dropbtn {
-        background-color: #354852;
-      }
-      
-      .pages{
-        
-      padding-top: 8px;
-      font-size: 14px;
-      position:fixed;
-      right:100px;
-      
-      }	
-      .pages a{
-      text-decoration: none;
-      color:skyblue;
-      }	
-      @media (min-width: 320px) and (max-width: 999px){
-       
-        .pages{
-          position: fixed;
-          right:80px;
-          padding-top:10px; /* 3px in case get_verified is displayed */  }
-      }
-      
-  
-  
-  #menu__toggle {
-    opacity: 0;
-  }
-  #menu__toggle:checked + .menu__btn > span {
-    
-    transform: rotate(45deg);
-    
-  }
-  #menu__toggle:checked + .menu__btn > span::before {
-    top: 0;
-    transform: rotate(0deg);
-  }
-  #menu__toggle:checked + .menu__btn > span::after {
-    top: 0;
-    transform: rotate(90deg);
-  }
-  #menu__toggle:checked ~ .menu__box {
-    left: 0 !important;
-  }
-  .menu__btn {
-    position: fixed;
-    top: 16px;
-    right: 30px;
-    width: 26px;
-    height: 26px;
-    cursor: grab;
-    z-index: 1;
-    padding-top: 8px;
-    
-  }
-  
-  .menu__btn > span, 
-  .menu__btn > span::before,
-  .menu__btn > span::after {
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 4px;
-    background-color: #EDE3E3;
-    transition-duration: .25s;
-  
-  }
-  .menu__btn > span::before {
-    content: '';
-    top: -8px;
-  }
-  .menu__btn > span::after {
-    content: '';
-    top: 8px;
-  }
-  .menu__box {
-    display: block;
-    position: absolute;
-    top: 8vh;
-    left: -100%;
-    width: 200px;
-    height: min-height; /*100% for viewport height*/ 
-    margin:10px;
-    padding: 20px 0px;
-    background-color: #202b31;
-    
-    box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
-    transition-duration: .25s;
-    border-radius: 0px 17px 27px 0px ;
-    
-    }
-    
-    .menu__box li{
-         list-style: none;
-    }
-    
-      
-  .menu__item {
-    display: block;
-    padding: 8px 30px;
-    color: #EDE3E3;
-    letter-spacing: 3px;
-    font-size: 16px;
-    line-height: 1;
-    font-weight: 100;
-    text-decoration: none;
-    transition-duration: .25s;
-    
-  
-  }
-  
-  #menu1{
-  margin-bottom:80px;
-  }
-  
-  
-  .menu__item:hover {
-    background-color: #354852;
-    color: #FFFFFF;
-  }
-  
-  .foo__item {
-    display: block;
-    padding: 8px 30px;
-    color: #EDE3E3;
-    letter-spacing: 3px;
-    font-size: 16px;
-    line-height: 1;
-    font-weight: 100;
-    text-decoration: none;
-    
-  }
-  .foo__item:hover {
-    background-color: #354852;
-    color: #FFFFFF;
-  }
-  
-  /****  Nav Menu Ends Here ****/
-  
-/****  Footer Menu Begins Here ****/
-.footer{
-	        text-align: center;
-            line-height: 1em;
-    	}	
-        .footer a, .footer p{
-	text-decoration: none;
-  color:rgb(151, 149, 250);
-	letter-spacing: 3px;
-	font-size: 12px;
-	font-weight: 200;
-	margin-bottom:10px;
-    
-	}
+                font-family: "Montserrat";
+                font-style: normal;
+                font-display: swap;
+                font-weight: 400;
 
-#FooterLinks{
-	font-family: 'Montserrat', sans-serif;
-}
-  
-  @media (min-width: 320px) and (max-width: 999px)  {
-  
-    
-  
-  
-  }
-      
-      
-  /****  Footer Ends Here ****/
+                src: local(""), url("../resources/fonts/montserrat-v25-latin-regular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */ url("../resources/fonts/montserrat-v25-latin-regular.woff2") format("woff2"),
+                    /* Super Modern Browsers */ url("../resources/fonts/montserrat-v25-latin-regular.woff") format("woff"), /* Modern Browsers */ url("../resources/fonts/montserrat-v25-latin-regular.ttf") format("truetype"),
+                    /* Safari, Android, iOS */ url("../resources/fonts/montserrat-v25-latin-regular.svg#Montserrat") format("svg"); /* Legacy iOS */
+            }
+            * {
+                box-sizing: border-box;
+                margin: 0px;
+                padding: 0px;
+            }
+            body {
+                margin: 0;
+                font-family: "Montserrat", sans-serif;
+                background-color: #1f282d;
+                color: #ffffff;
+                line-height: 1.5;
+            }
 
+            nav {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
 
-  .main_container{
-	
-    padding:50px;
-    font-family: 'Montserrat', sans-serif;
-    background-color: #1f282d;
-    color:white;
-	font-size: 16px;
-	font-weight: 400px;
-	line-height: 1.5em;
-  }
-  .main_container a:hover{
-    color:red;
-  }
-h1{
-    padding-top:9vh;
-    color:skyblue;
-    text-align: center;
-    line-height: 1.2em;
-    
-} 
-h4{
-    padding-top: 5px;
-    padding-bottom: 5px;
-    color:skyblue;
-}
-h3{
-    padding-top: 8px;
-    padding-bottom: 9px;
-    color:goldenrod;
-}
-p{
-    padding-bottom: 3px;
-}
+                padding-top: 9px;
 
-.hero{
-	padding-top:20px;
-	padding-bottom:20px;
-    font-size: 16px;
-  }
-  .hero a{
-	text-decoration:none;
-	color:skyblue;
-  }
-blockquote{
-    padding:30px;
-    color: white;
-}
-.verifycompany blockquote {
-    border:solid white 2px;
-    text-align:center;
-    padding:16px;
-}
-.verifycompany a{
-    color:goldenrod;
-}
+                display: flex;
+                justify-content: space-between;
+                min-height: 8vh;
+                background-color: #1f282d; /* or use #5d4954*/
+            }
 
+            .logo a {
+                position: fixed;
+                padding-left: 35px;
+                padding-top: 5px;
+                text-decoration: none;
+                font-family: "Montserrat", sans-serif;
+                letter-spacing: 3px;
+                font-size: 20px;
+                font-weight: 200;
+            }
+            .brand_arch {
+                color: goldenrod;
+                font-size: 12px;
+                position: absolute;
+                left: 60px;
+                top: 37px;
+            }
 
-a{color:#7bbce2; text-decoration:none;}
-@media (min-width: 320px) and (max-width: 999px)  {
-body{
-    padding:10px;
-}
-.main_container{
-  padding:10px;
-}
-blockquote{
-    padding:16px;
-}
+            .dropbtn {
+                background-color: #1f282d;
+                color: white;
+                padding: 1px;
+                font-size: 14px;
+                border: none;
+                cursor: grab;
+            }
 
-}
+            .dropdown {
+                display: inline-block;
+            }
+
+            .dropdown-content {
+                padding-top: 20px;
+                display: none;
+                position: absolute;
+                background-color: #1f282d;
+                min-width: 130px;
+                box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+                border-radius: 5px;
+                z-index: 3;
+            }
+
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+            .dropdown-content a:hover {
+                background-color: #354852;
+            }
+
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+
+            .dropdown:hover .dropbtn {
+                background-color: #354852;
+            }
+
+            .pages {
+                padding-top: 8px;
+                font-size: 14px;
+                position: fixed;
+                right: 100px;
+            }
+            .pages a {
+                text-decoration: none;
+                color: skyblue;
+            }
+            @media (min-width: 320px) and (max-width: 999px) {
+                .pages {
+                    position: fixed;
+                    right: 80px;
+                    padding-top: 10px; /* 3px in case get_verified is displayed */
+                }
+            }
+
+            #menu__toggle {
+                opacity: 0;
+            }
+            #menu__toggle:checked + .menu__btn > span {
+                transform: rotate(45deg);
+            }
+            #menu__toggle:checked + .menu__btn > span::before {
+                top: 0;
+                transform: rotate(0deg);
+            }
+            #menu__toggle:checked + .menu__btn > span::after {
+                top: 0;
+                transform: rotate(90deg);
+            }
+            #menu__toggle:checked ~ .menu__box {
+                left: 0 !important;
+            }
+            .menu__btn {
+                position: fixed;
+                top: 16px;
+                right: 30px;
+                width: 26px;
+                height: 26px;
+                cursor: grab;
+                z-index: 1;
+                padding-top: 8px;
+            }
+
+            .menu__btn > span,
+            .menu__btn > span::before,
+            .menu__btn > span::after {
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 4px;
+                background-color: #ede3e3;
+                transition-duration: 0.25s;
+            }
+            .menu__btn > span::before {
+                content: "";
+                top: -8px;
+            }
+            .menu__btn > span::after {
+                content: "";
+                top: 8px;
+            }
+            .menu__box {
+                display: block;
+                position: absolute;
+                top: 8vh;
+                left: -100%;
+                width: 200px;
+                height: min-height; /*100% for viewport height*/
+                margin: 10px;
+                padding: 20px 0px;
+                background-color: #202b31;
+
+                box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+                transition-duration: 0.25s;
+                border-radius: 0px 17px 27px 0px;
+            }
+
+            .menu__box li {
+                list-style: none;
+            }
+
+            .menu__item {
+                display: block;
+                padding: 8px 30px;
+                color: #ede3e3;
+                letter-spacing: 3px;
+                font-size: 16px;
+                line-height: 1;
+                font-weight: 100;
+                text-decoration: none;
+                transition-duration: 0.25s;
+            }
+
+            #menu1 {
+                margin-bottom: 80px;
+            }
+
+            .menu__item:hover {
+                background-color: #354852;
+                color: #ffffff;
+            }
+
+            .foo__item {
+                display: block;
+                padding: 8px 30px;
+                color: #ede3e3;
+                letter-spacing: 3px;
+                font-size: 16px;
+                line-height: 1;
+                font-weight: 100;
+                text-decoration: none;
+            }
+            .foo__item:hover {
+                background-color: #354852;
+                color: #ffffff;
+            }
+
+            /****  Nav Menu Ends Here ****/
+
+            /****  Footer Menu Begins Here ****/
+
+            .footer a,
+            .footer p {
+                text-decoration: none;
+                color: rgb(151, 149, 250);
+                letter-spacing: 3px;
+                font-size: 12px;
+                font-weight: 200;
+            }
+
+            .footer {
+                text-align: center;
+                position: relative;
+                left: 0;
+                z-index: 1;
+                right: 0;
+                bottom: 1vh;
+            }
+
+            #FooterLinks {
+                font-family: "Montserrat", sans-serif;
+            }
+
+            /****  Footer Ends Here ****/
+
+            /**** Donate Box Starts Here ****/
+            #donate_box {
+                position: absolute;
+                /*top:90vh;*/
+                right: 1.5vw;
+                z-index: 2;
+            }
+
+            #donate {
+                position: relative;
+                bottom: 2vh;
+                background-color: #316e7d;
+                /*   #FDFF8F; */
+                padding-left: 10px;
+                padding-right: 10px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+
+                border: solid white;
+                border-width: 1px;
+            }
+
+            #donate a {
+                color: white;
+                text-decoration: none;
+                font-weight: bold;
+                font-family: "Montserrat", sans-serif;
+                font-size: 14px;
+            }
+
+            @media (min-width: 320px) and (max-width: 520px) {
+                #donate_box {
+                    display: none;
+                }
+            }
+
+            /**** Donate Box Ends Here****/
+
+            .main-section {
+                display: flex;
+                flex-direction: column; /* Stack vertically on small screens */
+                justify-content: center;
+                align-items: center;
+                height: 80vh;
+                padding: 20px;
+                box-sizing: border-box;
+            }
+            .left-section,
+            .right-section {
+                width: 100%;
+                max-width: 800px;
+            }
+            .left-section {
+                text-align: left;
+                margin-bottom: 20px;
+            }
+            .left-section h1 {
+                font-size: 2rem;
+                margin-bottom: 20px;
+                font-weight: 400;
+            }
+            .left-section p {
+                font-size: 1rem;
+                margin-bottom: 20px;
+                font-weight: 400;
+            }
+            .right-section {
+              /*  display: flex;
+                justify-content: flex-end;*/
+                align-items: center;
+            }
+            .right-section .button {
+                background-color: #28a745;
+                border: none;
+                color: #ffffff;
+                padding: 12px 20px;
+                font-size: 0.9rem;
+                cursor: pointer;
+                border-radius: 5px;
+
+                transition: background-color 0.3s;
+                text-decoration: none;
+            }
+            .right-section .button:hover {
+                background-color: #218838;
+            }
+            .about-section {
+                padding: 20px;
+                max-width: 95vw;
+                margin: 0 20px;
+                border-radius: 10px;
+                background-color: #14191e;
+            }
+            .about-content {
+                display: flex;
+                flex-direction: column; /* Stack vertically on small screens */
+                gap: 20px;
+            }
+            .about-left,
+            .about-right {
+                width: 100%;
+                max-width: 800px;
+            }
+            .about-left h2 {
+                font-size: 2rem;
+                margin-bottom: 10px;
+                font-weight: 400;
+            }
+            .about-left p {
+                font-size: 1rem;
+                font-weight: 400;
+                line-height: 1.6;
+                margin-bottom: 20px;
+            }
+            .about-right p {
+                padding-top: 20px;
+                font-size: 1rem;
+                font-weight: 400;
+                line-height: 1.6;
+            }
+            .features {
+                padding: 40px 20px;
+                max-width: 1000px;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column; /* Stack features vertically on small screens */
+                gap: 20px;
+                text-align: center;
+            }
+            .feature {
+                background-color: #272f37;
+                padding: 15px;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+            .feature h3 {
+                font-size: 1.2rem;
+                margin-bottom: 10px;
+                font-weight: 400;
+                text-align: left;
+            }
+            .feature p {
+                font-size: 0.9rem;
+                font-weight: 400;
+                text-align: left;
+            }
+            .why-authifybrand {
+                padding: 120px 20px;
+                max-width: 1000px;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column; /* Stack vertically on small screens */
+                gap: 20px;
+            }
+
+            .left-side,
+            .right-side {
+                width: 100%;
+                max-width: 500px;
+            }
+
+            .left-side h2 {
+                font-size: 1.8rem;
+                margin-bottom: 15px;
+                font-weight: 400;
+            }
+
+            .left-side p {
+                font-size: 1rem;
+                margin-bottom: 20px;
+                font-weight: 400;
+            }
+
+            .left-side .button {
+                background-color: #28a745;
+                margin-top: 20px;
+                border: none;
+                color: #ffffff;
+                padding: 12px 20px;
+                font-size: 0.9rem;
+                cursor: pointer;
+                border-radius: 5px;
+                text-decoration: none;
+                transition: background-color 0.3s;
+            }
+
+            .left-side .button:hover {
+                background-color: #218838;
+            }
+
+            .right-side {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .features-box {
+                background-color: #272f37;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                width: 100%;
+                max-width: 400px;
+            }
+
+            .features-box ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .features-box li {
+                font-size: 1rem;
+                font-weight: 400;
+                margin-bottom: 10px;
+                display: flex;
+                align-items: center;
+            }
+
+            .features-box li::before {
+                color: #2ecc71;
+                margin-right: 10px;
+            }
+
+            .sharable-brand-profile {
+                padding: 40px 20px;
+                max-width: 1000px;
+                margin: 0 auto;
+                text-align: left;
+                background-color: #272f37;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+
+            .sharable-brand-profile h2 {
+                font-size: 2rem;
+                margin-bottom: 15px;
+                font-weight: 400;
+            }
+
+            .sharable-brand-profile p {
+                font-size: 1rem;
+                margin-bottom: 20px;
+                font-weight: 400;
+            }
+            .sharable-brand-profile .button {
+                display: none;
+                background-color: #28a745;
+                border: none;
+                color: #ffffff;
+                padding: 12px 20px;
+                font-size: 0.9rem;
+                cursor: pointer;
+                border-radius: 5px;
+                text-decoration: none;
+                transition: background-color 0.3s;
+            }
+            .faq {
+                border: 1px grey solid;
+                padding: 40px 20px;
+                max-width: 1000px;
+                margin: 20px auto;
+                text-align: center;
+            }
+
+            .faq h2 {
+                font-size: 2rem;
+                margin-bottom: 20px;
+                font-weight: 400;
+                color: goldenrod;
+            }
+
+            .faq-container {
+                display: flex;
+                margin: 10px;
+                flex-direction: column;
+                gap: 20px;
+                align-items: center;
+            }
+
+            .faq-item {
+                border: 1px solid white;
+                padding: 20px;
+                border-radius: 8px;
+                width: 100%;
+                max-width: 600px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                text-align: left;
+            }
+
+            .faq-item summary {
+                font-size: 1rem;
+                font-weight: 400;
+                cursor: pointer;
+                margin-bottom: 10px;
+            }
+
+            .faq-item p {
+                font-size: 1rem;
+                font-weight: 400;
+                margin: 0;
+                padding-top: 10px;
+                line-height: 1.5;
+                margin-bottom:20px;
+            }
+            .faq-item ul{
+                line-height:1.6em;
+                margin: 5px 60px;
+            }
+
+            @media (min-width: 768px) {
+                .main-section {
+                    flex-direction: row; /* Horizontal layout on larger screens */
+                    padding: 20px 100px;
+                    margin: 10px;
+                }
+                .left-section {
+                    max-width: 50%;
+                    text-align: left;
+                }
+                .right-section {
+                    max-width: 50%;
+                    text-align: right;
+                }
+                .about-section {
+                    padding: 20px;
+                    max-width: 95vw;
+                    margin: 0 60px;
+                    border-radius: 10px;
+                    background-color: #14191e;
+                }
+                .about-content {
+                    padding: 40px;
+                    padding-top: 20px;
+                    flex-direction: row; /* Horizontal layout on larger screens */
+                    gap: 40px;
+                }
+                .about-left,
+                .about-right {
+                    padding-top: 20px;
+                    max-width: 50%;
+                }
+                .about-right {
+                    padding-top: 40px;
+                }
+                .features {
+                    flex-direction: row; /* Arrange features horizontally on larger screens */
+                    flex-wrap: wrap;
+                    gap: 30px;
+                }
+                .feature {
+                    flex: 1 1 calc(33.333% - 30px);
+                    max-width: calc(33.333% - 30px);
+                }
+                .why-authifybrand {
+                    padding: 150px 50px;
+                    flex-direction: row;
+                    gap: 20px;
+                }
+                .left-side,
+                .right-side {
+                    width: 50%;
+                }
+                .sharable-brand-profile {
+                    padding: 60px 30px;
+                }
+                .faq {
+                    margin-top: 90px;
+                    padding: 60px 30px;
+                }
+            }
         </style>
     </head>
-<body>
-    <nav>		
-        <div class="logo">
-			<a href="https://url.authifyweb.com"><span style="color:#EDE3E3;"> authify</span><span style="color:#a2fb15;">URL</span></a><span class="brand_arch"> by authifyWeb.com</span>
-			</div> 
-        
-        <div class="pages">
-            <div class="dropdown">
-              <button class="dropbtn">📌 About <sub> <svg width="20px" height="20px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="skyblue"><path d="M7 10l5 5 5-5"/></g></svg></sub></button>
-              <div class="dropdown-content">
-              <a href="../pages/about.html" >About</a>
-              <a href="https://forms.gle/HPWfPsuQeLdQSv5A7" target="_blank">Get Verified</a>
-              <a href="https://authifyweb.com/pages/contribute.html">Get Involved</a>
-              <a href="https://authifyweb.com/pages/donate.html" style="background-color:#316e7d; font-style: italic; font-weight: bold; color:#fff;">💰 Donate</a>
-              </div>
+    <body>
+        <nav>
+            <div class="logo">
+                <a href="https://brands.authifyweb.com"><span style="color: #ede3e3;"> authify</span><span style="color: #a2fb15;">Brand</span></a><span class="brand_arch"> by authifyWeb.com</span>
             </div>
-          </div>
-        <div class="hamburger-menu">
-            <input id="menu__toggle" type="checkbox" />
-            <label class="menu__btn" for="menu__toggle">
-                <span> </span>
-            </label>
-            
-            <ul class="menu__box">
-                <ul>	
-                    <div id="menu1">
-                    <li><a class="menu__item" href="https://authifyweb.com">Home</a></li>
-                    <li><a class="menu__item" href="https://chat.authifyweb.com"><span style="color:#EDE3E3;"> authify</span><span style="color:#a2fb15;">Chat</span></a></li>
-                    <li><a class="menu__item" href="https://url.authifyweb.com"><span style="color:#EDE3E3;"> authify</span><span style="color:#a2fb15;">URL</span></a></li>
-                    <li><a class="menu__item" href="https://fame.authifyweb.com"><span style="color:#EDE3E3;"> authify</span><span style="color:#a2fb15;">Fame</span></a></li> 
-                    <li><a class="menu__item" href="https://now.authifyweb.com"><span style="color:#EDE3E3;"> authify</span><span style="color:#a2fb15;">Now</span></a></li>
-                    
-                    <li><a class="menu__item" style="background-color:#FFC800; color:black; font-style:italic; font-weight:bold" href="https://authifyweb.com/pages/donate.html">Donate Now</a></li>
-                    <li><a class="menu__item" target="_blank" style="background-color:skyblue; color:black; margin-top:5px;font-style:strong;  font-weight:bold" href="https://forms.gle/HPWfPsuQeLdQSv5A7">Get Verified</a></li>
+
+            <div class="pages">
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        📌 About
+                        <sub>
+                            <svg width="20px" height="20px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <g fill="skyblue"><path d="M7 10l5 5 5-5" /></g>
+                            </svg>
+                        </sub>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="../pages/about.html">About</a>
+                        <a href="../pages/get-listed.html">Get Listed</a>
+                        <a href="https://authifyweb.com/pages/contribute.html" target="_blank">Get Involved</a>
+                        <a href="https://authifyweb.com/pages/donate.html" style="background-color: #316e7d; font-style: italic; font-weight: bold; color: #fff;">💰 Donate</a>
                     </div>
-                    
+                </div>
+            </div>
+            <div class="hamburger-menu">
+                <input id="menu__toggle" type="checkbox" />
+                <label class="menu__btn" for="menu__toggle">
+                    <span> </span>
+                </label>
+
+                <ul class="menu__box">
+                    <ul>
+                        <div id="menu1">
+                            <li><a class="menu__item" href="https://authifyweb.com">Home</a></li>
+                            <li>
+                                <a class="menu__item" href="https://chat.authifyweb.com"><span style="color: #ede3e3;"> authify</span><span style="color: #a2fb15;">Chat</span></a>
+                            </li>
+                            <li>
+                                <a class="menu__item" href="https://brand.authifyweb.com"><span style="color: #ede3e3;"> authify</span><span style="color: #a2fb15;">Brand</span></a>
+                            </li>
+                            <li>
+                                <a class="menu__item" href="https://fame.authifyweb.com"><span style="color: #ede3e3;"> authify</span><span style="color: #a2fb15;">Fame</span></a>
+                            </li>
+                            <li>
+                                <a class="menu__item" href="https://now.authifyweb.com"><span style="color: #ede3e3;"> authify</span><span style="color: #a2fb15;">Now</span></a>
+                            </li>
+
+                            <li><a class="menu__item" style="background-color: #ffc800; color: black; font-style: italic; font-weight: bold;" href="https://authifyweb.com/pages/donate">Donate Now</a></li>
+                            <li><a class="menu__item" style="background-color: skyblue; color: black; margin-top: 5px; font-style: strong; font-weight: bold;" href="../pages/get-listed.html">Get Listed</a></li>
+                        </div>
+                    </ul>
+                    <ul>
+                        <div id="menu2">
+                            <li><a class="foo__item" target="_blank" href="https://authifyweb.com/pages/privacy">Privacy</a></li>
+                            <li><a class="foo__item" target="_blank" href="https://authifyweb.com/pages/disclaimer">Disclaimer</a></li>
+                            <li><a class="foo__item" target="_blank" href="https://authifyweb.com/pages/terms">Terms</a></li>
+
+                            <li><a class="foo__item" target="_blank" href="https://github.com/authifyWeb/URL-Frontend">Github</a></li>
+                        </div>
+                    </ul>
                 </ul>
-                <ul>
-                    <div id="menu2">
-                    <li><a class="foo__item" target ="_blank" href="https://authifyweb.com/pages/privacy">Privacy</a></li>		
-                    <li><a class="foo__item" target ="_blank" href="https://authifyweb.com/pages/disclaimer">Disclaimer</a></li>
-                    <li><a class="foo__item" target ="_blank" href="https://authifyweb.com/pages/terms">Terms</a></li>
-                    
-                    <li><a class="foo__item" target ="_blank" href="https://github.com/authifyWeb/URL-Frontend">Github</a></li>
-                </ul>
-            </ul>
+            </div>
+        </nav>
+
+        <div style="height: 10vh;"></div>
+
+        <!-- Main Section -->
+        <div class="main-section">
+            <!-- Left Section -->
+            <div class="left-section">
+                <p style="font-size: 12px; text-transform: uppercase;">What is authifyBrand</p>
+                <h1>Helping Users Identify Scams Impersonating Your Brand</h1>
+                <p>Empower your customers to identify scams that impersonate your brand. Make it easy for them to verify your websites, social media, and much more.</p>
+            </div>
+
+            <!-- Right Section -->
+            <div class="right-section">
+                <p><a href="../pages/get-listed.html" class="button"> Create Your authifyBrand Page</a></p>
+            </div>
         </div>
-    </nav>
 
-   
-<div class="main_container">
+        <!-- About Us Section -->
+        <div class="about-section">
+            <div class="about-content">
+                <div class="about-left">
+                    <p style="font-size: 12px; text-transform: uppercase;">What authifyBrand Stands For</p>
+                    <h2>Safeguarding Your Digital Reputation</h2>
 
-<h1 class="title">What is authifyURL?</h1>
-<div class="hero">
-<p><em><a href="https://url.authifyweb.com">authifyURL</a> is an open-source project designed to empower users with a simple and effective tool for verifying website authenticity. Users can easily determine whether a website belongs to a specific company or if it's potentially fraudulent and brands can make sure their customers are visiting the official websites of the brand. </em> </p>
-<br>
-<iframe style="text-align:center; width:100%;" src="https://player.vimeo.com/video/853600635"  height="270" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" title="What If You Have A Friend"></iframe>
-<p>In today's digital landscape, the prevalence of fake and scam websites poses a significant threat to both internet users and brands. The need for a reliable solution that helps users identify legitimate websites and protects brands from impersonation is more critical than ever.</p>
-<br>
-<p>Even tech-savvy individuals find experiencing moments of hesitation and doubt when it comes to making online payments. It's natural to question the authenticity of websites and worry about falling victim to scams. Now, imagine the plight of those who are not familiar with the intricacies of the internet or the prevalence of these types of scams. There is a significant portion of the population who may not be internet and tech-savvy, or they may not even be aware of the potential dangers lurking online. They may not have heard about the scams that target unsuspecting individuals, making them vulnerable to financial losses.</p>
+                    <p>authifyBrand stands as the guardian of authenticity for brands, non-profits and corporations.</p>
+                </div>
 
- <blockquote><em>In an era of rampant data leaks and increasing cyber threats worldwide, the risk of falling victim to scams only seems to escalate. </em></blockquote>
+                <div class="about-right">
+                    <p>authifyBrand offer a unique and secure space where users can verify your online presence, ensuring your Customer connect with the real you.</p>
+                </div>
+            </div>
 
-<p>With authifyURL we are not attempting to revolutionize the field or introduce something entirely new. Instead, we prioritize making today's internet safer and more secure through a centralized database approach. We strives to assist those who may face difficulties in an area that may seem ordinary to others. By providing a user-centric and easily accessible platform, authifyURL aims to bring about positive change for users who may otherwise find themselves at a disadvantage. </p>
-<p>With authifyURL, individuals who are unfamiliar with the intricacies of the internet can easily verify the authenticity of websites before completing online payments. By easily using the authifyURL website, they can gain peace of mind and assurance that the website they are using is legitimate and trustworthy. The verification process goes beyond domain names and URLs, extending its verification capabilities to include social media profiles, app stores, web-stores, many 3rd party subdomains & websites etc. . With us users can confidently verify the authenticity of social media accounts, ensuring they are interacting with genuine and trusted profiles(Even if they don’t have a paid verification mark on SM profiles).</p>
-<div class="verifycompany"> <blockquote> <a href="https://forms.gle/HPWfPsuQeLdQSv5A7" target="_blank"> Help your users avoid scams and protect your company's brand reputation by listing it for FREE on authifyURL.</a></blockquote> </div>
+            <section class="features">
+                <div class="feature">
+                    <h3>Quality & Trust</h3>
+                    <p>authifyBrand is a sign of quality and trust, showing your commitment towards your customers.</p>
+                </div>
+                <div class="feature">
+                    <h3>Free & User-Friendly</h3>
+                    <p>Our interface is designed to be simple and freely accessible for everyone to verify links.</p>
+                </div>
+                <div class="feature">
+                    <h3>Web-Based</h3>
+                    <p>authifyBrand is entirely web-based. No need to install anything, users can access the site anytime from any device.</p>
+                </div>
+            </section>
 
-<h1 class="features"> Why Use authifyURL?</h1>
-<em><blockquote>Brands, Non-Profits, Open Source Communities and other internet users, all can use authifyURL service to the maximum.</blockquote></em>
+            <p style="color: goldenrod; text-align: center; font-size: 16px;">You focus on building your brand, we'll ensure its digital reputation remains safeguarded.</p>
+        </div>
 
-<h4><em>Helping Internet Users Stay Secure:</em></h4>
-<p> One of the primary advantages of authifyURL is its ability to assist internet users in distinguishing between real and fake websites. With the majority of users discovering websites through search engines, the risk of encountering fraudulent links on search engine results pages (SERPs) is high. By leveraging authifyURL, users can proactively verify the authenticity of a website or social media profile before engaging with it, ensuring they don't fall victim to scams or deceptive online practices. </p>
+        <section class="why-authifybrand">
+            <div class="left-side">
+                <p style="font-size: 12px; text-transform: uppercase;">Features & More</p>
+                <h2>Why authifyBrand Page?</h2>
+                <p>By safeguarding your fans, you build a reputation of trust and integrity for your brand.</p>
 
-<h4><em>A User-Friendly Approach:</em></h4>
-<p> The primary focus of authifyURL is to prioritize the needs of users, especially those who may not be familiar with complex technical processes. The tool's user-friendly interface eliminates any barriers to entry, ensuring that individuals from all backgrounds can benefit from its features. Users simply need to visit the authifyURL website, without the hassle of account creation or extensive personal information collection. Moreover, privacy is paramount, and authifyURL prioritizes user data protection by refraining from tracking or storing personal information. In addition to that, to improve the website, we opted to use the Privacy-first Cloudflare Analytics, which provides an additional layer of protection and peace of mind for users.  
-</p> 
+                <p><a href="../pages/get-listed.html" class="button"> Create your authifyBrand page</a></p>
+            </div>
 
-<h3>For Brands, Companies, Non-Profits & Open-Source Communities</h3>
-<p>As a Brand, you understand the importance of ensuring a safe and trustworthy online experience for your valued customers. With our service,  provides your customers with the tools they need to make informed decisions and protect themselves from potential scams or fraudulent activities. By prioritizing verification, we are building a stronger bond of trust for your brand with your customers, assuring them that their online interactions with your brand are secure.</p>
+            <div class="right-side">
+                <div class="features-box">
+                    <ul>
+                        <li>&#10003; &nbsp;Instant URL Verification</li>
+                        <li>&#10003; &nbsp;Unlimited Personal Sites</li>
+                        <li>&#10003; &nbsp;30+ Third-Party Websites</li>
+                        <li>&#10003; &nbsp;Support for Multiple Platforms</li>
+                        <li>&#10003; &nbsp;Safeguard Online Reputation</li>
+                        <li>&#10003; &nbsp;Individual Verification Pages</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
+        <section class="sharable-brand-profile">
+            <p style="font-size: 12px; text-transform: uppercase;">Commitment towards customers</p>
+            <h2>
+                Sharable Brand Page
+                <svg fill="#87ceeb" width="30" height="30" viewBox="0 0 24 24" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="m21.707 11.293-8-8A1 1 0 0 0 12 4v3.545A11.015 11.015 0 0 0 2 18.5V20a1 1 0 0 0 1.784.62 11.46 11.46 0 0 1 7.887-4.049c.05-.006.175-.016.329-.026V20a1 1 0 0 0 1.707.707l8-8a1 1 0 0 0 0-1.414M14 17.586V15.5a1 1 0 0 0-1-1c-.255 0-1.296.05-1.562.085a14 14 0 0 0-7.386 2.948A9.013 9.013 0 0 1 13 9.5a1 1 0 0 0 1-1V6.414L19.586 12Z"
+                    />
+                </svg>
+            </h2>
+            <p>Share your authifyBrand Page across all your social platforms and bios to ensure your customers easily avoid impersonation scams.</p>
+            <p>Your brand page is designed to be easily accessible, fast and sharable, making it effortless for your customers to connect with the authentic you.</p>
+            <p>Safeguards your brand reputation & protects your customers from falling into financial frauds.</p>
+            <p><a href="../pages/get-listed.html" class="button"> Create your authifyBrand page</a></p>
+        </section>
 
-<h4><em>Protecting Brand Reputation and Customer Trust:</em></h4>
-<p> authifyURL offers significant benefits to brands by safeguarding their reputation and customer trust. With the rise of personal data breaches and increasing instances of scam calls and messages, brands face a higher risk of fraudulent websites operating under their name, so customers need reassurance that they are interacting with legitimate websites. By utilizing authifyURL, brands can minimize the risk of their customers falling for fake websites operating under their name. This proactive approach bolsters the brand's image, as customers can confidently trust that the verified website is the official and trusted source. 
-</p>
+        <section class="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <details class="faq-item">
+                    <summary>What is authifyBrand Page?</summary>
+                    <p>
+                        authifyBrand page is a free web-based tool that helps users easily identify scams sites and profiles impersonating as brands. It helps companies, non-profits, and other organisations safeguard their online
+                        reputation by ensuring that their customers are interacting with the genuine accounts.
+                    </p>
+                    <p>authifyBrand stands as the guardian of authenticity for brands and organisations.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Who should use authifyBrand pages?</summary>
+					<p>Any company, brand, or non-profits who has to protect their digital reputation from scamemrs, should definitely have a authifyBrand card.</p>
+				<div>		
+					<ul>
+						<li>Large and Global Brands</li>
+						<li>Influencers</li>
+						<li>Small Business</li>
+						<li>MSMEs</li>
+						<li>Open Source Organisations</li>
+						<li>E-Commerce sites</li>
+						<li>News & Media</li>
+						<li>Communities</li>
+						 &nbsp; & more
+					  </ul>
+					</div>	
+					<p>Once you get a verified profile, you don't have to worry about monitoring for fake websites. You can simply add your real websites and social media sites here, and anything fake will be shown as fake. Even if you are not online 24/7 to respond to verification queries from customers, your authifyBrand page acts as an auto-respondent to verify links, ensuring continuous protection and trust, safeguarding your digital reputation.</p>
+				</details>
+                <details class="faq-item">
+                    <summary>Why should you have an authifyBrand page?</summary>
+                    <p>
+                        Scammers are always around to misuse your digital identity and impersonate your brand to run scams. authifyBrand page make sure your customers or even the general public know which are your authentic social media profile and which are fake and scammy.
+                    </p>
+                </details>
+                <details class="faq-item">
+                    <summary>How to get a verified authifyBrand Page?</summary>
+                    <p>
+                        All authifyBrand users are manually verified and then listed to prevent impersonation. Get registered
+                        <a href="../pages/get-listed.html" style="color: skyblue;" ;>here</a>.
+                    </p>
+                </details>
+                <details class="faq-item">
+                    <summary>Should I share my authifyBrand Page link on social media sites?</summary>
+                    <p>Yes. This will give maximum advantage for customers who follow you on one profile to verify any other links. Your social media bios are the most suitable place to share authifyBrand page links.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Is authifyBrand URL verification free?</summary>
+                    <p>Yes, Your customers and followers can verify any links of yours without any fee.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>How does the URL verification work?</summary>
+                    <p>
+                        Once you register for an authifyBrand Page, you'll receive a dedicated profile page where your customers can submit URLs for verification. We check these URLs against the links you’ve provided and inform your fans
+                        if the URL is verified or a scam.
+                    </p>
+                </details>
+                <details class="faq-item">
+                    <summary>Is my data secure?</summary>
+                    <p>
+                        Yes, we prioritize your privacy and data security. We store all required information and ensure that all data is handled with the utmost confidentiality. If you delete your account and later create it again, you'll have to verify again from the start. Check our
+                        <a href="https://authifyweb.com/pages/terms" style="color: skyblue;" ;>terms</a> and <a href="https://authifyweb.com/pages/privacy" style="color: skyblue;" ;>privacy policy</a> for more details.
+                    </p>
+                </details>
+                <details class="faq-item">
+                    <summary>Can I update my profile information?</summary>
+                    <p>Absolutely! You can update your profile information and links at any time through your authifyBrand dashboard to ensure that your fans always have the latest and most accurate information. [Coming Soon]</p>
+                </details>
+            </div>
+        </section>
 
-<h4><em>Streamlining Brand Protection Efforts:</em></h4>
-<p> In addition to protecting brand reputation, authifyURL simplifies the process of brand protection. Brands no longer need to constantly remind their customers through tweets or messages about the official website. The project reduces the need for brands to continuously monitor and combat fake websites with similar names. Consequently, even small brands can feel secure in their online presence without having to invest in multiple top-level domains (TLDs) or worry about similar-looking websites diluting their brand's trustworthiness. Needless to say, users won't have to remember all those multiple URLS.
-</p>
-
-
-<h4><em>Boosting Trust and Convenience for Users towards your brand:</em></h4>
-<p> With authifyURL, users benefit from increased trust and convenience. Instead of remembering numerous official URLs for different brands, users can rely on a single source: authifyURL. The straightforward verification process ensures consistent and reliable results for all brands, enabling users to quickly verify website authenticity whenever they have doubts. By providing this user-friendly and trustworthy platform, authifyURL empowers individuals to navigate the web safely and with confidence. 
-</p>
-<h4><em>Empowering Non-Profits and FOSS Projects:</em></h4>
-<p>Non-profit organizations and open-source projects, often lacking extensive marketing resources, face a higher risk of fraudulent websites operating under their name. authifyURL serves as a vital tool for such projects, allowing them to safeguard their brand image and protect users from downloading counterfeit or malicious content. By identifying fake products early on, authifyURL empowers users to mitigate potential harm and maintain their trust in the online community.  </p>
-</br>
-<blockquote><em>By working with us, you demonstrates your commitment to your customers' safety and security. By encouraging them to verify first, you establish a stronger bond of trust and create a safer online environment for everyone. It's not just about making a one-time purchase or interaction; it's about building a long-lasting relationship based on trust and transparency.</em></blockquote>
-
-<h3>Simplicity At Its Very Core.</h3>
-<p>authifyURL is built on the foundation of simplicity and accessibility. With just a bookmark to the authifyURL site, users gain instant access to a powerful verification tool at their fingertips. This streamlined approach ensures that even individuals who are not tech-savvy can easily navigate and utilize the tool without feeling overwhelmed or intimidated. By removing unnecessary complexities, authifyURL empowers users to take control of their online safety effortlessly.</p>
-<p>While we acknowledges that it may not provide a foolproof solution against scams and fraudulent websites, it acknowledges the importance of addressing the needs of everyday users. For many individuals, what may seem ordinary to tech-savvy individuals can be quite challenging to comprehend. We aims to bridge this gap and provide a tool that simplifies website verification, making it accessible to a broader audience. By doing so, it seeks to empower and protect users who may otherwise struggle to navigate the complexities of the online world.</p>
-<p> We recognize that cultivating a behavior shift in users takes time, but with authifyURL, we are actively facilitating this transition. We are actively promoting a culture of cautiousness and responsible online interactions. By encouraging your customers to utilize authifyURL's user-friendly platform, you empower them to verify the authenticity of your website and social media profiles before engaging further.</p>
-
-<blockquote>With <a href="https://url.authifyweb.com">authifyURL</a>, everyone can embark on their online journey with confidence and peace of mind </blockquote>
-
-<div class="verifycompany"><blockquote> <a href="https://forms.gle/HPWfPsuQeLdQSv5A7" target="_blank"> Help your users avoid scams and protect your company's brand reputation by listing it for FREE on authifyURL.</a></blockquote> </div>
-</div>
-</div>
-<div class="footer"> 
-           
-    <div id="FooterLinks">
-        <span><a href="https://authifyweb.com/pages/privacy" target="_blank"> Privacy </a> </span> &nbsp; <span><a href="https://authifyweb.com/pages/disclaimer" target="_blank"> Disclaimer</a></span> &nbsp; <span><a href="https://authifyweb.com/pages/terms" target="_blank"> Terms</a></span>
-        <p>  &copy; <a href="https://authifyweb.com" > authifyWeb.com</a> </p>
-        
-    </div>
- </div>   
-</body>
+        <div class="footer">
+            <div id="FooterLinks">
+                <span><a href="https://authifyweb.com/pages/privacy" target="_blank"> Privacy </a> </span> &nbsp; <span><a href="https://authifyweb.com/pages/disclaimer" target="_blank"> Disclaimer</a></span> &nbsp;
+                <span><a href="https://authifyweb.com/pages/terms" target="_blank"> Terms</a></span>
+                <p>&copy; <a href="https://authifyweb.com"> authifyWeb.com</a></p>
+            </div>
+        </div>
+        <p id="donate_box">
+            <span id="donate">
+                <a href="https://authifyweb.com/pages/donate"><i>Donate Now</i></a>
+            </span>
+        </p>
+    </body>
 </html>
