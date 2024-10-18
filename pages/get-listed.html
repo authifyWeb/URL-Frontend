@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="noindex, nofollow, noarchive"> 
+
+        <title>Get-Listed &mdash; authifyBrand</title>
+        <meta name="description" content="Get listed so your customers can detect impersonation scams easily." />
+        <meta property="og:title" content="Get-Listed &mdash; authifyBrand">
+        <meta property="og:description" content="Get listed so your customers can detect impersonation scams easily.">
+        <meta property="og:image" content="https://brand.authifyweb.com/images/authifyBrand.jpg">
+        <meta name="google-site-verification" content="D6Q4n8azCjI14o-iCcXxn0r3_xZ-3r7wzBaz25y_Clw" />
+        <meta name="keywords" content="authifyBrand, authifyBrand One Cards, what is authifyBrand, verify websites, identify scams sites" />
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@authifyBrand">
+        <meta name="twitter:creator" content="@authifyWeb">
+        <meta property="twitter:url" content="https://brand.authifyweb.com/pages/get-listed.html" />
+        <meta property="twitter:title" content="Get-Listed &mdash; authifyBrand" />
+        <meta property="twitter:description" content="Get listed so your customers can detect impersonation scams easily." />
+        <meta property="twitter:image" content="https://brand.authifyweb.com/images/authifyBrand.jpg">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png" />
+        <link rel="manifest" href="../images/site.webmanifest" />
+
+    <style>
+ @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    
+    src: local(''),
+         url('../resources/fonts/montserrat-v25-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../resources/fonts/montserrat-v25-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../resources/fonts/montserrat-v25-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('../resources/fonts/montserrat-v25-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../resources/fonts/montserrat-v25-latin-regular.svg#Montserrat') format('svg'); /* Legacy iOS */
+  }
+  *{
+      box-sizing: border-box;
+      margin: 0px;
+      padding: 0px;
+      
+  }
+  
+  body{
+        font-family: 'Montserrat', sans-serif;
+        background-color: #1f282d; /* #343434*/
+        font-weight:400px ;
+        color:#fff;
+      }
+  
+  nav{	position:fixed;
+          top:0; left:0; right:0; 
+          
+          padding-top: 9px;
+          
+          display: flex;
+          justify-content: space-between;
+          min-height: 8vh;
+          background-color: #1f282d; /* or use #5d4954*/
+      }
+  
+  .logo a{
+          position: fixed;
+          padding-left: 35px;
+          padding-top: 5px;
+          text-decoration: none;
+          font-family: 'Montserrat', sans-serif;
+          letter-spacing: 3px;
+          font-size: 20px;
+          font-weight: 200;
+      
+        }
+        .brand_arch{
+		color:goldenrod;
+		font-size:12px; 
+		position:absolute; 
+		left:60px; 
+		top:37px;  
+	}
+  
+      .dropbtn {
+        background-color: #1f282d;
+        color: white;
+        padding: 1px;
+        font-size: 14px;
+        border: none;
+        cursor: grab;
+        
+      }
+      
+      .dropdown {
+        
+        display: inline-block;
+      }
+      
+      .dropdown-content {
+        padding-top:20px;
+        display: none;
+        position: absolute;
+        background-color: #1f282d;
+        min-width: 130px;
+        box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+        border-radius: 5px ;
+      z-index:3;
+      }
+      
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      
+      .dropdown-content a:hover {background-color: #354852}
+      
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+      
+      .dropdown:hover .dropbtn {
+        background-color: #354852;
+      }
+      
+      .pages{
+        
+      padding-top: 8px;
+      font-size: 14px;
+      position:fixed;
+      right:100px;
+      
+      }	
+      .pages a{
+      text-decoration: none;
+      color:skyblue;
+      }	
+      @media (min-width: 320px) and (max-width: 999px){
+       
+        .pages{
+          position: fixed;
+          right:80px;
+          padding-top:10px; /* 3px in case get_verified is displayed */  }
+      }
+      
+  
+  
+  #menu__toggle {
+    opacity: 0;
+  }
+  #menu__toggle:checked + .menu__btn > span {
+    
+    transform: rotate(45deg);
+    
+  }
+  #menu__toggle:checked + .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0deg);
+  }
+  #menu__toggle:checked + .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .menu__box {
+    left: 0 !important;
+  }
+  .menu__btn {
+    position: fixed;
+    top: 16px;
+    right: 30px;
+    width: 26px;
+    height: 26px;
+    cursor: grab;
+    z-index: 1;
+    padding-top: 8px;
+    
+  }
+  
+  .menu__btn > span, 
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #EDE3E3;
+    transition-duration: .25s;
+  
+  }
+  .menu__btn > span::before {
+    content: '';
+    top: -8px;
+  }
+  .menu__btn > span::after {
+    content: '';
+    top: 8px;
+  }
+  .menu__box {
+    display: block;
+    position: absolute;
+    top: 8vh;
+    left: -100%;
+    width: 200px;
+    height: min-height; /*100% for viewport height*/ 
+    margin:10px;
+    padding: 20px 0px;
+    background-color: #202b31;
+    
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+    transition-duration: .25s;
+    border-radius: 0px 17px 27px 0px ;
+    
+    }
+    
+    .menu__box li{
+         list-style: none;
+    }
+    
+      
+  .menu__item {
+    display: block;
+    padding: 8px 30px;
+    color: #EDE3E3;
+    letter-spacing: 3px;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 100;
+    text-decoration: none;
+    transition-duration: .25s;
+    
+  
+  }
+  
+  #menu1{
+  margin-bottom:80px;
+  }
+  
+  
+  .menu__item:hover {
+    background-color: #354852;
+    color: #FFFFFF;
+  }
+  
+  .foo__item {
+    display: block;
+    padding: 8px 30px;
+    color: #EDE3E3;
+    letter-spacing: 3px;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 100;
+    text-decoration: none;
+    
+  }
+  .foo__item:hover {
+    background-color: #354852;
+    color: #FFFFFF;
+  }
+  
+  /****  Nav Menu Ends Here ****/
+  
+/****  Footer Menu Begins Here ****/
+.footer{
+	        text-align: center;
+            line-height: 1em;
+    	}	
+        .footer a, .footer p{
+	text-decoration: none;
+  color:rgb(151, 149, 250);
+	letter-spacing: 3px;
+	font-size: 12px;
+	font-weight: 200;
+	margin-bottom:10px;
+    
+	}
+
+#FooterLinks{
+	font-family: 'Montserrat', sans-serif;
+}
+  
+  @media (min-width: 320px) and (max-width: 999px)  {
+  
+    
+  
+  
+  }
+      
+      
+  /****  Footer Ends Here ****/
+
+  .main_container{
+	
+    
+    font-family: 'Montserrat', sans-serif;
+    background-color: #1f282d;
+    color:white;
+	font-size: 16px;
+	font-weight: 400px;
+	line-height: 1.5em;
+  }
+  .main_container a:hover{
+    color:red;
+  }
+h1{
+    padding-top:9vh;
+    color:#fff;
+    text-align: center;
+    line-height: 1.2em;
+    
+}
+h4{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color:goldenrod;
+}
+h3{
+    margin-top: 8px;
+    margin-bottom: 9px;
+    color:rgb(255, 255, 255);
+}
+p{
+    color:white;
+    padding-bottom:3px;
+} 
+.hero{
+  padding:50px;
+	padding-top:20px;
+	padding-bottom:20px;
+    font-size: 16px;
+  }
+  .hero a{
+	text-decoration:none;
+	color:skyblue;
+  }
+blockquote{
+    padding:30px;
+    color: white;
+}
+.listless{
+    padding-left:30px;
+}
+
+a{color:#7bbce2; text-decoration:none;}
+
+#expedited_process{
+  margin:50px;
+  margin-top:85px;
+  margin-bottom:50px;
+  
+}
+.purchase{
+  margin:10px;
+  padding-left:7px;
+  margin-bottom: 50px;
+  line-height:2em;
+}
+sup, sub{
+  font-size:11px;
+}
+
+.stripe_checkout{
+  margin:20px;
+  width: auto;
+}
+.clause{
+  margin:50px;
+}
+@media (min-width: 320px) and (max-width: 999px)  {
+body{
+    padding:10px;
+}
+.main_container{
+    padding:5px;
+}
+.hero{
+  padding:5px;
+}
+blockquote{
+    padding:15px;
+}
+}
+
+
+.waitlist-container {
+    text-align: center;
+    background-color: #131318; 
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    
+}
+
+.waitlist-container a {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.waitlist-container a:hover {
+    background-color: #0056b3;
+}
+.waitlist-container h2{
+    margin:10px;
+}
+
+
+    </style>  
+    
+</head>
+
+<body>
+
+    <nav>		
+        <div class="logo">
+            <a href="https://brand.authifyweb.com"><span style="color:#EDE3E3;"> authify</span><span style="color:#a2fb15;">Brand</span></a><span class="brand_arch"> by authifyWeb.com</span>
+            </div> 
+        
+        <div class="pages">
+            <div class="dropdown">
+              <button class="dropbtn">📌 About <sub> <svg width="20px" height="20px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="skyblue"><path d="M7 10l5 5 5-5"/></g></svg></sub></button>
+              <div class="dropdown-content">
+              <a href="../pages/about.html" >About</a>
+              <a href="../pages/get-listed.html" >Get Listed</a>
+              <a href="https://authifyweb.com/pages/contribute.html" target="_blank">Get Involved</a>
+              <a href="https://authifyweb.com/pages/donate.html" style="background-color:#316e7d; font-style: italic; font-weight: bold; color:#fff;">💰 Donate</a>
+              </div>
+            </div>
+          </div>
+        <div class="hamburger-menu">
+            <input id="menu__toggle" type="checkbox" />
+            <label class="menu__btn" for="menu__toggle">
+                <span> </span>
+            </label>
+            
+            <ul class="menu__box">
+                <ul>	
+                    <div id="menu1">
+                    <li><a class="menu__item" href="https://authifyweb.com">Home</a></li>
+                    <li><a class="menu__item" href="https://chat.authifyweb.com"><span style="color:#EDE3E3;"> authify</span><span style="color:#a2fb15;">Chat</span></a></li>
+                    <li><a class="menu__item" href="https://brand.authifyweb.com"><span style="color:#EDE3E3;"> authify</span><span style="color:#a2fb15;">Brand</span></a></li>
+                    <li><a class="menu__item" href="https://fame.authifyweb.com"><span style="color:#EDE3E3;"> authify</span><span style="color:#a2fb15;">Fame</span></a></li> 
+                    <li><a class="menu__item" href="https://now.authifyweb.com"><span style="color:#EDE3E3;"> authify</span><span style="color:#a2fb15;">Now</span></a></li>
+                    
+                    <li><a class="menu__item" style="background-color:#FFC800; color:black; font-style:italic; font-weight:bold" href="https://authifyweb.com/pages/donate">Donate Now</a></li>
+                    <li><a class="menu__item"  style="background-color:skyblue; color:black; margin-top:5px;font-style:strong;  font-weight:bold" href="../pages/get-listed.html">Get Listed</a></li>
+                    </div>
+                    
+                </ul>
+                <ul>
+                    <div id="menu2">
+                    <li><a class="foo__item" target ="_blank" href="https://authifyweb.com/pages/privacy">Privacy</a></li>		
+                    <li><a class="foo__item" target ="_blank" href="https://authifyweb.com/pages/disclaimer">Disclaimer</a></li>
+                    <li><a class="foo__item" target ="_blank" href="https://authifyweb.com/pages/terms">Terms</a></li>
+                    
+                    <li><a class="foo__item" target ="_blank" href="https://github.com/authifyWeb/URL-Frontend">Github</a></li>
+                </ul>
+            </ul>
+        </div>
+    </nav>   
+
+    <div class="main_container">    
+        
+        <div class="hero">
+            
+            <br>
+            <h1 class="title">Join Our Waitlist & Secure Your Spot</h1><br>
+            <p style="text-align:center;">All users are manually verified and then listed to avoid impersonation. The process is time consuming and hence patience is required. </p><br>
+                
+            <div class="waitlist-container">
+                <p>To ensure a safe and valuable experience for everyone, we ask that you complete the brief application below.</p>
+                <a id="waitlist-link" href="https://tally.so/r/mYMLBB" target="_blank">Join Now</a>
+            
+            </div>    
+                <div class="clause"> <sub>(1): You'll have 7 days to complete the verification from the date of contact, unless explicitly mentioned. Failing to adhere the <a href="https://authifyweb.com/pages/terms.html">rules of authifyWeb</a> will result in termination your account. Incase you have any doubt please <a href="https://tally.so#tally-open=w8LjkA">contact us</a> Donations does not guarantee you getting listed. The service is for individuals themselves or those who represent a company. Fan pages and fake profiles will not be listed under any condition.</sub>
+                </div>
+             
+            
+            </div>
+   
+           <div class="footer"> 
+              
+               <div id="FooterLinks">
+                   <span><a href="https://authifyweb.com/pages/privacy" target="_blank"> Privacy </a> </span> &nbsp; <span><a href="https://authifyweb.com/pages/disclaimer" target="_blank"> Disclaimer</a></span> &nbsp; <span><a href="https://authifyweb.com/pages/terms" target="_blank"> Terms</a></span>
+                   <p>  &copy; <a href="https://authifyweb.com" > authifyWeb.com</a> </p>
+                   
+               </div>
+            </div>  
+</div>
+</body>
+</html>            
