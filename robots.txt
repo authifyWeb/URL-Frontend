@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /brand/
+Allow: /pages/
+Allow: /
+
+Sitemap: https://brand.authifyweb.com/sitemap.xml
