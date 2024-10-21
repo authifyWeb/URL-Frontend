@@ -67,7 +67,7 @@ display: (item, event) => {
     function handleFormSubmit(event) {
       event.preventDefault();
     if (userId) {
-      const profileUrl = `https://url.authifyweb.com/org/${userId}`;
+      const profileUrl = `https://brand.authifyweb.com/id/${userId}`;
       window.location.href = profileUrl;
     } else {
       // Handle case where no user is selected
