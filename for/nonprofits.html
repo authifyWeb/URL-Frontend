@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>authifyBrand Pages for Non Profits | Protect Digital Reputation and Trust?</title>
+        <meta name="description" content="Discover how authifyBrand Pages can help nonprofits protect their reputation & build trust with donors. Protect your nonprofit from impersonation and fraud today." />
+        <meta property="og:title" content="authifyBrand Pages for Non Profits | Protect Digital Reputation and Trust?">
+        <meta property="og:description" content="Discover how authifyBrand Pages can help nonprofits protect their reputation & build trust with donors. Protect your nonprofit from impersonation and fraud today.">
+        <meta property="og:image" content="https://brand.authifyweb.com/images/authifyBrand.jpg">
+        <meta name="google-site-verification" content="D6Q4n8azCjI14o-iCcXxn0r3_xZ-3r7wzBaz25y_Clw" />
+        <meta name="keywords" content="authifyBrand, authifyBrand Pages, what is authifyBrand, verify websites, identify scams sites" />
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@authifyBrand">
+        <meta name="twitter:creator" content="@authifyWeb">
+        <meta property="twitter:url" content="https://brand.authifyweb.com/pages/about.html" />
+        <meta property="twitter:title" content="authifyBrand Pages for Non Profits | Protect Digital Reputation and Trust?" />
+        <meta property="twitter:description" content="Discover how authifyBrand Pages can help nonprofits protect their reputation & build trust with donors. Protect your nonprofit from impersonation and fraud today." />
+        <meta property="twitter:image" content="https://brand.authifyweb.com/images/authifyBrand.jpg">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png" />
+        <link rel="manifest" href="../images/site.webmanifest" />
+        <style>
+             @font-face {
+                font-family: "Montserrat";
+                font-style: normal;
+                font-display: swap;
+                font-weight: 400;
+
+                src: local(""), url("../resources/fonts/montserrat-v25-latin-regular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */ url("../resources/fonts/montserrat-v25-latin-regular.woff2") format("woff2"),
+                    /* Super Modern Browsers */ url("../resources/fonts/montserrat-v25-latin-regular.woff") format("woff"), /* Modern Browsers */ url("../resources/fonts/montserrat-v25-latin-regular.ttf") format("truetype"),
+                    /* Safari, Android, iOS */ url("../resources/fonts/montserrat-v25-latin-regular.svg#Montserrat") format("svg"); /* Legacy iOS */
+            }
+            * {
+                box-sizing: border-box;
+                margin: 0px;
+                padding: 0px;
+            }
+            body {
+                margin: 0;
+                font-family: "Montserrat", sans-serif;
+                background-color: #1f282d;
+                color: #ffffff;
+                line-height: 1.5;
+            }
+
+            nav {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+
+                padding-top: 9px;
+
+                display: flex;
+                justify-content: space-between;
+                min-height: 8vh;
+                background-color: #1f282d; /* or use #5d4954*/
+            }
+
+            .logo a {
+                position: fixed;
+                padding-left: 35px;
+                padding-top: 5px;
+                text-decoration: none;
+                font-family: "Montserrat", sans-serif;
+                letter-spacing: 3px;
+                font-size: 20px;
+                font-weight: 200;
+            }
+            .brand_arch {
+                color: goldenrod;
+                font-size: 12px;
+                position: absolute;
+                left: 60px;
+                top: 37px;
+            }
+
+            .dropbtn {
+                background-color: #1f282d;
+                color: white;
+                padding: 1px;
+                font-size: 14px;
+                border: none;
+                cursor: grab;
+            }
+
+            .dropdown {
+                display: inline-block;
+            }
+
+            .dropdown-content {
+                padding-top: 20px;
+                display: none;
+                position: absolute;
+                background-color: #1f282d;
+                min-width: 130px;
+                box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+                border-radius: 5px;
+                z-index: 3;
+            }
+
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+            .dropdown-content a:hover {
+                background-color: #354852;
+            }
+
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+
+            .dropdown:hover .dropbtn {
+                background-color: #354852;
+            }
+
+            .pages {
+                padding-top: 8px;
+                font-size: 14px;
+                position: fixed;
+                right: 100px;
+            }
+            .pages a {
+                text-decoration: none;
+                color: skyblue;
+            }
+            @media (min-width: 320px) and (max-width: 999px) {
+                .pages {
+                    position: fixed;
+                    right: 80px;
+                    padding-top: 10px; /* 3px in case get_verified is displayed */
+                }
+            }
+
+            #menu__toggle {
+                opacity: 0;
+            }
+            #menu__toggle:checked + .menu__btn > span {
+                transform: rotate(45deg);
+            }
+            #menu__toggle:checked + .menu__btn > span::before {
+                top: 0;
+                transform: rotate(0deg);
+            }
+            #menu__toggle:checked + .menu__btn > span::after {
+                top: 0;
+                transform: rotate(90deg);
+            }
+            #menu__toggle:checked ~ .menu__box {
+                left: 0 !important;
+            }
+            .menu__btn {
+                position: fixed;
+                top: 16px;
+                right: 30px;
+                width: 26px;
+                height: 26px;
+                cursor: grab;
+                z-index: 1;
+                padding-top: 8px;
+            }
+
+            .menu__btn > span,
+            .menu__btn > span::before,
+            .menu__btn > span::after {
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 4px;
+                background-color: #ede3e3;
+                transition-duration: 0.25s;
+            }
+            .menu__btn > span::before {
+                content: "";
+                top: -8px;
+            }
+            .menu__btn > span::after {
+                content: "";
+                top: 8px;
+            }
+            .menu__box {
+                display: block;
+                position: absolute;
+                top: 8vh;
+                left: -100%;
+                width: 200px;
+                height: min-height; /*100% for viewport height*/
+                margin: 10px;
+                padding: 20px 0px;
+                background-color: #202b31;
+
+                box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+                transition-duration: 0.25s;
+                border-radius: 0px 17px 27px 0px;
+            }
+
+            .menu__box li {
+                list-style: none;
+            }
+
+            .menu__item {
+                display: block;
+                padding: 8px 30px;
+                color: #ede3e3;
+                letter-spacing: 3px;
+                font-size: 16px;
+                line-height: 1;
+                font-weight: 100;
+                text-decoration: none;
+                transition-duration: 0.25s;
+            }
+
+            #menu1 {
+                margin-bottom: 80px;
+            }
+
+            .menu__item:hover {
+                background-color: #354852;
+                color: #ffffff;
+            }
+
+            .foo__item {
+                display: block;
+                padding: 8px 30px;
+                color: #ede3e3;
+                letter-spacing: 3px;
+                font-size: 16px;
+                line-height: 1;
+                font-weight: 100;
+                text-decoration: none;
+            }
+            .foo__item:hover {
+                background-color: #354852;
+                color: #ffffff;
+            }
+
+            /****  Nav Menu Ends Here ****/
+
+            /****  Footer Menu Begins Here ****/
+
+            .footer a,
+            .footer p {
+                text-decoration: none;
+                color: rgb(151, 149, 250);
+                letter-spacing: 3px;
+                font-size: 12px;
+                font-weight: 200;
+            }
+
+            .footer {
+                text-align: center;
+                position: relative;
+                left: 0;
+                z-index: 1;
+                right: 0;
+                bottom: 1vh;
+            }
+
+            #FooterLinks {
+                font-family: "Montserrat", sans-serif;
+            }
+
+            /****  Footer Ends Here ****/
+
+            /**** Donate Box Starts Here ****/
+            #donate_box {
+                position: absolute;
+                /*top:90vh;*/
+                right: 1.5vw;
+                z-index: 2;
+            }
+
+            #donate {
+                position: relative;
+                bottom: 2vh;
+                background-color: #316e7d;
+                /*   #FDFF8F; */
+                padding-left: 10px;
+                padding-right: 10px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+
+                border: solid white;
+                border-width: 1px;
+            }
+
+            #donate a {
+                color: white;
+                text-decoration: none;
+                font-weight: bold;
+                font-family: "Montserrat", sans-serif;
+                font-size: 14px;
+            }
+
+            @media (min-width: 320px) and (max-width: 520px) {
+                #donate_box {
+                    display: none;
+                }
+            }
+
+            .main-section {
+                display: flex;
+                flex-direction: column; /* Stack vertically on small screens */
+                justify-content: center;
+                align-items: center;
+                height: 80vh;
+                padding: 20px;
+                box-sizing: border-box;
+            }
+            .left-section,
+            .right-section {
+                width: 100%;
+                max-width: 800px;
+            }
+            .left-section {
+                text-align: left;
+                margin-bottom: 20px;
+            }
+            .left-section h1 {
+                font-size: 2rem;
+                margin-bottom: 20px;
+                font-weight: 400;
+            }
+            .left-section p {
+                font-size: 1rem;
+                margin-bottom: 20px;
+                font-weight: 400;
+            }
+            .right-section {
+              /*  display: flex;
+                justify-content: flex-end;*/
+                align-items: center;
+            }
+            .right-section .button {
+                background-color: #28a745;
+                border: none;
+                color: #ffffff;
+                padding: 12px 20px;
+                font-size: 0.9rem;
+                cursor: pointer;
+                border-radius: 5px;
+
+                transition: background-color 0.3s;
+                text-decoration: none;
+            }
+            .right-section .button:hover {
+                background-color: #218838;
+            }
+            .about-section {
+                padding: 20px;
+                max-width: 95vw;
+                margin: 0 20px;
+                border-radius: 10px;
+                background-color: #14191e;
+            }
+            .about-content {
+                display: flex;
+                flex-direction: column; /* Stack vertically on small screens */
+                gap: 20px;
+            }
+            .about-left,
+            .about-right {
+                width: 100%;
+                max-width: 800px;
+            }
+            .about-left h2 {
+                font-size: 2rem;
+                margin-bottom: 10px;
+                font-weight: 400;
+            }
+            .about-left p {
+                font-size: 1rem;
+                font-weight: 400;
+                line-height: 1.6;
+                margin-bottom: 20px;
+            }
+            .about-right p {
+                padding-top: 20px;
+                font-size: 1rem;
+                font-weight: 400;
+                line-height: 1.6;
+            }
+
+            .features {
+                padding: 40px 20px;
+                max-width: 1000px;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column; /* Stack features vertically on small screens */
+                gap: 20px;
+                text-align: center;
+            }
+            .feature {
+                background-color: #272f37;
+                padding: 15px;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+            .feature h3 {
+                font-size: 1.2rem;
+                margin-bottom: 10px;
+                font-weight: 400;
+                text-align: left;
+            }
+            .feature p {
+                font-size: 0.9rem;
+                font-weight: 400;
+                text-align: left;
+            }
+            .why-authifybrand {
+                padding: 120px 20px;
+                max-width: 1000px;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column; /* Stack vertically on small screens */
+                gap: 20px;
+            }
+            .left-side,
+            .right-side {
+                width: 100%;
+                max-width: 500px;
+            }
+
+            .left-side h2 {
+                font-size: 1.8rem;
+                margin-bottom: 15px;
+                font-weight: 400;
+            }
+
+            .left-side p {
+                font-size: 1rem;
+                margin-bottom: 20px;
+                font-weight: 400;
+            }
+
+            .left-side .button {
+                background-color: #28a745;
+                margin-top: 20px;
+                border: none;
+                color: #ffffff;
+                padding: 12px 20px;
+                font-size: 0.9rem;
+                cursor: pointer;
+                border-radius: 5px;
+                text-decoration: none;
+                transition: background-color 0.3s;
+            }
+
+            .left-side .button:hover {
+                background-color: #218838;
+            }
+
+            .right-side {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .features-box {
+                background-color: #272f37;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                width: 100%;
+                max-width: 400px;
+            }
+
+            .features-box ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .features-box li {
+                font-size: 1rem;
+                font-weight: 400;
+                margin-bottom: 10px;
+                display: flex;
+                align-items: center;
+            }
+
+            .features-box li::before {
+                color: #2ecc71;
+                margin-right: 10px;
+            }
+
+            .sharable-brand-profile {
+                padding: 40px 20px;
+                max-width: 1000px;
+                margin: 0 auto;
+                text-align: left;
+                background-color: #272f37;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+
+            .sharable-brand-profile h2 {
+                font-size: 2rem;
+                margin-bottom: 15px;
+                font-weight: 400;
+            }
+
+            .sharable-brand-profile p {
+                font-size: 1rem;
+                margin-bottom: 20px;
+                font-weight: 400;
+            }
+            .sharable-brand-profile .button {
+                display: none;
+                background-color: #28a745;
+                border: none;
+                color: #ffffff;
+                padding: 12px 20px;
+                font-size: 0.9rem;
+                cursor: pointer;
+                border-radius: 5px;
+                text-decoration: none;
+                transition: background-color 0.3s;
+            }
+            .faq {
+                border: 1px grey solid;
+                padding: 40px 20px;
+                max-width: 1000px;
+                margin: 20px auto;
+                text-align: center;
+            }
+
+            .faq h2 {
+                font-size: 2rem;
+                margin-bottom: 20px;
+                font-weight: 400;
+                color: goldenrod;
+            }
+
+            .faq-container {
+                display: flex;
+                margin: 10px;
+                flex-direction: column;
+                gap: 20px;
+                align-items: center;
+            }
+
+            .faq-item {
+                border: 1px solid white;
+                padding: 20px;
+                border-radius: 8px;
+                width: 100%;
+                max-width: 600px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                text-align: left;
+            }
+
+            .faq-item summary {
+                font-size: 1rem;
+                font-weight: 400;
+                cursor: pointer;
+                margin-bottom: 10px;
+            }
+
+            .faq-item p {
+                font-size: 1rem;
+                font-weight: 400;
+                margin: 0;
+                padding-top: 10px;
+                line-height: 1.5;
+                margin-bottom:20px;
+            }
+            .faq-item ul{
+                line-height:1.6em;
+                margin: 5px 60px;
+            }
+            .faq-item a{
+                color:skyblue;
+                text-decoration:none;
+            }
+
+
+
+            @media (min-width: 768px) {
+                .main-section {
+                    flex-direction: row; /* Horizontal layout on larger screens */
+                    padding: 20px 100px;
+                    margin: 10px;
+                }
+                .left-section {
+                    max-width: 50%;
+                    text-align: left;
+                }
+                .right-section {
+                    max-width: 50%;
+                    text-align: right;
+                }
+                .about-section {
+                    padding: 20px;
+                    max-width: 95vw;
+                    margin: 0 60px;
+                    border-radius: 10px;
+                    background-color: #14191e;
+                }
+                .about-content {
+                    padding: 40px;
+                    padding-top: 20px;
+                    flex-direction: row; /* Horizontal layout on larger screens */
+                    gap: 40px;
+                }
+                .about-left,
+                .about-right {
+                    padding-top: 20px;
+                    max-width: 50%;
+                }
+                .about-right {
+                    padding-top: 40px;
+                }
+                .features {
+                    flex-direction: row; /* Arrange features horizontally on larger screens */
+                    flex-wrap: wrap;
+                    gap: 30px;
+                    justify-content: space-around;
+                }
+                .feature {
+                    flex: 1 1 calc(33.333% - 30px);
+                    max-width: calc(33.333% - 30px);
+                }
+                .why-authifybrand {
+                    padding: 150px 50px;
+                    flex-direction: row;
+                    gap: 20px;
+                }
+                .left-side,
+                .right-side {
+                    width: 50%;
+                }
+                .sharable-brand-profile {
+                    padding: 60px 30px;
+                }
+                .faq {
+                    margin-top: 90px;
+                    padding: 60px 30px;
+                }
+            }    
+        </style>
+    </head>
+    <body>
+        <nav>
+            <div class="logo">
+                <a href="https://brand.authifyweb.com"><span style="color: #ede3e3;"> authify</span><span style="color: #a2fb15;">Brand</span></a><span class="brand_arch"> by authifyWeb.com</span>
+            </div>
+
+            <div class="pages">
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        📌 About
+                        <sub>
+                            <svg width="20px" height="20px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <g fill="skyblue"><path d="M7 10l5 5 5-5" /></g>
+                            </svg>
+                        </sub>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="../pages/about.html">About</a>
+                        <a href="../pages/get-listed.html">Get Listed</a>
+                        <a href="https://authifyweb.com/pages/contribute.html" target="_blank">Get Involved</a>
+                        <a href="https://authifyweb.com/pages/donate.html" style="background-color: #316e7d; font-style: italic; font-weight: bold; color: #fff;">💰 Donate</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hamburger-menu">
+                <input id="menu__toggle" type="checkbox" />
+                <label class="menu__btn" for="menu__toggle">
+                    <span> </span>
+                </label>
+
+                <ul class="menu__box">
+                    <ul>
+                        <div id="menu1">
+                            <li><a class="menu__item" href="https://authifyweb.com">Home</a></li>
+                            <li>
+                                <a class="menu__item" href="https://chat.authifyweb.com"><span style="color: #ede3e3;"> authify</span><span style="color: #a2fb15;">Chat</span></a>
+                            </li>
+                            <li>
+                                <a class="menu__item" href="https://brand.authifyweb.com"><span style="color: #ede3e3;"> authify</span><span style="color: #a2fb15;">Brand</span></a>
+                            </li>
+                            <li>
+                                <a class="menu__item" href="https://fame.authifyweb.com"><span style="color: #ede3e3;"> authify</span><span style="color: #a2fb15;">Fame</span></a>
+                            </li>
+                            <li>
+                                <a class="menu__item" href="https://now.authifyweb.com"><span style="color: #ede3e3;"> authify</span><span style="color: #a2fb15;">Now</span></a>
+                            </li>
+
+                            <li><a class="menu__item" style="background-color: #ffc800; color: black; font-style: italic; font-weight: bold;" href="https://authifyweb.com/pages/donate">Donate Now</a></li>
+                            <li><a class="menu__item" style="background-color: skyblue; color: black; margin-top: 5px; font-style: strong; font-weight: bold;" href="../pages/get-listed.html">Get Listed</a></li>
+                        </div>
+                    </ul>
+                    <ul>
+                        <div id="menu2">
+                            <li><a class="foo__item" target="_blank" href="https://authifyweb.com/pages/privacy">Privacy</a></li>
+                            <li><a class="foo__item" target="_blank" href="https://authifyweb.com/pages/disclaimer">Disclaimer</a></li>
+                            <li><a class="foo__item" target="_blank" href="https://authifyweb.com/pages/terms">Terms</a></li>
+
+                            <li><a class="foo__item" target="_blank" href="https://github.com/authifyWeb/URL-Frontend">Github</a></li>
+                        </div>
+                    </ul>
+                </ul>
+            </div>
+        </nav>
+        <div style="height: 10vh;"></div>
+        <!-- Main Section -->
+        <div class="main-section">
+            <!-- Left Section -->
+            <div class="left-section">
+                <p style="font-size: 12px; text-transform: uppercase;">Scams targeting nonprofits are on the rise</p>
+                <h1>Protect Your Non-Profit and Donors from Impersonation Scams</h1>
+                <p>Ensure trust and authenticity with authifyBrand.</p>
+                <p>Help your donors easily identify scams that impersonate the nonprofit. Make it easy for them to verify your websites, social media, and much more.</p>
+            </div>
+
+            <!-- Right Section -->
+            <div class="right-section">
+                <p><a href="../pages/get-listed.html" class="button"> Create Your authifyBrand Page</a></p>
+            </div>
+        </div>
+
+        <!-- About Us Section -->
+        <div class="about-section">
+            <div class="about-content">
+                <div class="about-left">
+                    <p style="font-size: 12px; text-transform: uppercase;">Why authifyBrand</p>
+                    <h2>Safeguard Your Non-Profit’s Reputation and Prevent Fraud</h2>
+
+                    <p>authifyBrand stands as the guardian of authenticity for non-profits.</p>
+                </div>
+
+                <div class="about-right">
+                    <p>With authifyBrand, you no longer have to worry about the time and money spent ensuring your donors interact with the real website, or social media profile. We make verification simple, secure, and effortless.</p>
+                </div>
+            </div>
+            
+            <section class="features">
+                
+                <div class="feature">
+                    <h3>Free, Easy & User-Friendly</h3>
+                    <p>Donors can easily verify your nonprofit’s authenticity—saving them time and avoiding the need for extensive research.</p>
+                </div>
+                <div class="feature">
+                    <h3>Boost Donor Confidence</h3>
+                    <p>authifyBrand protects your donors from phishing and scams, ensuring they interact with your official website.</p>
+                </div>
+                <div class="feature">
+                    <h3>A Sign of Trust</h3>
+                    <p>authifyBrand serves as a trust sign for donors, giving them peace of mind that the organization they are supporting is genuine and trustworthy.</p>
+                </div>
+            </section>
+
+            <p style="color: goldenrod; text-align: center; font-size: 16px;">You focus on serving the community, we'll protect your nonprofit from being impersonated by scammers.</p>
+        </div>
+
+        <section class="why-authifybrand">
+            <div class="left-side">
+                <p style="font-size: 12px; text-transform: uppercase;">Features & More</p>
+                <h2>Why authifyBrand Page?</h2>
+                <p>By safeguarding your donors, you build a reputation of trust and integrity for your non-profit.</p>
+
+                <p><a href="../pages/get-listed.html" class="button"> Create your authifyBrand page</a></p>
+            </div>
+
+            <div class="right-side">
+                <div class="features-box">
+                    <ul>
+                        <li>&#10003; &nbsp;Instant URL Verification</li>
+                        <li>&#10003; &nbsp;Unlimited Websites</li>
+                        <li>&#10003; &nbsp;50+ Third-Party Websites</li>
+                        <li>&#10003; &nbsp;Support for Multiple Platforms</li>
+                        <li>&#10003; &nbsp;Safeguard Online Reputation</li>
+                        <li>&#10003; &nbsp;Individual Verification Pages</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="sharable-brand-profile">
+            <p style="font-size: 12px; text-transform: uppercase;">Commitment towards your community</p>
+            <h2>
+                Sharable Brand Page
+                <svg fill="#87ceeb" width="30" height="30" viewBox="0 0 24 24" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="m21.707 11.293-8-8A1 1 0 0 0 12 4v3.545A11.015 11.015 0 0 0 2 18.5V20a1 1 0 0 0 1.784.62 11.46 11.46 0 0 1 7.887-4.049c.05-.006.175-.016.329-.026V20a1 1 0 0 0 1.707.707l8-8a1 1 0 0 0 0-1.414M14 17.586V15.5a1 1 0 0 0-1-1c-.255 0-1.296.05-1.562.085a14 14 0 0 0-7.386 2.948A9.013 9.013 0 0 1 13 9.5a1 1 0 0 0 1-1V6.414L19.586 12Z"
+                    />
+                </svg>
+            </h2>
+            <p>Share your authifyBrand Page across all your social platforms and bios to ensure your donors easily avoid impersonation scams.</p>
+            <p>Your brand page is designed to be easily accessible, fast and sharable, making it effortless for your donors to connect with the authentic you.</p>
+            <p>Safeguards your non-profits reputation & protects your donors from falling into impersonation scams.</p>
+            <p><a href="../pages/get-listed.html" class="button"> Create your authifyBrand page</a></p>
+        </section>
+
+        <section class="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-container">
+                
+                <details class="faq-item">
+                    <summary>Is an authifyBrand page beneficial for a non-profit?</summary>
+                    <p>
+                        Yes, an authifyBrand page helps non-profits protect their donors from falling victim to scams impersonating a non-profit. 
+                    </p>
+                    <p>authifyBrand helps your nonprofit safeguard its online reputation</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Are there any special offers for non-profits?</summary>
+                    <p>
+                        Yes! We offer a 100% discount for selected non-profits, ensuring that your organization can protect its online presence and build trust with your donors without any cost. Get in touch with us to get listed.
+                    </p>
+                </details>
+                <details class="faq-item">
+                    <summary>Can authifyBrand verify a nonprofit’s social media profiles</summary>
+                    <p>
+                        Yes, authifyBrand can verify your nonprofit's social media profiles to help ensure donors and supporters are interacting with your official, authenticated accounts and not fraudulent impersonations
+                    </p>
+                    <p> <a href="https://authifyweb.com/pages/supported-sites" target="_blank">Explore all our supported sites</a>.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Live Demo?</summary>
+                    
+                    <p> <a href="https://brand.authifyweb.com/id/a8b" target="_blank">authifyBrand page of authifyWeb</a>.</p>
+                </details>                
+            </div>
+        </section>        
+
+    </body>
+</html>                    
