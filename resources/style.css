@@ -319,7 +319,7 @@ nav {
   font-size: 1rem;
   border: 2px solid #767676;
   border-radius: 5px 2px 2px 5px;
-  width: 250px;
+  width: 320px;
 }
 
 .left-section button {
@@ -834,14 +834,14 @@ nav {
 }
 
 .single-item .badge {
-  padding-top: 10px;
-  height: 24px;
-  width: 24px;
+  padding-top: 5px;
+  height: 20px;
+  width: 20px;
 }
 
 .single-item .propic {
-  height: 48px;
-  width: 48px;
+  height: 40px;
+  width: 40px;
   border-radius: 50%;
 }
 
